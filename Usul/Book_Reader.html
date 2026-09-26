@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قارئ أمهات كتب أصول الفقه | المكتبة الحوزوية التراثية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@700&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-page: #f4efe6;
+      --bg-book: #fdfbf7;
+      --text-main: #2c2724;
+      --text-muted: #736b63;
+      --border-book: #d5c8b5;
+      --accent-gold: #b3822a;
+      --accent-gold-soft: rgba(179, 130, 42, 0.12);
+      --highlight-text: #fff2c4;
+      --shadow-book: rgba(60, 45, 30, 0.15);
+      --font-body: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+    }
+
+    [data-theme="sepia"] {
+      --bg-page: #e8dcce;
+      --bg-book: #f3e9db;
+      --text-main: #382c21;
+      --text-muted: #7c6853;
+      --border-book: #c7b39b;
+      --accent-gold: #9e6c1e;
+      --accent-gold-soft: rgba(158, 108, 30, 0.14);
+      --highlight-text: #fae3af;
+      --shadow-book: rgba(45, 30, 15, 0.2);
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #121316;
+      --bg-book: #1b1c20;
+      --text-main: #e2e4e9;
+      --text-muted: #959aa5;
+      --border-book: #333640;
+      --accent-gold: #d4a54c;
+      --accent-gold-soft: rgba(212, 165, 76, 0.18);
+      --highlight-text: rgba(212, 165, 76, 0.25);
+      --shadow-book: rgba(0, 0, 0, 0.6);
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .font-ruqaa { font-family: 'Aref Ruqaa', serif; }
+    .font-amiri { font-family: 'Amiri', serif; }
+
+    /* Classical Book Sheet Styling */
+    .book-sheet {
+      background-color: var(--bg-book);
+      border: 1px solid var(--border-book);
+      box-shadow: 0 10px 30px var(--shadow-book), 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .book-inner-frame {
+      border: 3px double var(--border-book);
+      padding: 2.25rem 2.5rem;
+      min-height: 820px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    @media (max-width: 640px) {
+      .book-inner-frame {
+        padding: 1.25rem 1rem;
+        min-height: auto;
+      }
+    }
+
+    /* Running Header */
+    .running-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1.5px solid var(--border-book);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .running-header .center-motif {
+      color: var(--accent-gold);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+    }
+
+    /* Page Content Typography */
+    .page-body-content {
+      font-size: 1.18rem;
+      line-height: 2.25;
+      text-align: justify;
+      text-justify: inter-word;
+      color: var(--text-main);
+      flex: 1;
+    }
+
+    .page-body-content p {
+      margin-bottom: 1.2rem;
+      text-indent: 1.75rem;
+    }
+
+    .page-body-content h3 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      text-align: center;
+      margin: 1.5rem 0 1rem 0;
+      text-indent: 0;
+      border-bottom: 1px dashed var(--border-book);
+      padding-bottom: 0.4rem;
+    }
+
+    /* Footnotes Area */
+    .footnotes-container {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1.5px solid var(--border-book);
+      font-size: 0.92rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+    }
+
+    .footnotes-container .fn-item {
+      margin-bottom: 0.4rem;
+    }
+
+    .footnotes-container .fn-num {
+      color: var(--accent-gold);
+      font-weight: bold;
+      margin-left: 0.35rem;
+    }
+
+    /* Page Footer Stamp */
+    .running-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-top: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: var(--text-muted);
+      letter-spacing: 0.15em;
+    }
+
+    /* Controls & Navigation */
+    .nav-arrow-btn {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--bg-book);
+      border: 1px solid var(--border-book);
+      color: var(--text-main);
+      width: 48px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 15px var(--shadow-book);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      z-index: 40;
+      border-radius: 8px;
+    }
+    .nav-arrow-btn:hover {
+      background: var(--accent-gold);
+      color: #fff;
+      border-color: var(--accent-gold);
+      transform: translateY(-50%) scale(1.05);
+    }
+    .nav-arrow-prev { right: 16px; }
+    .nav-arrow-next { left: 16px; }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1e2024;
+      color: #f1f2f6;
+      border: 1px solid #3e424c;
+      padding: 10px 24px;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      z-index: 100;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation & Control Header -->
+  <header class="sticky top-0 z-30 bg-[var(--bg-book)] border-b border-[var(--border-book)] shadow-sm px-4 py-2.5 transition-colors">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand & Book Selector -->
+      <div class="flex items-center gap-3">
+        <button onclick="toggleSidebar()" class="p-2 rounded-lg hover:bg-[var(--accent-gold-soft)] text-[var(--accent-gold)] transition" title="فهرس الكتاب والبحث">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+        </button>
+
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">📚</span>
+            <select id="bookSelect" onchange="onBookChange()" class="bg-[var(--bg-page)] text-[var(--text-main)] font-bold text-sm md:text-base border border-[var(--border-book)] rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-[var(--accent-gold)] cursor-pointer">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+          <span id="bookAuthorSubtitle" class="text-xs text-[var(--text-muted)] pr-8">المحقق والمدرسة الأصولية</span>
+        </div>
+      </div>
+
+      <!-- Quick Jump & Pagination Bar -->
+      <div class="flex items-center gap-2">
+        <button onclick="flipPage(-1)" class="px-2.5 py-1.5 rounded-lg border border-[var(--border-book)] hover:bg-[var(--accent-gold-soft)] text-sm font-bold transition" title="الصفحة السابقة (السهم الأيمن)">
+          › السابقة
+        </button>
+
+        <div class="flex items-center gap-1 bg-[var(--bg-page)] border border-[var(--border-book)] rounded-lg px-2 py-1">
+          <span class="text-xs text-[var(--text-muted)] font-bold">ص:</span>
+          <input type="number" id="pageInput" min="1" onchange="onPageInputChange()" class="w-14 text-center font-bold text-sm bg-transparent text-[var(--text-main)] focus:outline-none">
+          <span id="pageTotalSpan" class="text-xs text-[var(--text-muted)]">/ ...</span>
+        </div>
+
+        <button onclick="flipPage(1)" class="px-2.5 py-1.5 rounded-lg border border-[var(--border-book)] hover:bg-[var(--accent-gold-soft)] text-sm font-bold transition" title="الصفحة التالية (السهم الأيسر)">
+          التالية ‹
+        </button>
+      </div>
+
+      <!-- Themes, View Mode & Action Tools -->
+      <div class="flex items-center gap-2">
+        
+        <!-- Theme Selectors -->
+        <div class="flex items-center bg-[var(--bg-page)] border border-[var(--border-book)] rounded-lg p-0.5">
+          <button onclick="setTheme('cream')" class="px-2 py-1 text-xs rounded font-bold hover:bg-[var(--bg-book)]" title="ورق كريمي كلاسيكي">كريمي</button>
+          <button onclick="setTheme('sepia')" class="px-2 py-1 text-xs rounded font-bold hover:bg-[var(--bg-book)]" title="ورق عتيق سبيا">عتيق</button>
+          <button onclick="setTheme('dark')" class="px-2 py-1 text-xs rounded font-bold hover:bg-[var(--bg-book)]" title="مكتبة ليلية داكنة">داكن</button>
+        </div>
+
+        <!-- Single / Spread Toggle -->
+        <button id="spreadBtn" onclick="toggleSpreadView()" class="hidden md:flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-[var(--border-book)] text-xs font-bold hover:bg-[var(--accent-gold-soft)] transition" title="تبديل بين صفحة مفردة وصفحتين متقابلتين">
+          <span>📖</span> <span id="spreadBtnLabel">صفحتان</span>
+        </button>
+
+        <!-- Font Size Adjust -->
+        <div class="hidden sm:flex items-center bg-[var(--bg-page)] border border-[var(--border-book)] rounded-lg p-0.5 text-xs font-bold">
+          <button onclick="adjustFontSize(-1)" class="px-2 py-1 hover:bg-[var(--bg-book)] rounded" title="تصغير الخط">A-</button>
+          <button onclick="adjustFontSize(1)" class="px-2 py-1 hover:bg-[var(--bg-book)] rounded" title="تكبير الخط">A+</button>
+        </div>
+
+        <!-- Copy Page -->
+        <button onclick="copyCurrentPageText()" class="p-2 rounded-lg border border-[var(--border-book)] hover:bg-[var(--accent-gold-soft)] text-sm transition" title="نسخ نص الصفحة مع التوثيق الكامل">
+          📋
+        </button>
+
+        <!-- Return to Lessons -->
+        <div class="relative group">
+          <button class="px-3 py-1.5 rounded-lg bg-[var(--accent-gold)] text-white text-xs font-bold flex items-center gap-1 shadow-sm hover:opacity-90 transition">
+            <span>🎓 الدروس</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="absolute left-0 mt-1 w-44 bg-[var(--bg-book)] border border-[var(--border-book)] rounded-xl shadow-xl p-1 hidden group-hover:block z-50 text-xs font-bold">
+            <a href="00_المقدمة_والمبادئ/01_تعريف_علم_الأصول_وموضوعه_وغايته.html" class="block px-3 py-2 rounded-lg hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)]">الدرس 1: تعريف الأصول</a>
+            <a href="00_المقدمة_والمبادئ/02_تقسيم_المباحث_وحقيقة_الوضع_وأقسامه.html" class="block px-3 py-2 rounded-lg hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)]">الدرس 2: حقيقة الوضع</a>
+            <a href="00_المقدمة_والمبادئ/03_الدلالة_التصورية_والدلالة_التصديقية.html" class="block px-3 py-2 rounded-lg hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)]">الدرس 3: الدلالات اللفظية</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Side Navigation Arrow Buttons (Floating) -->
+  <button onclick="flipPage(-1)" class="nav-arrow-btn nav-arrow-prev hidden lg:flex" title="الصفحة السابقة">›</button>
+  <button onclick="flipPage(1)" class="nav-arrow-btn nav-arrow-next hidden lg:flex" title="الصفحة التالية">‹</button>
+
+  <!-- Main Reader Canvas -->
+  <main class="flex-1 flex justify-center items-start p-3 sm:p-6 lg:p-8">
+    <div id="bookContainer" class="w-full max-w-4xl flex gap-6 justify-center">
+      
+      <!-- Primary / Right Page Sheet -->
+      <article id="primaryPageSheet" class="book-sheet w-full max-w-2xl rounded-2xl">
+        <div class="book-inner-frame">
+          
+          <!-- Running Header -->
+          <header class="running-header">
+            <span id="headerBookTitle" class="truncate max-w-[200px]">اسم الكتاب</span>
+            <span class="center-motif">✦ ✤ ✦</span>
+            <span id="headerTopicTitle" class="truncate max-w-[250px] text-center font-amiri font-bold text-amber-700 dark:text-amber-400">المطلب</span>
+            <span class="center-motif">✦ ✤ ✦</span>
+            <span id="headerVolPage" class="font-mono">ص: 00</span>
+          </header>
+
+          <!-- Page Body Content -->
+          <div id="pageBody" class="page-body-content">
+            <!-- Rendered Arabic Body -->
+          </div>
+
+          <!-- Footnotes Divider & Text -->
+          <footer id="pageFootnotesArea" class="footnotes-container hidden">
+            <div id="pageFootnotesList"></div>
+          </footer>
+
+          <!-- Running Footer (Page Number) -->
+          <div class="running-footer">
+            <span id="footerPageNum">— 0 —</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Secondary / Left Page Sheet (Active only in Two-Page Spread mode) -->
+      <article id="secondaryPageSheet" class="book-sheet w-full max-w-2xl rounded-2xl hidden">
+        <div class="book-inner-frame">
+          
+          <header class="running-header">
+            <span id="headerBookTitle2" class="truncate max-w-[200px]">اسم الكتاب</span>
+            <span class="center-motif">✦ ✤ ✦</span>
+            <span id="headerTopicTitle2" class="truncate max-w-[250px] text-center font-amiri font-bold text-amber-700 dark:text-amber-400">المطلب</span>
+            <span class="center-motif">✦ ✤ ✦</span>
+            <span id="headerVolPage2" class="font-mono">ص: 00</span>
+          </header>
+
+          <div id="pageBody2" class="page-body-content"></div>
+
+          <footer id="pageFootnotesArea2" class="footnotes-container hidden">
+            <div id="pageFootnotesList2"></div>
+          </footer>
+
+          <div class="running-footer">
+            <span id="footerPageNum2">— 0 —</span>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Collapsible Drawer Sidebar (TOC, Full-Text Search, Book Info) -->
+  <aside id="sidebarDrawer" class="fixed inset-y-0 right-0 w-80 sm:w-96 bg-[var(--bg-book)] border-l border-[var(--border-book)] shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+    
+    <!-- Drawer Header -->
+    <div class="p-4 border-b border-[var(--border-book)] flex items-center justify-between bg-[var(--bg-page)]">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">📑</span>
+        <h2 class="font-bold text-base text-[var(--text-main)]">فهرس وبحث الكتاب</h2>
+      </div>
+      <button onclick="toggleSidebar()" class="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-main)] transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Tabs: TOC vs Search -->
+    <div class="flex border-b border-[var(--border-book)] bg-[var(--bg-book)] text-xs font-bold">
+      <button id="tabBtnToc" onclick="switchSidebarTab('toc')" class="flex-1 py-2.5 text-center border-b-2 border-[var(--accent-gold)] text-[var(--accent-gold)] transition">فهرس المطالب</button>
+      <button id="tabBtnSearch" onclick="switchSidebarTab('search')" class="flex-1 py-2.5 text-center text-[var(--text-muted)] hover:text-[var(--text-main)] transition">بحث في الكتاب</button>
+      <button id="tabBtnInfo" onclick="switchSidebarTab('info')" class="flex-1 py-2.5 text-center text-[var(--text-muted)] hover:text-[var(--text-main)] transition">بطاقة الكتاب</button>
+    </div>
+
+    <!-- Tab 1: Table of Contents -->
+    <div id="tabContentToc" class="flex-1 overflow-y-auto p-3 space-y-1 text-sm">
+      <input type="text" id="tocFilterInput" oninput="filterToc()" placeholder="ابحث في عناوين الفهرس..." class="w-full bg-[var(--bg-page)] border border-[var(--border-book)] rounded-lg px-3 py-1.5 text-xs text-[var(--text-main)] mb-2 focus:outline-none focus:border-[var(--accent-gold)]">
+      <div id="tocList" class="space-y-1">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Tab 2: Full-Text Search -->
+    <div id="tabContentSearch" class="flex-1 overflow-y-auto p-3 space-y-3 hidden text-sm">
+      <div class="flex gap-1.5">
+        <input type="text" id="fullSearchInput" onkeydown="if(event.key==='Enter') executeFullSearch()" placeholder="اكتب كلمة للبحث (مثال: الوضع، الغرض)..." class="flex-1 bg-[var(--bg-page)] border border-[var(--border-book)] rounded-lg px-3 py-1.5 text-xs text-[var(--text-main)] focus:outline-none focus:border-[var(--accent-gold)]">
+        <button onclick="executeFullSearch()" class="px-3 py-1.5 rounded-lg bg-[var(--accent-gold)] text-white text-xs font-bold">بحث</button>
+      </div>
+      <div id="searchResultsCount" class="text-xs text-[var(--text-muted)]"></div>
+      <div id="searchResultsList" class="space-y-2">
+        <!-- Search hits -->
+      </div>
+    </div>
+
+    <!-- Tab 3: Book Info & Method -->
+    <div id="tabContentInfo" class="flex-1 overflow-y-auto p-4 space-y-4 hidden text-xs leading-relaxed">
+      <div class="p-3 rounded-xl bg-[var(--bg-page)] border border-[var(--border-book)]">
+        <h4 class="font-bold text-sm text-[var(--accent-gold)] mb-1" id="infoBookTitle">-</h4>
+        <p class="text-[var(--text-muted)]" id="infoBookAuthor">-</p>
+      </div>
+      <div>
+        <span class="font-bold text-[var(--text-main)] block mb-1">المدرسة الأصولية والمنهج:</span>
+        <p class="text-[var(--text-muted)]" id="infoBookSchool">-</p>
+      </div>
+      <div>
+        <span class="font-bold text-[var(--text-main)] block mb-1">إحصائيات المجلد:</span>
+        <p class="text-[var(--text-muted)]" id="infoBookStats">-</p>
+      </div>
+      <div class="pt-4 border-t border-[var(--border-book)]">
+        <span class="text-[var(--text-muted)] block text-[11px]">المصدر الرقمي: مكتبة أهل البيت (ع) العامة والمكتبة التخصصية، مطابقة لترقيم النسخ المحققة المعتمدة.</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Backdrop for Drawer -->
+  <div id="drawerBackdrop" onclick="toggleSidebar()" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden transition-opacity"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast">تم نسخ نص الصفحة مع التوثيق الكامل!</div>
+
+  <!-- Load Offline Database Script -->
+  <script src="Resources/books_data/books_db.js"></script>
+
+  <!-- Application Logic -->
+  <script>
+    let currentBookId = 'usul_muzaffar_1';
+    let currentPageNum = 49;
+    let isSpreadView = false;
+    let fontSizeLevel = 0;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('book') && window.HAWZA_BOOKS && window.HAWZA_BOOKS[params.get('book')]) {
+        currentBookId = params.get('book');
+      }
+      if (params.get('page')) {
+        currentPageNum = parseInt(params.get('page')) || 49;
+      }
+
+      initBookSelector();
+      loadBook(currentBookId, currentPageNum);
+
+      window.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+        if (e.key === 'ArrowLeft') {
+          flipPage(1);
+        } else if (e.key === 'ArrowRight') {
+          flipPage(-1);
+        }
+      });
+    });
+
+    function initBookSelector() {
+      const select = document.getElementById('bookSelect');
+      select.innerHTML = '';
+      if (!window.HAWZA_CATALOG) return;
+
+      window.HAWZA_CATALOG.forEach(b => {
+        const opt = document.createElement('option');
+        opt.value = b.id;
+        opt.textContent = b.title + ' — ' + b.author.split('(')[0];
+        if (b.id === currentBookId) opt.selected = true;
+        select.appendChild(opt);
+      });
+    }
+
+    function onBookChange() {
+      const select = document.getElementById('bookSelect');
+      currentBookId = select.value;
+      const b = window.HAWZA_BOOKS[currentBookId];
+      currentPageNum = b ? b.minPage || 1 : 1;
+      loadBook(currentBookId, currentPageNum);
+    }
+
+    function loadBook(bookId, pageNum) {
+      const book = window.HAWZA_BOOKS ? window.HAWZA_BOOKS[bookId] : null;
+      if (!book) {
+        alert('لم يتم العثور على بيانات الكتاب: ' + bookId);
+        return;
+      }
+
+      document.getElementById('bookAuthorSubtitle').textContent = book.author + ' • ' + book.school;
+      document.getElementById('pageTotalSpan').textContent = '/ ' + book.maxPage;
+
+      document.getElementById('infoBookTitle').textContent = book.title;
+      document.getElementById('infoBookAuthor').textContent = book.author;
+      document.getElementById('infoBookSchool').textContent = book.school;
+      document.getElementById('infoBookStats').textContent = `عدد الصفحات: ${book.totalPages} (من ص ${book.minPage} إلى ص ${book.maxPage}) • الجزء: ${book.volume}`;
+
+      renderToc(book.toc);
+
+      if (pageNum < book.minPage) pageNum = book.minPage;
+      if (pageNum > book.maxPage) pageNum = book.maxPage;
+      currentPageNum = pageNum;
+
+      renderPage(currentPageNum);
+    }
+
+    function renderPage(pNum) {
+      const book = window.HAWZA_BOOKS[currentBookId];
+      if (!book) return;
+
+      document.getElementById('pageInput').value = pNum;
+
+      const pData = book.pages[pNum.toString()] || {
+        page: pNum,
+        header: 'صفحة فارغة أو عنوان تمهيدي',
+        body: 'لا يوجد نص مسجل في هذه الصفحة من النسخة الرقمية.',
+        footnotes: ''
+      };
+
+      document.getElementById('headerBookTitle').textContent = book.title;
+      document.getElementById('headerTopicTitle').textContent = pData.header || book.school.split('(')[0];
+      document.getElementById('headerVolPage').textContent = `ج ${book.volume} • ص ${pNum}`;
+      document.getElementById('footerPageNum').textContent = `— ${pNum} —`;
+
+      document.getElementById('pageBody').innerHTML = formatBodyHtml(pData.body);
+
+      const fnArea = document.getElementById('pageFootnotesArea');
+      const fnList = document.getElementById('pageFootnotesList');
+      if (pData.footnotes && pData.footnotes.trim().length > 0) {
+        fnArea.classList.remove('hidden');
+        fnList.innerHTML = formatFootnotesHtml(pData.footnotes);
+      } else {
+        fnArea.classList.add('hidden');
+        fnList.innerHTML = '';
+      }
+
+      if (isSpreadView) {
+        const pNum2 = pNum + 1;
+        const sheet2 = document.getElementById('secondaryPageSheet');
+        if (pNum2 <= book.maxPage) {
+          sheet2.classList.remove('hidden');
+          const pData2 = book.pages[pNum2.toString()] || {
+            page: pNum2,
+            header: '',
+            body: '',
+            footnotes: ''
+          };
+          document.getElementById('headerBookTitle2').textContent = book.title;
+          document.getElementById('headerTopicTitle2').textContent = pData2.header || pData.header;
+          document.getElementById('headerVolPage2').textContent = `ج ${book.volume} • ص ${pNum2}`;
+          document.getElementById('footerPageNum2').textContent = `— ${pNum2} —`;
+          document.getElementById('pageBody2').innerHTML = formatBodyHtml(pData2.body);
+
+          const fnArea2 = document.getElementById('pageFootnotesArea2');
+          const fnList2 = document.getElementById('pageFootnotesList2');
+          if (pData2.footnotes && pData2.footnotes.trim().length > 0) {
+            fnArea2.classList.remove('hidden');
+            fnList2.innerHTML = formatFootnotesHtml(pData2.footnotes);
+          } else {
+            fnArea2.classList.add('hidden');
+          }
+        } else {
+          sheet2.classList.add('hidden');
+        }
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function formatBodyHtml(raw) {
+      if (!raw) return '';
+      let clean = raw.replace(/###\s*(.*?)\n/g, '<h3>$1</h3>');
+      let paras = clean.split('\n\n');
+      return paras.map(p => {
+        if (p.startsWith('<h3>')) return p;
+        return `<p>${p.replace(/\n/g, '<br>')}</p>`;
+      }).join('');
+    }
+
+    function formatFootnotesHtml(raw) {
+      if (!raw) return '';
+      return raw.split('\n').map(line => {
+        let l = line.trim();
+        let m = l.match(/^\(?\s*(\d+)\s*\)?\s*(.*)/);
+        if (m) {
+          return `<div class="fn-item"><span class="fn-num">(${m[1]})</span> ${m[2]}</div>`;
+        }
+        return `<div class="fn-item">${l}</div>`;
+      }).join('');
+    }
+
+    function flipPage(delta) {
+      const book = window.HAWZA_BOOKS[currentBookId];
+      if (!book) return;
+      const step = isSpreadView ? 2 * delta : delta;
+      let nextP = currentPageNum + step;
+      if (nextP < book.minPage) nextP = book.minPage;
+      if (nextP > book.maxPage) nextP = book.maxPage;
+      currentPageNum = nextP;
+      renderPage(currentPageNum);
+    }
+
+    function onPageInputChange() {
+      const input = document.getElementById('pageInput');
+      let val = parseInt(input.value);
+      const book = window.HAWZA_BOOKS[currentBookId];
+      if (!isNaN(val) && book) {
+        if (val < book.minPage) val = book.minPage;
+        if (val > book.maxPage) val = book.maxPage;
+        currentPageNum = val;
+        renderPage(currentPageNum);
+      }
+    }
+
+    function renderToc(toc) {
+      const list = document.getElementById('tocList');
+      list.innerHTML = '';
+      if (!toc || toc.length === 0) {
+        list.innerHTML = '<div class="text-xs text-[var(--text-muted)] p-2">لا يوجد فهرس معتمد</div>';
+        return;
+      }
+
+      toc.forEach(item => {
+        const btn = document.createElement('button');
+        btn.className = 'w-full text-right px-3 py-2 rounded-lg hover:bg-[var(--accent-gold-soft)] flex justify-between items-center text-xs transition';
+        btn.innerHTML = `<span class="font-semibold text-[var(--text-main)] truncate">${item.title}</span> <span class="font-mono font-bold text-[var(--accent-gold)] shrink-0 pr-2">ص ${item.page}</span>`;
+        btn.onclick = () => {
+          currentPageNum = item.page;
+          renderPage(currentPageNum);
+          toggleSidebar();
+        };
+        list.appendChild(btn);
+      });
+    }
+
+    function filterToc() {
+      const q = document.getElementById('tocFilterInput').value.trim().toLowerCase();
+      const items = document.querySelectorAll('#tocList button');
+      items.forEach(btn => {
+        const t = btn.textContent.toLowerCase();
+        btn.style.display = t.includes(q) ? 'flex' : 'none';
+      });
+    }
+
+    function executeFullSearch() {
+      const q = document.getElementById('fullSearchInput').value.trim();
+      const countEl = document.getElementById('searchResultsCount');
+      const listEl = document.getElementById('searchResultsList');
+      listEl.innerHTML = '';
+
+      if (!q || q.length < 2) {
+        countEl.textContent = 'الرجاء إدخال كلمتين على الأقل للبحث';
+        return;
+      }
+
+      const book = window.HAWZA_BOOKS[currentBookId];
+      if (!book) return;
+
+      let hits = [];
+      for (const [pStr, pData] of Object.entries(book.pages)) {
+        if (pData.body.includes(q) || (pData.footnotes && pData.footnotes.includes(q))) {
+          hits.push({
+            page: parseInt(pStr),
+            header: pData.header,
+            body: pData.body
+          });
+        }
+      }
+
+      hits.sort((a,b) => a.page - b.page);
+      countEl.textContent = `تم العثور على ${hits.length} صفحة تحتوي على: "${q}"`;
+
+      hits.slice(0, 40).forEach(h => {
+        const card = document.createElement('div');
+        card.className = 'p-2.5 rounded-xl bg-[var(--bg-page)] border border-[var(--border-book)] hover:border-[var(--accent-gold)] cursor-pointer transition';
+        
+        let snippet = '';
+        let idx = h.body.indexOf(q);
+        if (idx !== -1) {
+          let s = Math.max(0, idx - 40);
+          let e = Math.min(h.body.length, idx + q.length + 50);
+          snippet = '...' + h.body.substring(s, idx) + '<mark class="bg-amber-300 dark:bg-amber-900 text-black dark:text-white px-1 rounded">' + q + '</mark>' + h.body.substring(idx + q.length, e) + '...';
+        }
+
+        card.innerHTML = `
+          <div class="flex justify-between items-center font-bold text-xs mb-1">
+            <span class="text-[var(--accent-gold)]">${h.header || 'مبحث'}</span>
+            <span class="font-mono">ص ${h.page}</span>
+          </div>
+          <p class="text-[11px] text-[var(--text-muted)] leading-relaxed">${snippet}</p>
+        `;
+        card.onclick = () => {
+          currentPageNum = h.page;
+          renderPage(currentPageNum);
+          toggleSidebar();
+        };
+        listEl.appendChild(card);
+      });
+    }
+
+    function toggleSidebar() {
+      const drawer = document.getElementById('sidebarDrawer');
+      const backdrop = document.getElementById('drawerBackdrop');
+      const isOpen = !drawer.classList.contains('translate-x-full');
+      if (isOpen) {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      } else {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('hidden');
+      }
+    }
+
+    function switchSidebarTab(tab) {
+      ['Toc', 'Search', 'Info'].forEach(t => {
+        document.getElementById('tabContent' + t).classList.add('hidden');
+        document.getElementById('tabBtn' + t).className = 'flex-1 py-2.5 text-center text-[var(--text-muted)] hover:text-[var(--text-main)] transition';
+      });
+
+      const activeName = tab.charAt(0).toUpperCase() + tab.slice(1);
+      document.getElementById('tabContent' + activeName).classList.remove('hidden');
+      document.getElementById('tabBtn' + activeName).className = 'flex-1 py-2.5 text-center border-b-2 border-[var(--accent-gold)] text-[var(--accent-gold)] font-bold transition';
+    }
+
+    function setTheme(themeName) {
+      if (themeName === 'cream') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', themeName);
+      }
+    }
+
+    function toggleSpreadView() {
+      isSpreadView = !isSpreadView;
+      const sheet2 = document.getElementById('secondaryPageSheet');
+      const label = document.getElementById('spreadBtnLabel');
+      if (isSpreadView) {
+        label.textContent = 'صفحة مفردة';
+        document.getElementById('bookContainer').classList.remove('max-w-4xl');
+        document.getElementById('bookContainer').classList.add('max-w-7xl');
+      } else {
+        label.textContent = 'صفحتان';
+        sheet2.classList.add('hidden');
+        document.getElementById('bookContainer').classList.remove('max-w-7xl');
+        document.getElementById('bookContainer').classList.add('max-w-4xl');
+      }
+      renderPage(currentPageNum);
+    }
+
+    function adjustFontSize(delta) {
+      fontSizeLevel = Math.max(-2, Math.min(4, fontSizeLevel + delta));
+      const bodyElements = document.querySelectorAll('.page-body-content');
+      const baseRem = 1.18 + (fontSizeLevel * 0.12);
+      bodyElements.forEach(el => {
+        el.style.fontSize = baseRem + 'rem';
+      });
+    }
+
+    function copyCurrentPageText() {
+      const book = window.HAWZA_BOOKS[currentBookId];
+      if (!book) return;
+      const pData = book.pages[currentPageNum.toString()];
+      if (!pData) return;
+
+      const formatted = `[كتاب: ${book.title} - للمؤلف: ${book.author}]\n[الجزء: ${book.volume} • الصفحة: ${currentPageNum}]\n\n${pData.body}\n\n--- الهوامش ---\n${pData.footnotes || 'لا توجد هوامش'}\n\n[المصدر: مكتبة أهل البيت (ع) - الأصول الحوزوية]`;
+
+      navigator.clipboard.writeText(formatted).then(() => {
+        showToast('تم نسخ نص الصفحة مع التوثيق الحوزوي الكامل!');
+      }).catch(() => {
+        alert('تعذر النسخ التلقائي، يمكنك تحديد النص ونسخه.');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+  </script>
+</body>
+</html>

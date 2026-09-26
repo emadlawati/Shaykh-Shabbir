@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المعجم الحوزوي الشامل لمصطلحات أصول الفقه والرسائل العملية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@700&family=Cairo:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-page: #f6f3ed;
+      --bg-card: #ffffff;
+      --bg-subtle: #fcfbf9;
+      --text-main: #1f242e;
+      --text-muted: #626a7a;
+      --border-main: #dfd7cc;
+      --accent-gold: #b3822a;
+      --accent-gold-soft: rgba(179, 130, 42, 0.12);
+      --shadow-sm: rgba(45, 35, 20, 0.06);
+      --shadow-lg: rgba(45, 35, 20, 0.15);
+      --font-body: 'Amiri', 'Noto Naskh Arabic', serif;
+      --font-ui: 'Cairo', sans-serif;
+    }
+
+    [data-theme="sepia"] {
+      --bg-page: #ece2d3;
+      --bg-card: #f5ece0;
+      --bg-subtle: #faf5ed;
+      --text-main: #2b2118;
+      --text-muted: #6e5e4f;
+      --border-main: #cfbeab;
+      --accent-gold: #9e6c1e;
+      --accent-gold-soft: rgba(158, 108, 30, 0.14);
+      --shadow-sm: rgba(35, 25, 15, 0.08);
+      --shadow-lg: rgba(35, 25, 15, 0.2);
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #111317;
+      --bg-card: #1a1d24;
+      --bg-subtle: #222630;
+      --text-main: #e4e7ed;
+      --text-muted: #8e95a5;
+      --border-main: #2e3342;
+      --accent-gold: #d4a54c;
+      --accent-gold-soft: rgba(212, 165, 76, 0.18);
+      --shadow-sm: rgba(0, 0, 0, 0.4);
+      --shadow-lg: rgba(0, 0, 0, 0.7);
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .font-ui { font-family: var(--font-ui); }
+    .font-amiri { font-family: 'Amiri', serif; }
+    .font-ruqaa { font-family: 'Aref Ruqaa', serif; }
+
+    /* Term Card Styles */
+    .term-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .term-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow-lg);
+      border-color: var(--accent-gold);
+    }
+
+    /* Modal Backdrop & Canvas */
+    #termModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    #termModal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-radius: 1.5rem;
+      width: 100%;
+      max-width: 860px;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px var(--shadow-lg);
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+      overflow: hidden;
+    }
+
+    #termModal.open .modal-box {
+      transform: scale(1);
+    }
+
+    /* Section Cards in Modal */
+    .facet-section {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-main);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .facet-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.75rem;
+      border-bottom: 1px dashed var(--border-main);
+      padding-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-[var(--bg-card)] border-b border-[var(--border-main)] shadow-sm px-4 py-3 transition-colors">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Brand Logo & Title -->
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">📖</span>
+        <div>
+          <h1 class="font-ui font-extrabold text-lg md:text-xl text-[var(--text-main)] flex items-center gap-2">
+            المعجم الأصولي والفقهي الشامل
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-[var(--accent-gold-soft)] text-[var(--accent-gold)] border border-[var(--accent-gold)]/30 font-bold">الموسوعة المرجعية</span>
+          </h1>
+          <p class="text-xs text-[var(--text-muted)] font-ui">تحرير المصطلحات، تطورها التاريخي، شواهدها، وتطبيقاتها في الفتاوى والرسائل العملية</p>
+        </div>
+      </div>
+
+      <!-- Quick Navigation & Theme Controls -->
+      <div class="flex items-center gap-2.5 font-ui text-xs font-bold">
+        
+        <!-- Theme Switchers -->
+        <div class="flex items-center bg-[var(--bg-page)] border border-[var(--border-main)] rounded-xl p-1">
+          <button onclick="setTheme('cream')" class="px-2.5 py-1 rounded-lg hover:bg-[var(--bg-card)] transition">كريمي</button>
+          <button onclick="setTheme('sepia')" class="px-2.5 py-1 rounded-lg hover:bg-[var(--bg-card)] transition">عتيق</button>
+          <button onclick="setTheme('dark')" class="px-2.5 py-1 rounded-lg hover:bg-[var(--bg-card)] transition">داكن</button>
+        </div>
+
+        <!-- Link to Book Reader -->
+        <a href="Book_Reader.html" target="_blank" class="px-3 py-2 rounded-xl bg-[var(--bg-subtle)] hover:bg-[var(--bg-card)] border border-[var(--border-main)] text-[var(--text-main)] flex items-center gap-1.5 transition shadow-sm">
+          <span>📚</span> قارئ الكتب التراثية
+        </a>
+
+        <!-- Link to Lessons -->
+        <div class="relative group">
+          <button class="px-3 py-2 rounded-xl bg-[var(--accent-gold)] text-white flex items-center gap-1.5 shadow-sm hover:opacity-95 transition">
+            <span>🎓 الدروس</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="absolute left-0 mt-1 w-48 bg-[var(--bg-card)] border border-[var(--border-main)] rounded-2xl shadow-2xl p-1.5 hidden group-hover:block z-50 text-xs font-bold">
+            <a href="00_المقدمة_والمبادئ/01_تعريف_علم_الأصول_وموضوعه_وغايته.html" class="block px-3 py-2 rounded-xl hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)]">الدرس 01: تعريف الأصول</a>
+            <a href="00_المقدمة_والمبادئ/02_تقسيم_المباحث_وحقيقة_الوضع_وأقسامه.html" class="block px-3 py-2 rounded-xl hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)]">الدرس 02: حقيقة الوضع</a>
+            <a href="00_المقدمة_والمبادئ/03_الدلالة_التصورية_والدلالة_التصديقية.html" class="block px-3 py-2 rounded-xl hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)]">الدرس 03: الدلالات اللفظية</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero & Instant Search Controls -->
+  <section class="bg-[var(--bg-card)] border-b border-[var(--border-main)] py-8 px-4 transition-colors">
+    <div class="max-w-4xl mx-auto space-y-6 text-center">
+      
+      <div>
+        <h2 class="font-ruqaa text-3xl md:text-4xl text-[var(--accent-gold)] mb-2">قاموس الأصوليين ومصطلحات الفقهاء</h2>
+        <p class="text-sm md:text-base text-[var(--text-muted)] font-ui max-w-2xl mx-auto">
+          محرر ومعتمد من أمهات معاجم المصطلحات (المشكيني، رفيق العجم، أحمد فتح الله، ياسين العاملي) لبيان المعاني الأصولية المعمقة وتطبيقاتها المعاصرة.
+        </p>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="relative max-w-2xl mx-auto">
+        <span class="absolute inset-y-0 right-4 flex items-center text-xl text-[var(--text-muted)]">🔍</span>
+        <input type="text" id="mainSearchInput" oninput="filterTerms()" placeholder="ابحث عن مصطلح (مثال: دليل إجماعي، استصحاب، حكومة، أحوط وجوباً، وضع)..." class="w-full bg-[var(--bg-page)] border-2 border-[var(--border-main)] focus:border-[var(--accent-gold)] rounded-2xl py-3.5 pr-12 pl-4 text-base font-ui text-[var(--text-main)] focus:outline-none shadow-inner transition">
+        <button onclick="clearSearch()" id="clearBtn" class="absolute inset-y-0 left-4 flex items-center text-sm text-[var(--text-muted)] hover:text-[var(--text-main)] hidden">✕ إلغاء</button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2 font-ui text-xs font-bold pt-2">
+        <button onclick="setCategoryFilter('all')" class="cat-pill active px-3.5 py-2 rounded-xl border border-[var(--accent-gold)] bg-[var(--accent-gold)] text-white transition shadow-sm" data-cat="all">
+          🌟 الكل (<span id="countAll">0</span>)
+        </button>
+        <button onclick="setCategoryFilter('evidences')" class="cat-pill px-3.5 py-2 rounded-xl border border-[var(--border-main)] bg-[var(--bg-page)] hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)] transition" data-cat="evidences">
+          ⚖️ الأدلة الشرعية والعقلية
+        </button>
+        <button onclick="setCategoryFilter('principles')" class="cat-pill px-3.5 py-2 rounded-xl border border-[var(--border-main)] bg-[var(--bg-page)] hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)] transition" data-cat="principles">
+          ⚙️ الأصول العملية والقواعد
+        </button>
+        <button onclick="setCategoryFilter('semantics')" class="cat-pill px-3.5 py-2 rounded-xl border border-[var(--border-main)] bg-[var(--bg-page)] hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)] transition" data-cat="semantics">
+          🔤 مباحث الألفاظ والدلالات
+        </button>
+        <button onclick="setCategoryFilter('conflict')" class="cat-pill px-3.5 py-2 rounded-xl border border-[var(--border-main)] bg-[var(--bg-page)] hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)] transition" data-cat="conflict">
+          🔄 التعارض ومناهج الجمع
+        </button>
+        <button onclick="setCategoryFilter('fatwa')" class="cat-pill px-3.5 py-2 rounded-xl border border-[var(--border-main)] bg-[var(--bg-page)] hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)] transition" data-cat="fatwa">
+          📜 مصطلحات الرسائل العملية
+        </button>
+      </div>
+
+      <!-- Alphabet Filter Bar -->
+      <div id="alphabetBar" class="flex flex-wrap items-center justify-center gap-1 text-xs font-ui font-bold text-[var(--text-muted)] pt-1">
+        <!-- Generated by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Terms Grid -->
+  <main class="max-w-7xl mx-auto px-4 py-8 flex-1 w-full">
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="font-ui font-bold text-base md:text-lg text-[var(--text-main)] flex items-center gap-2">
+        <span>📑 المصطلحات المعجمية</span>
+        <span id="resultsCountBadge" class="text-xs px-2.5 py-0.5 rounded-full bg-[var(--accent-gold-soft)] text-[var(--accent-gold)] font-bold">15 مصطلح</span>
+      </h3>
+      <span class="text-xs text-[var(--text-muted)] font-ui">انقر على أي مصطلح لفتح بطاقة التحليل الكاملة والربط بالكتب التراثية</span>
+    </div>
+
+    <!-- The Grid Container -->
+    <div id="termsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Generated by JS -->
+    </div>
+
+    <!-- Empty Search State -->
+    <div id="emptyState" class="hidden py-16 text-center space-y-3 font-ui">
+      <span class="text-5xl">🔍</span>
+      <h4 class="text-lg font-bold text-[var(--text-main)]">لم يتم العثور على مصطلحات مطابقة</h4>
+      <p class="text-xs text-[var(--text-muted)]">جرب البحث بكلمة أخرى أو تصفح حسب الفئات أعلاه.</p>
+    </div>
+  </main>
+
+  <!-- Detailed Term Modal (The 7-Facet Dossier) -->
+  <div id="termModal" onclick="onModalBackdropClick(event)">
+    <div class="modal-box">
+      
+      <!-- Modal Header -->
+      <div class="p-5 border-b border-[var(--border-main)] bg-[var(--bg-subtle)] flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span id="modalIcon" class="text-3xl">⚖️</span>
+          <div>
+            <h2 id="modalTermTitle" class="font-ruqaa text-2xl md:text-3xl text-[var(--accent-gold)]">اسم المصطلح</h2>
+            <div class="flex items-center gap-2 mt-1 font-ui text-xs">
+              <span id="modalCategoryBadge" class="px-2.5 py-0.5 rounded-full bg-[var(--accent-gold-soft)] text-[var(--accent-gold)] font-bold border border-[var(--accent-gold)]/20">التصنيف</span>
+              <span id="modalLetterBadge" class="font-mono text-[var(--text-muted)] font-bold">حرف: م</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a id="modalReaderLink" href="#" target="_blank" class="px-3 py-1.5 rounded-xl text-xs font-ui font-bold bg-[var(--accent-gold)] text-white shadow-sm hover:opacity-90 flex items-center gap-1 transition" title="فتح شرح المصطلح في كتاب أصلي">
+            <span>📖</span> قارئ الكتب
+          </a>
+          <button onclick="copyTermFullText()" class="px-3 py-1.5 rounded-xl text-xs font-ui font-bold bg-[var(--bg-card)] hover:bg-[var(--bg-page)] border border-[var(--border-main)] text-[var(--text-main)] flex items-center gap-1 transition shadow-sm" title="نسخ بطاقة المصطلح">
+            <span>📋</span> نسخ
+          </button>
+          <button onclick="closeTermModal()" class="p-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-page)] transition" title="إغلاق (Esc)">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (The 7 Facets) -->
+      <div class="p-6 overflow-y-auto space-y-4 text-sm leading-loose">
+        
+        <!-- 1. التعريف اللغوي والاصطلاحي -->
+        <div class="facet-section">
+          <div class="facet-title"><span>📘</span> 1. التعريف اللغوي والاصطلاحي المعتمد</div>
+          <div class="space-y-2">
+            <p><strong class="text-[var(--accent-gold)]">في اللغة:</strong> <span id="modalDefLing">-</span></p>
+            <p><strong class="text-[var(--accent-gold)]">في الاصطلاح الأصولي/الفقهي:</strong> <span id="modalDefTech">-</span></p>
+          </div>
+        </div>
+
+        <!-- 2. التطور التاريخي وموقف المدارس -->
+        <div class="facet-section">
+          <div class="facet-title"><span>⏳</span> 2. المنشأ والتطور التاريخي (المتقدمون vs المتأخرون)</div>
+          <p id="modalHistory" class="text-[var(--text-main)] leading-relaxed">-</p>
+        </div>
+
+        <!-- 3. الأقسام والتفريعات -->
+        <div class="facet-section">
+          <div class="facet-title"><span>🌿</span> 3. الأقسام والتفريعات الأصولية للمصطلح</div>
+          <ul id="modalSubdivisions" class="space-y-1.5 pr-4 list-disc text-[var(--text-main)]"></ul>
+        </div>
+
+        <!-- 4. الشواهد القرآنية والحديثية -->
+        <div class="facet-section">
+          <div class="facet-title"><span>📖</span> 4. الشاهد القرآني والروائي والعقلي</div>
+          <p id="modalEvidence" class="italic text-[var(--text-main)] bg-[var(--bg-card)] p-3 rounded-xl border border-[var(--border-main)] leading-relaxed">-</p>
+        </div>
+
+        <!-- 5. التطبيق الفقهي العملي المعاصر -->
+        <div class="facet-section">
+          <div class="facet-title"><span>⚖️</span> 5. التطبيق العملي في الفتاوى والرسائل العملية</div>
+          <div id="modalPractical" class="text-[var(--text-main)] whitespace-pre-line leading-relaxed"></div>
+        </div>
+
+        <!-- 6. المفاهيم المقابلة والفروق الدقيقة -->
+        <div class="facet-section bg-amber-500/5 border-amber-500/20">
+          <div class="facet-title text-amber-700 dark:text-amber-400"><span>⚡</span> 6. المفاهيم المقابلة والفرق الدقيق</div>
+          <p id="modalContrast" class="text-[var(--text-main)] font-medium leading-relaxed">-</p>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-[var(--border-main)] bg-[var(--bg-subtle)] flex items-center justify-between font-ui text-xs text-[var(--text-muted)]">
+        <span>المصدر: مصطلحات الفقه للمشكيني، موسوعة رفيق العجم، ألفاظ الفقه الجعفري، الرسائل العملية.</span>
+        <button onclick="closeTermModal()" class="px-4 py-1.5 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-page)] text-[var(--text-main)] border border-[var(--border-main)] font-bold transition">
+          إغلاق النافذة
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Load Offline Dictionary Database Script -->
+  <script src="Resources/dictionary_data/dictionary_db.js"></script>
+
+  <!-- Application Logic -->
+  <script>
+    let activeCategory = 'all';
+    let activeLetter = 'all';
+    let searchQuery = '';
+    let currentTerm = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initAlphabetBar();
+      renderTerms();
+
+      // Check if URL has ?term=id
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('term')) {
+        openTermById(params.get('term'));
+      }
+
+      // Keyboard Esc
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeTermModal();
+      });
+    });
+
+    function initAlphabetBar() {
+      const bar = document.getElementById('alphabetBar');
+      bar.innerHTML = '<button onclick="setLetterFilter(\'all\')" class="px-2 py-0.5 rounded hover:text-[var(--accent-gold)] font-bold text-amber-600">الكل</button>';
+
+      const letters = ['أ', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'هـ', 'و', 'ي'];
+      letters.forEach(l => {
+        const btn = document.createElement('button');
+        btn.textContent = l;
+        btn.className = 'px-1.5 py-0.5 rounded hover:bg-[var(--accent-gold-soft)] hover:text-[var(--accent-gold)] transition';
+        btn.onclick = () => setLetterFilter(l);
+        bar.appendChild(btn);
+      });
+    }
+
+    function renderTerms() {
+      const grid = document.getElementById('termsGrid');
+      const empty = document.getElementById('emptyState');
+      grid.innerHTML = '';
+
+      if (!window.MASTER_DICTIONARY_TERMS) return;
+
+      const terms = window.MASTER_DICTIONARY_TERMS;
+      document.getElementById('countAll').textContent = terms.length;
+
+      let filtered = terms.filter(t => {
+        // Cat filter
+        if (activeCategory !== 'all' && t.cat_id !== activeCategory) return false;
+        // Letter filter
+        if (activeLetter !== 'all' && t.letter !== activeLetter) return false;
+        // Search
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          const matchTerm = t.term.toLowerCase().includes(q);
+          const matchDef = (t.definition_technical + t.definition_linguistic).toLowerCase().includes(q);
+          const matchPractical = t.practical_application.toLowerCase().includes(q);
+          if (!matchTerm && !matchDef && !matchPractical) return false;
+        }
+        return true;
+      });
+
+      document.getElementById('resultsCountBadge').textContent = filtered.length + ' مصطلح';
+
+      if (filtered.length === 0) {
+        empty.classList.remove('hidden');
+        return;
+      } else {
+        empty.classList.add('hidden');
+      }
+
+      filtered.forEach(t => {
+        const card = document.createElement('div');
+        card.className = 'term-card';
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xl">${t.icon}</span>
+                <h4 class="font-ruqaa text-xl text-[var(--accent-gold)]">${t.term}</h4>
+              </div>
+              <span class="inline-block mt-1 px-2.5 py-0.5 rounded-full text-[11px] font-ui font-bold bg-[var(--bg-subtle)] text-[var(--text-muted)] border border-[var(--border-main)]">
+                ${t.category}
+              </span>
+            </div>
+            <span class="font-mono text-xs font-bold px-2 py-1 rounded bg-[var(--bg-page)] text-[var(--text-muted)]">${t.letter}</span>
+          </div>
+
+          <p class="text-xs text-[var(--text-main)] leading-relaxed line-clamp-3 mb-4 flex-1">
+            ${t.definition_technical}
+          </p>
+
+          <div class="pt-3 border-t border-[var(--border-main)] flex items-center justify-between font-ui text-xs">
+            <button onclick="openTermById('${t.id}')" class="font-bold text-[var(--accent-gold)] hover:underline flex items-center gap-1">
+              <span>📖</span> استعراض البطاقة الكاملة
+            </button>
+            <span class="text-[10px] text-[var(--text-muted)]">معجم المشكيني والعجم</span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function openTermById(termId) {
+      const term = window.MASTER_DICTIONARY_TERMS.find(t => t.id === termId);
+      if (!term) return;
+      currentTerm = term;
+
+      document.getElementById('modalIcon').textContent = term.icon;
+      document.getElementById('modalTermTitle').textContent = term.term;
+      document.getElementById('modalCategoryBadge').textContent = term.category;
+      document.getElementById('modalLetterBadge').textContent = 'حرف: ' + term.letter;
+
+      document.getElementById('modalDefLing').textContent = term.definition_linguistic;
+      document.getElementById('modalDefTech').textContent = term.definition_technical;
+      document.getElementById('modalHistory').textContent = term.history_evolution;
+      document.getElementById('modalEvidence').textContent = term.evidence;
+      document.getElementById('modalPractical').textContent = term.practical_application;
+      document.getElementById('modalContrast').textContent = term.contrast;
+
+      // Subdivisions list
+      const subList = document.getElementById('modalSubdivisions');
+      subList.innerHTML = '';
+      term.subdivisions.forEach(s => {
+        const li = document.createElement('li');
+        li.textContent = s;
+        subList.appendChild(li);
+      });
+
+      // Reader link
+      const rLink = document.getElementById('modalReaderLink');
+      if (term.reader_ref && term.reader_ref.book) {
+        rLink.href = `Book_Reader.html?book=${term.reader_ref.book}&page=${term.reader_ref.page}`;
+        rLink.classList.remove('hidden');
+      } else {
+        rLink.classList.add('hidden');
+      }
+
+      const modal = document.getElementById('termModal');
+      modal.classList.add('open');
+    }
+
+    function closeTermModal() {
+      const modal = document.getElementById('termModal');
+      modal.classList.remove('open');
+    }
+
+    function onModalBackdropClick(e) {
+      if (e.target.id === 'termModal') closeTermModal();
+    }
+
+    function filterTerms() {
+      searchQuery = document.getElementById('mainSearchInput').value.trim();
+      const clearBtn = document.getElementById('clearBtn');
+      if (searchQuery.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      renderTerms();
+    }
+
+    function clearSearch() {
+      document.getElementById('mainSearchInput').value = '';
+      searchQuery = '';
+      document.getElementById('clearBtn').classList.add('hidden');
+      renderTerms();
+    }
+
+    function setCategoryFilter(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.className = 'cat-pill active px-3.5 py-2 rounded-xl border border-[var(--accent-gold)] bg-[var(--accent-gold)] text-white transition shadow-sm';
+        } else {
+          btn.className = 'cat-pill px-3.5 py-2 rounded-xl border border-[var(--border-main)] bg-[var(--bg-page)] hover:bg-[var(--accent-gold-soft)] text-[var(--text-main)] transition';
+        }
+      });
+      renderTerms();
+    }
+
+    function setLetterFilter(l) {
+      activeLetter = l;
+      renderTerms();
+    }
+
+    function setTheme(theme) {
+      if (theme === 'cream') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    }
+
+    function copyTermFullText() {
+      if (!currentTerm) return;
+      const text = `[المعجم الحوزوي الشامل: ${currentTerm.term}]\n[التصنيف: ${currentTerm.category}]\n\n1. التعريف اللغوي:\n${currentTerm.definition_linguistic}\n\n2. التعريف الاصطلاحي:\n${currentTerm.definition_technical}\n\n3. المنشأ والتطور التاريخي:\n${currentTerm.history_evolution}\n\n4. الأقسام والتفريعات:\n${currentTerm.subdivisions.join('\n')}\n\n5. الشاهد:\n${currentTerm.evidence}\n\n6. التطبيق في الفتوى:\n${currentTerm.practical_application}\n\n7. المفاهيم المقابلة:\n${currentTerm.contrast}\n\n[المصدر: معجم مصطلحات الفقه والأصول]`;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        alert('تم نسخ بطاقة المصطلح الكاملة بنجاح!');
+      });
+    }
+  </script>
+</body>
+</html>
