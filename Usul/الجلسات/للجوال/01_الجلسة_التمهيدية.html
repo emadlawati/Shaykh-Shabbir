@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="تقرير الجلسة التمهيدية من درس الشيخ شبير في أصول الفقه: نشأة العلم، الإشكالات المؤسسة، الحجة والاطمئنان، الأصولية والأخبارية، الأعلام، ولماذا ندرس الأصول.">
+  <title>الجلسة 01 — لماذا وُجد علم الأصول؟</title>
+  <script>try{const t=localStorage.getItem('shabbir_usul_theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <style>
+:root {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --surface: #fffdf8;
+  --surface-2: #f0ece3;
+  --ink: #17201d;
+  --muted: #64706a;
+  --line: #dcd5c8;
+  --primary: #176b54;
+  --primary-strong: #0e4e3c;
+  --primary-soft: #e3f2ec;
+  --gold: #9a6718;
+  --gold-soft: #fbf0d7;
+  --blue: #285b87;
+  --blue-soft: #e7f0f8;
+  --rose: #9a3d4d;
+  --rose-soft: #f9e7ea;
+  --shadow: 0 18px 55px rgb(38 44 40 / 10%);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101614;
+  --surface: #17201d;
+  --surface-2: #1d2925;
+  --ink: #eef4f0;
+  --muted: #a6b2ac;
+  --line: #34423c;
+  --primary: #66c5a4;
+  --primary-strong: #8edbbb;
+  --primary-soft: #183a30;
+  --gold: #e4b75f;
+  --gold-soft: #3d311b;
+  --blue: #8bb8df;
+  --blue-soft: #1c3449;
+  --rose: #e79baa;
+  --rose-soft: #43252c;
+  --shadow: 0 18px 55px rgb(0 0 0 / 28%);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 88% 5%, color-mix(in srgb, var(--primary) 13%, transparent), transparent 27rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  line-height: 1.85;
+}
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: var(--primary); }
+.shell { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+.site-header { padding: 30px 0 16px; }
+.eyebrow { margin: 0 0 6px; color: var(--gold); font-weight: 800; font-size: .88rem; letter-spacing: .03em; }
+h1, h2, h3, h4 { line-height: 1.4; margin: 0; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; }
+h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+h3 { font-size: 1.1rem; }
+p { margin: .55rem 0 1rem; }
+.header-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
+.header-copy { max-width: 850px; }
+.subtitle { color: var(--muted); max-width: 800px; font-size: 1.04rem; }
+.header-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.btn {
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 12px;
+  padding: 9px 14px; cursor: pointer; font-weight: 750; transition: .18s ease; text-decoration: none;
+}
+.btn:hover, .btn:focus-visible { border-color: var(--primary); transform: translateY(-1px); outline: none; }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+html[data-theme="dark"] .btn.primary { color: #0d1a15; }
+.btn.small { padding: 5px 10px; font-size: .82rem; border-radius: 9px; }
+.progress-panel { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px 17px; box-shadow: var(--shadow); }
+.progress-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; font-size: .9rem; font-weight: 700; }
+.progress-track { height: 9px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-top: 8px; }
+.progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--gold)); transition: width .25s ease; }
+.tabs-wrap { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); }
+.tabs { display: flex; gap: 8px; overflow-x: auto; padding: 11px 0; scrollbar-width: thin; }
+.tab {
+  white-space: nowrap; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--muted);
+  padding: 8px 13px; cursor: pointer; font-weight: 800; font-size: .9rem;
+}
+.tab[aria-selected="true"] { background: var(--primary); color: #fff; box-shadow: 0 8px 18px color-mix(in srgb, var(--primary) 28%, transparent); }
+html[data-theme="dark"] .tab[aria-selected="true"] { color: #0d1a15; }
+main { padding: 28px 0 64px; }
+.panel[hidden] { display: none; }
+.panel { animation: enter .22s ease; }
+@keyframes enter { from { opacity: 0; transform: translateY(5px); } }
+.section-head { margin-bottom: 18px; }
+.section-head p { color: var(--muted); max-width: 850px; }
+.grid { display: grid; gap: 16px; }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; box-shadow: 0 8px 30px rgb(32 39 35 / 5%); }
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+.card.accent { border-top: 4px solid var(--primary); }
+.card.gold { border-top: 4px solid var(--gold); }
+.card.blue { border-top: 4px solid var(--blue); }
+.card.rose { border-top: 4px solid var(--rose); }
+.muted { color: var(--muted); }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; }
+.pill { display: inline-flex; align-items: center; gap: 5px; border-radius: 999px; padding: 4px 9px; font-weight: 800; font-size: .75rem; background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+.pill.core { background: var(--primary-soft); color: var(--primary-strong); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
+.pill.advanced { background: var(--gold-soft); color: var(--gold); border-color: color-mix(in srgb, var(--gold) 35%, var(--line)); }
+.pill.verified { background: var(--blue-soft); color: var(--blue); }
+.callout { border-right: 4px solid var(--primary); background: var(--primary-soft); padding: 15px 17px; border-radius: 13px; margin: 15px 0; }
+.callout.gold { border-color: var(--gold); background: var(--gold-soft); }
+.callout.rose { border-color: var(--rose); background: var(--rose-soft); }
+.definition { font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; font-weight: 700; }
+.source-button { border: 0; background: transparent; color: var(--primary); cursor: pointer; font-weight: 850; padding: 0; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.source-button:hover { color: var(--gold); }
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 10px; }
+.steps li { counter-increment: step; position: relative; padding: 13px 52px 13px 14px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 13px; }
+.steps li::before { content: counter(step); position: absolute; right: 12px; top: 12px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; }
+.argument-map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
+.argument-map div { min-height: 120px; padding: 12px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.argument-map strong { display: block; color: var(--gold); margin-bottom: 5px; }
+.comparison { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.comparison th, .comparison td { padding: 11px; border: 1px solid var(--line); text-align: right; vertical-align: top; }
+.comparison th { background: var(--surface-2); color: var(--primary-strong); }
+.scroll-x { overflow-x: auto; border-radius: 14px; }
+.exercise { border: 1px dashed color-mix(in srgb, var(--primary) 55%, var(--line)); border-radius: 15px; padding: 16px; margin: 12px 0; background: color-mix(in srgb, var(--primary-soft) 40%, var(--surface)); }
+.answer { margin-top: 12px; padding: 13px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.answer[hidden] { display: none; }
+.task-list { list-style: none; padding: 0; display: grid; gap: 10px; }
+.task-list label { display: flex; align-items: flex-start; gap: 10px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); cursor: pointer; }
+.task-list input { margin-top: 7px; accent-color: var(--primary); width: 17px; height: 17px; }
+.flash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.flashcard { text-align: right; min-height: 145px; width: 100%; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--ink); padding: 17px; cursor: pointer; }
+.flashcard .front { font-weight: 850; color: var(--primary-strong); }
+.flashcard .back { margin-top: 10px; color: var(--muted); }
+.flashcard .back[hidden] { display: none; }
+.notes, .error-log { width: 100%; min-height: 260px; resize: vertical; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 14px; padding: 14px; line-height: 1.8; }
+.error-log { min-height: 150px; }
+.notes:focus, .error-log:focus { outline: 2px solid color-mix(in srgb, var(--primary) 45%, transparent); border-color: var(--primary); }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 9px; }
+.source-grid { display: grid; gap: 12px; }
+.source-item { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 15px; }
+.source-item h3 { margin-bottom: 5px; }
+.source-meta { color: var(--muted); font-size: .84rem; }
+.footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: .84rem; text-align: center; }
+.drawer-overlay { position: fixed; inset: 0; background: rgb(0 0 0 / 58%); z-index: 49; opacity: 0; pointer-events: none; transition: .2s; }
+.drawer-overlay.open { opacity: 1; pointer-events: auto; }
+.drawer { position: fixed; z-index: 50; top: 0; right: 0; height: 100%; width: min(620px, 94vw); background: var(--surface); border-left: 1px solid var(--line); transform: translateX(105%); transition: transform .25s ease; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+.drawer.open { transform: translateX(0); }
+.drawer-head { display: flex; justify-content: space-between; gap: 16px; align-items: start; padding: 18px; border-bottom: 1px solid var(--line); }
+.drawer-body { padding: 18px; overflow: auto; }
+.source-text { white-space: pre-line; font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; line-height: 2.05; background: var(--surface-2); border-right: 4px solid var(--gold); padding: 16px; border-radius: 12px; }
+.lesson-prose { overflow-wrap: anywhere; }
+.lesson-prose h2 { margin-bottom: 14px; color: var(--primary-strong); }
+.lesson-prose h3 { margin: 28px 0 10px; color: var(--gold); }
+.lesson-prose h4 { margin: 20px 0 8px; }
+.lesson-prose li { margin: 6px 0; }
+.lesson-prose table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; margin: 16px 0 22px; }
+.lesson-prose th, .lesson-prose td { border: 1px solid var(--line); padding: 10px 12px; text-align: right; vertical-align: top; min-width: 120px; }
+.lesson-prose th { background: var(--surface-2); color: var(--primary-strong); }
+.lesson-prose details { border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); padding: 10px 14px; margin: 12px 0; }
+.lesson-prose details summary { cursor: pointer; color: var(--primary-strong); font-weight: 800; }
+.lesson-prose details[open] { border-color: var(--primary); }
+.lesson-prose hr { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+.lesson-controls, .source-shortcuts { margin-top: 16px; }
+.source-shortcuts .source-button { margin: 0 6px; }
+.lesson-controls input[type="date"] { width: 100%; margin-top: 5px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); border-radius: 8px; padding: 5px; }
+.provenance { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: .84rem; margin: 15px 0; }
+.provenance dt { color: var(--muted); }
+.provenance dd { margin: 0; font-weight: 700; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Session files: Shaykh Shabbir's lecture as the spine */
+.pill.teacher { background: var(--primary-soft); color: var(--primary-strong); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
+.pill.editor { background: var(--gold-soft); color: var(--gold); border-color: color-mix(in srgb, var(--gold) 35%, var(--line)); }
+.pill.check { background: var(--rose-soft); color: var(--rose); border-color: color-mix(in srgb, var(--rose) 35%, var(--line)); }
+.point { margin: 0 0 16px; }
+.point h3 { color: var(--primary-strong); }
+.point dl { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 10px 14px; margin: 14px 0 0; }
+.point dt { font-weight: 850; color: var(--muted); font-size: .88rem; padding-top: 3px; }
+.point dd { margin: 0; overflow-wrap: anywhere; }
+.point dd > :first-child { margin-top: 0; }
+.point dd > :last-child { margin-bottom: 0; }
+.matn { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.04rem; line-height: 2; background: var(--surface-2); border-right: 4px solid var(--gold); padding: 9px 13px; border-radius: 10px; }
+.matn cite { display: block; font-style: normal; font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: .8rem; color: var(--muted); margin-top: 4px; }
+.editor-note, .check-note { border-right: 3px dashed var(--gold); background: color-mix(in srgb, var(--gold-soft) 55%, transparent); padding: 8px 12px; border-radius: 9px; margin: 8px 0; }
+.check-note { border-right-color: var(--rose); background: color-mix(in srgb, var(--rose-soft) 55%, transparent); }
+.editor-note::before { content: "إضافة تحريرية: "; font-weight: 850; color: var(--gold); }
+.check-note::before { content: "للتحقق: "; font-weight: 850; color: var(--rose); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .85rem; color: var(--muted); }
+.session-banner { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; border: 1px solid color-mix(in srgb, var(--gold) 45%, var(--line)); background: var(--gold-soft); border-radius: 14px; padding: 10px 14px; margin-top: 14px; font-size: .92rem; }
+
+@media (max-width: 850px) {
+  .header-grid, .grid.two, .grid.three, .flash-grid { grid-template-columns: 1fr; }
+  .header-actions { justify-content: flex-start; }
+  .argument-map { grid-template-columns: 1fr; }
+  .argument-map div { min-height: auto; }
+  .point dl { grid-template-columns: 1fr; gap: 4px; }
+  .point dt { padding-top: 8px; }
+}
+
+@media print {
+  .tabs-wrap, .header-actions, .btn, .drawer, .drawer-overlay { display: none !important; }
+  body { background: #fff; color: #000; }
+  .panel[hidden] { display: block; }
+  .card, .source-item { box-shadow: none; break-inside: avoid; }
+}
+
+</style>
+</head>
+<body data-lesson="s01">
+  <header class="site-header"><div class="shell header-grid">
+    <div class="header-copy"><p class="eyebrow">درس الشيخ شبير • الجلسة 01 • تمهيدية خارج المتن</p>
+      <h1>لماذا وُجد علم الأصول؟</h1>
+      <p class="subtitle">افتتح الشيخ بإشكالات من نصوص حقيقية وتركها معلّقة، ثم روى قصة العلم: من المسائل المتفرقة إلى «الحجة»، ومن الصراع الأصولي الأخباري إلى الأنصاري والآخوند والصدر والسيستاني، وختم بسبب دراسة الأصول واختيار الكتاب.</p>
+      <div class="legend"><span class="pill teacher">تقرير الشيخ</span><span class="pill editor">إضافة تحريرية</span><span class="pill check">للتحقق أو سؤال للشيخ</span><span class="pill verified">نص محقق من قاعدة الكتب</span></div></div>
+    <div class="header-actions"><button class="btn" id="theme-toggle" type="button"><span id="theme-label">النمط الداكن</span></button>
+      <button class="btn" id="print-lesson" type="button">طباعة</button>
+      <a class="btn" href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/Usul/%D8%A7%D9%84%D8%AC%D9%84%D8%B3%D8%A7%D8%AA/%D9%85%D9%84%D8%A7%D8%AD%D8%B8%D8%A7%D8%AA_%D8%AE%D8%A7%D9%85/%D8%AC%D9%84%D8%B3%D8%A9_01.md" target="_blank" rel="noopener">الملاحظات الخام</a></div>
+  </div><div class="shell progress-panel" aria-label="تقدم المراجعة"><div class="progress-row"><span>مراجعة الجلسة</span>
+  <span id="progress-text">0 من 5 • 0٪</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div></div></header>
+
+  <nav class="tabs-wrap" aria-label="أقسام الجلسة"><div class="shell tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="false" data-tab="orientation">1. مسار الجلسة</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="examples">2. أمثلة الشيخ ونكاتها</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="questions">3. أسئلة على طريقة الشيخ</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="deeper">4. للتوسع (اختياري)</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="next">5. المراجعة والتحضير</button>
+  </div></nav>
+
+  <main class="shell">
+  <!-- ============ 1. مسار الجلسة ============ -->
+  <section class="panel" id="panel-orientation" tabindex="-1" hidden>
+    <div class="section-head"><h2>مسار الجلسة كما عرضه الشيخ</h2>
+      <p>كل نقطة: بيان الشيخ ← مثاله أو سؤاله ← <strong>النكتة</strong> (ما الذي أراد إثباته) ← أين تعود في الموجز. ما ليس من كلام الشيخ معلَّم بأنه إضافة تحريرية.</p></div>
+
+    <article class="card point accent"><h3>1. العلم وُلد مسائلَ متفرقة ثم جُمع</h3>
+      <dl>
+        <dt>بيان الشيخ</dt><dd>بدأ علم أصول الفقه مسائلَ متفرقة في كتب أخرى، كـ«باب التعارض واختلاف الحديث». ثم جُمعت المسائل العامة في علم مستقل <strong>يبحث عن الأدلة التي يُستفاد منها في الاستنباط الفقهي</strong>: الاستحسان، القياس، حجية خبر الواحد…</dd>
+        <dt>النكتة</dt><dd>العلم نشأ من <strong>مشكلات متكررة</strong> في التعامل مع النصوص (الإشكالات الثلاثة الآتية)، لا من تنظير مجرد.</dd>
+        <dt>إضافات</dt><dd>
+          <p class="editor-note">مثال معروف لهذا الباب: «باب اختلاف الحديث» في كتاب فضل العلم من أصول الكافي.</p>
+          <p class="editor-note">ذكر القياس والاستحسان في موضوعات العلم لا يعني قبولهما؛ فالأصولي الإمامي يبحث حجيتهما لينفيها، ونفي الحجية نتيجة أصولية أيضاً.</p>
+          <p class="check-note">في الملاحظات «بعض كتب الرجال»؛ والأقرب أنها كتب الحديث (كالكافي). راجع ما قصده الشيخ.</p></dd>
+        <dt>يعود في</dt><dd>تعارض الأدلة: الموجز ص 219–238.</dd>
+      </dl></article>
+
+    <article class="card point gold"><h3>2. الإشكال الأول: الصلاة في الحمّام</h3>
+      <dl>
+        <dt>الحالة</dt><dd>لا شك أن الصلاة مستحبة في كل حال، لكن عندنا روايات تنهى عن الصلاة في الحمّام.</dd>
+        <dt>ضبط اللفظ</dt><dd>الحمّام في لغة الروايات هو الحمّام العام على نمط الحمّامات الرومانية، لا دورة المياه بالمعنى المعاصر.
+          <p class="check-note">في الملاحظات «مكان السباحة». الحمّام العام موضع للاغتسال أساساً؛ صحّح التعبير إن لم يقصد الشيخ السباحة.</p></dd>
+        <dt>سؤال الشيخ</dt><dd>«فكيف أتعامل مع هذه الروايات؟» <span class="pill">تركه معلّقاً</span></dd>
+        <dt>النكتة</dt><dd>أمرٌ بطبيعة الصلاة ونهيٌ عن حصة منها في مورد واحد: هل يجتمع الحكمان؟ وهل النهي تحريم، أو كراهة، أو إشارة إلى نقص في هذه الحصة؟ هذا سؤال لا يجيب عنه الفقه وحده.</dd>
+        <dt>يعود في</dt><dd>اجتماع الأمر والنهي: الموجز ص 66–70، والنهي عن العبادة ص 70–72. والمثال نفسه يعالجه الآخوند في «العبادات المكروهة» (الكفاية ص 161–164، في التبويب 4).</dd>
+      </dl></article>
+
+    <article class="card point gold"><h3>3. الإشكال الثاني: ﴿وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ﴾</h3>
+      <dl>
+        <dt>النص</dt><dd>﴿وَأَنكِحُوا الْأَيَامَىٰ مِنكُمْ وَالصَّالِحِينَ مِنْ عِبَادِكُمْ وَإِمَائِكُمْ ۚ إِن يَكُونُوا فُقَرَاءَ يُغْنِهِمُ اللَّهُ مِن فَضْلِهِ﴾ (النور: 32)</dd>
+        <dt>بيان الشيخ</dt><dd>الآية تأمر بالإنكاح، أي أن تكون سبباً لحصول الزواج.</dd>
+        <dt>أسئلة الشيخ</dt><dd>هل يشمل الأمر الزوجة الثانية والثالثة؟ هل يشمل الزواج المنقطع؟ وعندنا نصوص تبين استحباباً كبيراً للخروج من العزوبية إلى الزواج؛ فهل تريد الآية الشيء نفسه؟</dd>
+        <dt>النكتة</dt><dd>ثلاثة أسئلة أصولية في آية واحدة: ما مفاد صيغة الأمر هنا (وجوب أو استحباب أو إرشاد)؟ ما حدود إطلاق متعلّقه؟ وهل تفسّر النصوص الأخرى مراد الآية؟</dd>
+        <dt>إضافات</dt><dd><p class="editor-note">«الأيامى» جمع «أيِّم»: من لا زوج له، رجلاً كان أو امرأة. فتحرير المفردة يعيد صياغة سؤال الزوجة الثانية: الرجل المتزوج ليس أيِّماً، أما المرأة التي يتزوجها فقد تكون أيِّماً. ضبط الكلمة يسبق تطبيق القاعدة.</p></dd>
+        <dt>يعود في</dt><dd>الأوامر: مفاد الهيئة ودلالتها على الوجوب، الموجز ص 35–38؛ المطلق والمقيد ومقدمات الحكمة ص 119–128.</dd>
+      </dl></article>
+
+    <article class="card point gold"><h3>4. الإشكال الثالث: مسافة التقصير والمشقة</h3>
+      <dl>
+        <dt>الحالة</dt><dd>من الواضح جداً أن السفر في أيام النبي ﷺ والأئمة عليهم السلام كان فيه مشقة.</dd>
+        <dt>سؤال الشيخ</dt><dd>«فهل نحمل المسافة في الروايات على ما فيه مشقة مقارنة بالأيام الماضية؟ أم نثبت على المسافة نفسها المطروحة في الروايات؟»</dd>
+        <dt>النكتة</dt><dd>إما الأخذ بظاهر التحديد، وإما تعدية الحكم بملاك مستنبط هو المشقة. والسؤال الحاسم: هل المشقة <strong>علة</strong> يدور معها الحكم، أم <strong>حكمة</strong> للتشريع لا يدور معها؟</dd>
+        <dt>إضافات</dt><dd><p class="editor-note">المصطلح المتداول لهذا الباب: الفرق بين العلة والحكمة، وتنقيح المناط.</p>
+          <p class="check-note">لا يعقد الموجز فصلاً مستقلاً للعلة والحكمة. أقرب المواضع: حجية الظواهر ص 156، ومقدمات الحكمة ص 125. اسأل الشيخ أين سيعالجه.</p></dd>
+      </dl></article>
+
+    <article class="card point accent"><h3>5. الأصولية والأخبارية، وتشدد القبول بعد العلامة</h3>
+      <dl>
+        <dt>بيان الشيخ</dt><dd>قام صراع بين الأصولية والأخبارية. وبعد العلامة الحلي صار تقييد شديد في الأخذ بالروايات؛ فبعضهم تبنّى أن العدالة والوثاقة لا تثبت إلا بشاهدين، فيحتاج الراوي إلى توثيق النجاشي والطوسي معاً. والأخباريون قالوا: عندنا <strong>علم</strong> بسبب القرائن التي جمعوها.</dd>
+        <dt>النكتة</dt><dd>كلما شُدّدت شروط الحجية ضاقت دائرة الأخبار المعمول بها. والأخباري يجيب عن المشكلة بدعوى العلم، لا بالحجة الظنية.</dd>
+        <dt>إضافات</dt><dd>
+          <p class="check-note">اشتراط تزكية عدلين يُنسب عادة إلى صاحب المعالم (في «منتقى الجمان») وصاحب المدارك. اسأل الشيخ هل قصدهما.</p>
+          <p class="editor-note">موقف الموجز في الطرف المقابل: العبرة بالوثوق بالصدور، ووثاقة الراوي طريق إليه.</p>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="168"><span class="q">وهذه تشكّل قرينة على أنّ العبرة في الواقع بالوثوق بالصدور لا على وثاقة الراوي</span><cite>الموجز ص 168 • نص حرفي من قاعدة الكتب</cite></blockquote>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="181"><span class="q">إذا شكّ في حرمة شيء لأجل عدم النصّ عليها في الشريعة فقد ذهب الأصوليّون إلى البراءة والأخباريون إلى الاحتياط</span><cite>الموجز ص 181</cite></blockquote></dd>
+        <dt>يعود في</dt><dd>ظواهر الكتاب والأخباريون ص 156–157؛ خبر الواحد ص 161–171؛ البراءة ص 180 وما بعدها.</dd>
+      </dl></article>
+
+    <article class="card point blue"><h3>6. الاطمئنان ليس يقيناً، والحجية قطعية وإن كان المضمون ظنياً</h3>
+      <dl>
+        <dt>بيان الشيخ</dt><dd>الاطمئنان غير اليقين: هو 99٪ ويبقى فيه 1٪. أراد الأصوليون أن يثبتوا أشياء تكون <strong>حجة أمام الله سبحانه</strong>، لأن الوصول إلى العلم صعب؛ فقالوا بحجية ظنون متعددة. فكونه حجة قطعي، وهو في نفسه ظني. «باب العلم منسد، ولكن عندنا أبواب للحجج».</dd>
+        <dt>تصحيح الشيخ</dt><dd>تصوير أن الاطمئنان لا تردد فيه غير دقيق. ليس هو سكون النفس، وإنما <strong>المخوف (مثلاً الـ1٪) لا يُعتنى به</strong>.</dd>
+        <dt>النكتة</dt><dd>السؤال الأصولي المركزي هو «ما الذي يُعذِّر ويُنجِّز أمام المولى؟»، لا «ما الذي يورث اليقين؟».</dd>
+        <dt>إضافات</dt><dd><p class="editor-note">الاصطلاح الفني لعبارة الشيخ: انسداد «باب العلم» مع انفتاح «باب العلمي»، أي الظن الذي قام الدليل القطعي على اعتباره.</p>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="169-170"><span class="q">حصول الاطمئنان بخبر الثقة عند العرف على وجه يفيد سكونا للنفس</span><cite>الموجز ص 169–170</cite></blockquote>
+          <p class="check-note">الموجز يصف الاطمئنان بأنه «يفيد سكوناً للنفس»، والشيخ نفى أن يكون سكون نفس. هل الخلاف لفظي (سكون مع احتمال لا يُعتنى به) أم معنوي؟ سؤال جيد لطرحه.</p></dd>
+        <dt>يعود في</dt><dd>حجية خبر الواحد والسيرة العقلائية، الموجز ص 166–170.</dd>
+      </dl></article>
+
+    <article class="card point blue"><h3>7. لماذا لم يعرف المتقدمون «الحكم الظاهري»؟</h3>
+      <dl>
+        <dt>بيان الشيخ</dt><dd>حجية الظنون بهذه الطريقة لم تكن مطروحة ولا مقبولة عند المتقدمين؛ ولهذا لم تكن عندهم فكرة الحكم الظاهري. كانوا يدّعون الوصول إلى العلم، ولو انسد باب العلم لكان لازماً أن يظهر الإمام عليه السلام.</dd>
+        <dt>النكتة</dt><dd>الحكم الظاهري فرع قبول حجة ظنية أو أصل عملي عند الشك. فمن ادّعى العلم دائماً لم يحتج إلى هذا المفهوم.</dd>
+        <dt>إضافات</dt><dd>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="43"><span class="q">وأمّا الحكم الظاهري ، فهو الحكم الثابت للشيء عند عدم العلم بالحكم الواقعي ، وهذا كالأحكام الثابتة بالأمارات والأصول</span><cite>الموجز ص 43</cite></blockquote>
+          <p class="editor-note">الموجز نفسه ينقل أن الطوسي ادّعى الإجماع على حجية خبر الثقة، والمرتضى ادّعى الإجماع على عدمها (النص في التبويب 4). فكلمة «المتقدمين» تصدق بوضوح على المرتضى ومن وافقه.</p>
+          <p class="check-note">اسأل الشيخ: ما موقع الطوسي من هذا التعميم؟</p></dd>
+      </dl></article>
+
+    <article class="card point accent"><h3>8. الأعلام: من قلب العلم؟</h3>
+      <dl>
+        <dt>بيان الشيخ</dt><dd>
+          <ul>
+            <li>ظهرت أسماء كبيرة: <strong>الشيخ البهائي</strong>، <strong>الوحيد البهبهاني</strong>، <strong>الشيخ الأنصاري</strong>.</li>
+            <li><strong>الأنصاري قلب علم الأصول</strong> (مطارح الأنظار والرسائل). طبيعته في كتبه أن يوسّع ويتتبع الآراء بقدر الإمكان، ويبيّن كيف الربط وكيف نتعامل مع العبارات.</li>
+            <li>جاء <strong>الآخوند</strong> فكتب «كفاية الأصول» واختصر علم الأصول في مجلد واحد.</li>
+            <li><strong>المحققون الثلاثة</strong>: النائيني، العراقي، الأصفهاني.</li>
+            <li><strong>الشهيد الصدر</strong>: آراء تميّز بها (حق الطاعة)، وأعاد تنظيم العلم (الحلقات الثلاث، والمعالم الجديدة).</li>
+            <li><strong>السيد السيستاني</strong>: من المؤثرين في مسائل التعارض واختلاف الحديث؛ وكثير من الأبحاث اليوم ناظرة لما قُرّر في درسه، وللشهيد الصدر إضافات في البحث نفسه.</li>
+          </ul></dd>
+        <dt>النكتة</dt><dd>لكل علم في هذه الخريطة <strong>إضافة واحدة مميزة</strong>. هذا يكفي في هذه المرحلة؛ المقارنة التفصيلية بين نصوصهم ليست مطلوبة الآن.</dd>
+        <dt>إضافات</dt><dd><p class="check-note">في الملاحظات «النراقي» ضمن المحققين الثلاثة؛ والمعروف أنهم النائيني والمحقق العراقي (آغا ضياء) والأصفهاني (الكمباني). الأرجح أنها «العراقي».</p>
+          <p class="editor-note">«مطارح الأنظار» تقرير لأبحاث الأنصاري في مباحث الألفاظ، و«الرسائل» هي «فرائد الأصول».</p>
+          <p>التفصيل في <a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/Usul/%D8%AE%D8%B1%D9%8A%D8%B7%D8%A9_%D8%A7%D9%84%D8%A3%D8%B9%D9%84%D8%A7%D9%85.md" target="_blank" rel="noopener">خريطة الأعلام</a>.</p></dd>
+      </dl></article>
+
+    <article class="card point blue"><h3>9. عندك احتمال تكليف: ما موقفك؟ حق الطاعة أم قبح العقاب بلا بيان</h3>
+      <dl>
+        <dt>سؤال الشيخ</dt><dd>في حال وجود احتمال تكليف، اسأل نفسك: ما موقفي <strong>عقلاً</strong> و<strong>شرعاً</strong>؟ هل أأثم؟ هل ألتزم به؟ أم هناك ما يقول لي: أنت معذور؟</dd>
+        <dt>بيان الشيخ</dt><dd>
+          <ul><li><strong>شرعاً:</strong> عندنا روايات البراءة.</li>
+            <li><strong>عقلاً:</strong> يوجد نقاش. بعض العلماء قالوا: تجري هنا قاعدة قبح العقاب بلا بيان. والسيد الشهيد قال: لا، لله حق علينا يشمل هذا الاحتمال ولو كان 10٪.</li></ul></dd>
+        <dt>النكتة</dt><dd>الخلاف في الأصل العقلي الأولي: هل الاحتمال وحده منجِّز؟</dd>
+        <dt>إضافات</dt><dd><p class="editor-note">البراءة الشرعية ثابتة عند الشهيد الصدر أيضاً، فالنتيجة العملية في الشبهة البدوية بعد الفحص متقاربة. والفرق في نقطة الانطلاق العقلية وما يترتب عليها.</p>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="181"><span class="q">فالدافع لقبح العقاب هو البيان الواصل بمعنى وجوده في مظانّه</span><cite>الموجز ص 181</cite></blockquote>
+          <p class="editor-note">أقرب ما في الموجز إلى روح حق الطاعة هو قاعدة «وجوب دفع الضرر المحتمل» التي يعرضها بوصفها معارضة لقبح العقاب (ص 185)، وإن اختلف مبناها عن مسلك الصدر.</p></dd>
+        <dt>يعود في</dt><dd>أصالة البراءة، الموجز ص 180–193.</dd>
+      </dl></article>
+
+    <article class="card point accent"><h3>10. لماذا ندرس علم الأصول؟</h3>
+      <dl>
+        <dt>بيان الشيخ</dt><dd><ol>
+          <li>صحيح أن قسماً منه أدوات تختص بالفقه، لكن طريقة نظمه <strong>ترتّب ذهن الإنسان</strong> في كيفية التعامل مع النصوص الشرعية، حتى في التفسير والسيرة والروايات الأخلاقية.</li>
+          <li>مجموعة من <strong>الشبهات</strong> الموجودة في الساحة تُحل وتُدفع بالدراسة الجيدة لأصول الفقه وأدوات العلم.</li>
+          <li>إذا قرأت بطريقة تُفهمني الجهد الذي يبذله الفقيه، فهذا يجعلنا <strong>نثق بالفقيه</strong>.</li></ol></dd>
+        <dt>النكتة</dt><dd>الأصول منهج لقراءة كل نص ديني، لا أداة فقهية فقط.</dd>
+      </dl></article>
+
+    <article class="card point accent"><h3>11. الكتب المتاحة وتقييم الشيخ لها</h3>
+      <dl>
+        <dt>بيان الشيخ</dt><dd><ol>
+          <li><strong>كتب الشيخ الفضلي:</strong> كتاب مقدمة، ثم كتاب متقدم عليه، ثم كتاب ثالث من جزأين؛ الأول بسيط جداً، والثاني لا يغطي علم الأصول كاملاً.</li>
+          <li><strong>كتيّب الشهيد مطهري</strong> في سلسلة «مداخل إلى العلوم الإسلامية»: مفيد، لكنه ليس مكتوباً دورةً أصولية مختصرة.</li>
+          <li><strong>مشروع الشهيد الصدر</strong> (الحلقات والمعالم الجديدة): الحلقة الأولى صالحة للتدريس لكن مطالبها محدودة جداً، والثانية طويلة، لا تقل دراستها عن ستة أشهر يومياً في الحوزة.</li>
+          <li><strong>الموجز</strong>: مشى على الترتيب المتعارف، ولذلك نختاره.</li></ol></dd>
+        <dt>إضافات</dt><dd><p class="check-note">في الملاحظات «عبد الله الفضلي»؛ والأرجح أنه الشيخ عبد الهادي الفضلي صاحب «مبادئ أصول الفقه» (نسخته في المستودع).</p>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="6"><span class="q">ورائدنا في تنظيم المقاصد والمباحث هو الكتب المتداولة في الأصول ، نظير الفرائد والكفاية وتقريرات الأعاظم</span><cite>الموجز، مقدمة المؤلف ص 6: هذا وجه «الترتيب المتعارف»</cite></blockquote>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="6"><span class="q">والنهج السائد في الكتب الدراسية هو الاقتصار على أقلّ العبارات بتعابير وافية بالمراد وخالية عن التعقيد وإيكال التفصيل والشرح إلى الأستاذ</span><cite>الموجز ص 6: ولهذا يكون شرح الشيخ هو الطبقة الأساسية في دراستنا</cite></blockquote></dd>
+      </dl></article>
+  </section>
+
+  <!-- ============ 2. الأمثلة ============ -->
+  <section class="panel" id="panel-examples" tabindex="-1" hidden>
+    <div class="section-head"><h2>أمثلة الشيخ: ماذا أثبت كل مثال؟ وأين يعود؟</h2>
+      <p>أمثلة الجلسة الأولى إعلان مسبق عن أبواب الكتاب. احفظ المثال مع وظيفته، لا المثال وحده.</p></div>
+    <div class="card scroll-x"><table class="comparison">
+      <thead><tr><th>المثال</th><th>ما الذي يثبته</th><th>أين يعود في الموجز</th></tr></thead>
+      <tbody>
+        <tr><td>الصلاة في الحمّام</td><td>أمرٌ ونهيٌ في مورد واحد: هل يجتمعان؟ وما معنى النهي عن العبادة؟</td><td>اجتماع الأمر والنهي ص 66–70؛ النهي عن العبادة ص 70–72</td></tr>
+        <tr><td>﴿وأنكحوا الأيامى﴾</td><td>حدود مفاد الأمر، وإطلاق المتعلّق، وأثر النصوص الأخرى في تحديد المراد</td><td>هيئة الأمر ص 35–38؛ المطلق والمقيد ص 119–128</td></tr>
+        <tr><td>مسافة التقصير في زمن المشقة</td><td>ظاهر التحديد مقابل ملاك مستنبط: العلة والحكمة</td><td>حجية الظواهر ص 156 (لا فصل مستقل)</td></tr>
+        <tr><td>توثيق النجاشي والطوسي معاً</td><td>تشديد شروط الحجية يضيّق دائرة الأخبار</td><td>خبر الواحد ص 161–171</td></tr>
+        <tr><td>99٪ و1٪</td><td>الاطمئنان ليس يقيناً؛ احتمال الخلاف موجود لكنه لا يُعتنى به</td><td>السيرة العقلائية ص 169–170</td></tr>
+        <tr><td>احتمال 10٪</td><td>حق الطاعة يجعل الاحتمال الضعيف منجِّزاً عقلاً</td><td>البراءة ص 180–185</td></tr>
+        <tr><td>«لو انسدّ العلم لظهر الإمام»</td><td>لماذا غاب مفهوم الحكم الظاهري عند المتقدمين</td><td>الحكم الظاهري ص 43؛ إجماعا الطوسي والمرتضى ص 169</td></tr>
+      </tbody></table></div>
+    <p class="callout gold">أسلوب الشيخ: يطرح المثال سؤالاً مفتوحاً («هل يشمل…؟ أم…؟»، «فكيف أتعامل…؟») ويؤجّل الجواب إلى بابه. تابع هذه الأسئلة في <a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/Usul/%D8%B3%D8%AC%D9%84_%D8%A7%D9%84%D8%A5%D8%B4%D9%83%D8%A7%D9%84%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.md" target="_blank" rel="noopener">سجل الإشكالات المفتوحة</a> حتى تُغلق.</p>
+  </section>
+
+  <!-- ============ 3. الأسئلة ============ -->
+  <section class="panel" id="panel-questions" tabindex="-1" hidden>
+    <div class="section-head"><h2>أسئلة على طريقة الشيخ</h2><p>أجب شفوياً أو كتابةً قبل كشف الجواب. أجوبة الإشكالات المعلّقة «مسار جواب» لا فتوى.</p></div>
+
+    <div class="exercise"><p><span class="pill">إشكال نصي</span> روايات تنهى عن الصلاة في الحمّام، والصلاة مستحبة في كل حال. صُغ الإشكال بلغة أصولية: ما الذي يتنافى مع ماذا؟</p>
+      <button class="btn small" type="button" data-reveal="q1" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q1" hidden>أمر استحبابي متعلق بطبيعة الصلاة، ونهي متعلق بحصة منها (الصلاة في الحمّام). السؤال: هل يجتمع حكمان متضادان في مورد واحد؟ وهل النهي هنا تحريمي، أو تنزيهي، أو إشارة إلى نقص ثواب هذه الحصة؟ هذا باب اجتماع الأمر والنهي، وبحث «العبادات المكروهة».</div></div>
+
+    <div class="exercise"><p><span class="pill">إما/أو + ثمرة</span> مسافة التقصير: نثبت على المسافة المنصوصة، أم نحملها على المشقة؟ ما الثمرة العملية لكل وجه في زماننا؟</p>
+      <button class="btn small" type="button" data-reveal="q2" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q2" hidden>على الأول: من قطع المسافة بالطائرة في ساعة يقصّر، لتحقق المسافة. على الثاني: قد لا يقصّر لانتفاء المشقة، وقد يقصّر من مشى أقل منها بمشقة. والسؤال الأصولي وراء ذلك: هل المشقة علة يدور معها الحكم، أم حكمة لا يدور معها؟</div></div>
+
+    <div class="exercise"><p><span class="pill">تصحيح تصور</span> «الاطمئنان حالة لا تردد فيها أصلاً». صح أم خطأ؟</p>
+      <button class="btn small" type="button" data-reveal="q3" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q3" hidden>خطأ بحسب تصحيح الشيخ. في الاطمئنان احتمال خلاف ضئيل (مثل 1٪)، لكنه لا يُعتنى به؛ ولهذا ليس يقيناً. قارنه بتعبير الموجز «يفيد سكوناً للنفس» (ص 169–170) واسأل: هل الخلاف لفظي؟</div></div>
+
+    <div class="exercise"><p><span class="pill">قطعي/ظني</span> كيف يكون الشيء ظنياً وتكون حجيته قطعية؟ مثّل بخبر الثقة.</p>
+      <button class="btn small" type="button" data-reveal="q4" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q4" hidden>خبر الثقة لا يورث إلا الظن بمضمونه، لكن الدليل على حجيته (كالسيرة العقلائية الممضاة) قطعي. فالعمل به استناد إلى قطعٍ بالحجية، لا إلى الظن نفسه. هذا معنى «باب العلم منسد، وعندنا أبواب للحجج».</div></div>
+
+    <div class="exercise"><p><span class="pill">تاريخ الفكرة</span> لماذا لم تكن فكرة الحكم الظاهري عند المتقدمين بحسب بيان الشيخ؟</p>
+      <button class="btn small" type="button" data-reveal="q5" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q5" hidden>لأنهم ادّعوا الوصول إلى العلم ولم يقبلوا حجية الظنون بهذا النحو؛ ولو انسدّ باب العلم للزم ظهور الإمام عليه السلام. والحكم الظاهري فرع قبول حجة ظنية أو أصل عملي عند الشك.</div></div>
+
+    <div class="exercise"><p><span class="pill">احتمال</span> احتملتَ بنسبة 10٪ أن الدعاء عند رؤية الهلال واجب. ما موقفك عقلاً على المسلكين؟ وما موقفك شرعاً؟</p>
+      <button class="btn small" type="button" data-reveal="q6" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q6" hidden>على قبح العقاب بلا بيان: معذور عقلاً. على حق الطاعة: الاحتمال منجِّز عقلاً فيلزمك الاحتياط. وشرعاً: البراءة الشرعية تؤمّنك على المسلكين. والمثال نفسه يستعمله الموجز للشبهة الوجوبية (ص 181).</div></div>
+
+    <div class="exercise"><p><span class="pill">تمييز</span> لماذا يبحث الأصولي الإمامي القياس والاستحسان مع أنه لا يعمل بهما؟</p>
+      <button class="btn small" type="button" data-reveal="q7" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q7" hidden>لأن موضوع العلم «ما يصلح أن يكون حجة». البحث عن حجية شيء قد ينتهي إلى النفي، وهذه نتيجة أصولية أيضاً تمنع الفقيه من الاستناد إليه.</div></div>
+
+    <div class="exercise"><p><span class="pill">الأعلام</span> اربط كل عالم بإضافته كما ذكرها الشيخ: الأنصاري، الآخوند، الشهيد الصدر، السيد السيستاني.</p>
+      <button class="btn small" type="button" data-reveal="q8" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q8" hidden>الأنصاري: قلب العلم بالتوسع وتتبع الآراء وضبط العبارات. الآخوند: الاختصار في «الكفاية». الصدر: حق الطاعة وإعادة تنظيم العلم في الحلقات والمعالم الجديدة. السيستاني: التعارض واختلاف الحديث.</div></div>
+
+    <div class="exercise"><p><span class="pill">منهج</span> ما الأسباب الثلاثة لدراسة الأصول؟ وأيها يتصل بالثقة بالمرجعية؟</p>
+      <button class="btn small" type="button" data-reveal="q9" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="q9" hidden>(1) ترتيب الذهن في التعامل مع كل النصوص الشرعية. (2) دفع الشبهات. (3) فهم جهد الفقيه، فنثق به. والثالث هو المتصل بالثقة.</div></div>
+  </section>
+
+  <!-- ============ 4. للتوسع ============ -->
+  <section class="panel" id="panel-deeper" tabindex="-1" hidden>
+    <div class="section-head"><h2>للتوسع — اختياري</h2><p>نصوص محققة تخدم نقاطاً أشار إليها الشيخ. لا تُقرأ قبل إتقان التبويبات 1–3.</p></div>
+    <article class="card lesson-prose">
+      <details><summary>الآخوند: الصلاة في الحمّام من «العبادات المكروهة» (الإشكال الأول)</summary>
+        <blockquote class="matn" data-book="kifayah_akhund" data-page="162"><span class="q">ثانيها : ما تعلق به النهي كذلك ، ويكون له البدل ، كالنهي عن الصلاة في الحمام</span><cite>كفاية الأصول ص 162</cite></blockquote>
+        <blockquote class="matn" data-book="kifayah_akhund" data-page="164"><span class="q">كما في الصلاة في الحمام ، فإن تشخصها بتشخص وقوعها فيه ، لا يناسب كونها معراجا ، وإن لم يكن نفس الكون في الحمام بمكروه ولا حزازة فيه أصلا</span><cite>كفاية الأصول ص 164</cite></blockquote>
+        <p>الحاصل: النهي هنا لا يعني أن الصلاة في الحمّام مرجوحة في ذاتها، بل أن هذه الحصة أقل ملاءمة لكون الصلاة «معراجاً»؛ فهي أقل ثواباً من غيرها. هذا جواب واحد عن سؤال الشيخ، وسيأتي بابه في الموجز.</p></details>
+      <details><summary>الطوسي والمرتضى: إجماعان متقابلان على خبر الواحد (النقطة 7)</summary>
+        <blockquote class="matn" data-book="mujaz_subhani" data-page="169"><span class="q">نقل غير واحد من علمائنا كالشيخ الطوسي ( 385 - 460 ه ) ومن تأخّر عنه إلى يومنا هذا إجماع علماء الإمامية على حجّية خبر الواحد إذا كان ثقة مأمونا في نقله وإن لم يفد خبره العلم ، وفي مقابل ذلك حكى جماعة أخرى منهم - أستاذ الشيخ - السيد المرتضى رحمه اللّه إجماع الإمامية على عدم الحجّية</span><cite>الموجز ص 169</cite></blockquote></details>
+      <details><summary>الأخباريون وظواهر الكتاب (النقطة 5)</summary>
+        <blockquote class="matn" data-book="mujaz_subhani" data-page="157"><span class="q">وعلى ذلك فما ذهب إليه الأخباريون بحجيّة كلّ ظاهر إلّا ظاهر الكتاب ممّا لا وجه له</span><cite>الموجز ص 157</cite></blockquote></details>
+      <details><summary>مرجع موضوعي أوسع</summary>
+        <p>ملف <a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/Usul/00_%D8%A7%D9%84%D9%85%D9%82%D8%AF%D9%85%D8%A9_%D9%88%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%A6/01_%D8%AA%D8%B9%D8%B1%D9%8A%D9%81_%D8%B9%D9%84%D9%85_%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D9%84_%D9%88%D9%85%D9%88%D8%B6%D9%88%D8%B9%D9%87_%D9%88%D8%BA%D8%A7%D9%8A%D8%AA%D9%87.html" target="_blank" rel="noopener">تعريف علم الأصول وموضوعه وغايته</a> يحوي نصوص المفيد والمرتضى والطوسي والآخوند والخوئي والسيستاني. هو مرجع عند الحاجة، لا واجب يومي.</p></details>
+    </article>
+  </section>
+
+  <!-- ============ 5. المراجعة والتحضير ============ -->
+  <section class="panel" id="panel-next" tabindex="-1" hidden>
+    <div class="grid two">
+      <article class="card"><h3>مراجعة هذه الجلسة</h3><ul class="task-list">
+        <li><label><input class="task-check" id="task-1" type="checkbox"><span>أعدت سرد الإشكالات الثلاثة ومواضعها في الموجز من الذاكرة.</span></label></li>
+        <li><label><input class="task-check" id="task-2" type="checkbox"><span>أجبت عن أسئلة التبويب 3 قبل كشف الأجوبة.</span></label></li>
+        <li><label><input class="task-check" id="task-3" type="checkbox"><span>أضفت الإشكالات إلى سجل الإشكالات المفتوحة.</span></label></li>
+        <li><label><input class="task-check" id="task-4" type="checkbox"><span>قرأت مقدمة المؤلف في الموجز ص 5–8.</span></label></li>
+        <li><label><input class="task-check" id="task-5" type="checkbox"><span>سألت الشيخ أو زميلاً عن نقاط «للتحقق».</span></label></li></ul></article>
+      <article class="card"><h3>أسئلة لطرحها على الشيخ</h3><ol>
+        <li>وصف الموجز الاطمئنان بأنه «يفيد سكوناً للنفس» (ص 169–170)، وأنتم نفيتم أنه سكون نفس. هل الخلاف لفظي؟</li>
+        <li>هل يشمل تعميم «المتقدمين» الشيخ الطوسي مع ادعائه الإجماع على حجية خبر الثقة؟</li>
+        <li>من قصدتم بمن اشترط شاهدين في التوثيق: صاحب المعالم وصاحب المدارك؟</li>
+        <li>أين سنعالج سؤال المسافة والمشقة (العلة والحكمة) في الموجز؟</li></ol></article>
+    </div>
+    <article class="card"><h3>الجلسة التالية</h3><p>الجلسة 02 غطّت الموجز ص 9–13: <a href="02_التعريف_والتقسيم_والوضع.html">التعريف والتقسيم والوضع</a>.</p>
+      <p class="muted">المراجعات المتباعدة: بعد يوم، ثم بعد 7 أيام مع مراجعة الأسبوع.</p>
+      <div class="grid two lesson-controls"><label>مراجعة بعد يوم<input type="date" id="review-1" data-review-date></label><label>مراجعة بعد 7 أيام<input type="date" id="review-7" data-review-date></label></div></article>
+  </section>
+  </main>
+  <footer class="footer">جلسات الشيخ شبير • الجلسة 01 • نصوص الموجز والكفاية منقولة حرفياً من قاعدة الكتب المحلية ومفحوصة آلياً</footer>
+  <script>
+(() => {
+  "use strict";
+
+  const lessonId = document.body.dataset.lesson || "01";
+  const prefix = `shabbir_usul_lesson_${lessonId}`;
+  const SOURCES = window.LESSON_SOURCES || window.LESSON01_SOURCES || {};
+  const SOURCE_ORDER = window.LESSON_SOURCE_ORDER || window.LESSON01_SOURCE_ORDER || Object.keys(SOURCES);
+  const LABELS = window.LESSON_LABELS || window.LESSON01_LABELS;
+  const KEYS = {
+    theme: "shabbir_usul_theme",
+    notes: `${prefix}_unified_notes`,
+    tasks: `${prefix}_tasks`,
+    errors: `${prefix}_error_log`,
+    reviews: `${prefix}_review_dates`,
+    tab: `${prefix}_active_tab`
+  };
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem(KEYS.theme, theme);
+    const label = $("#theme-label");
+    if (label) label.textContent = theme === "dark" ? "النمط الفاتح" : "النمط الداكن";
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem(KEYS.theme);
+    const preferred = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    setTheme(saved === "dark" || saved === "light" ? saved : preferred);
+  }
+
+  function activateTab(id, focus = false) {
+    const button = $(`[data-tab="${id}"]`);
+    const panel = $(`#panel-${id}`);
+    if (!button || !panel) return;
+    $$("[data-tab]").forEach((item) => item.setAttribute("aria-selected", String(item === button)));
+    $$(".panel").forEach((item) => { item.hidden = item !== panel; });
+    localStorage.setItem(KEYS.tab, id);
+    history.replaceState(null, "", `#${id}`);
+    if (focus) panel.focus({ preventScroll: true });
+  }
+
+  function loadTasks() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEYS.tasks) || "{}"); } catch (_) { saved = {}; }
+    $$(".task-check").forEach((box) => {
+      if (Object.prototype.hasOwnProperty.call(saved, box.id)) box.checked = Boolean(saved[box.id]);
+    });
+    updateProgress(false);
+  }
+
+  function updateProgress(save = true) {
+    const boxes = $$(".task-check");
+    const state = {};
+    let complete = 0;
+    boxes.forEach((box) => {
+      state[box.id] = box.checked;
+      if (box.checked) complete += 1;
+    });
+    if (save) localStorage.setItem(KEYS.tasks, JSON.stringify(state));
+    const percent = boxes.length ? Math.round((complete / boxes.length) * 100) : 0;
+    const text = $("#progress-text");
+    const bar = $("#progress-fill");
+    if (text) text.textContent = `${complete} من ${boxes.length} • ${percent}٪`;
+    if (bar) bar.style.width = `${percent}%`;
+  }
+
+  function bindSavedText(selector, key) {
+    const field = $(selector);
+    if (!field) return;
+    const saved = localStorage.getItem(key);
+    if (saved !== null) field.value = saved;
+    const count = $(`${selector}-count`);
+    const persist = () => {
+      localStorage.setItem(key, field.value);
+      if (count) count.textContent = `${field.value.length} حرف`;
+      const status = $("#save-status");
+      if (status) {
+        status.textContent = "حُفظ تلقائياً";
+        clearTimeout(persist.timer);
+        persist.timer = setTimeout(() => { status.textContent = ""; }, 1200);
+      }
+    };
+    field.addEventListener("input", persist);
+    if (count) count.textContent = `${field.value.length} حرف`;
+  }
+
+  function loadReviewDates() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEYS.reviews) || "{}"); } catch (_) { saved = {}; }
+    $$("[data-review-date]").forEach((input) => {
+      if (saved[input.id]) input.value = saved[input.id];
+      input.addEventListener("change", () => {
+        const current = {};
+        $$("[data-review-date]").forEach((item) => { current[item.id] = item.value; });
+        localStorage.setItem(KEYS.reviews, JSON.stringify(current));
+      });
+    });
+  }
+
+  function openSource(id) {
+    const source = SOURCES[id];
+    if (!source) return;
+    $("#source-title").textContent = source.book;
+    $("#source-author").textContent = source.author;
+    $("#source-kind").textContent = LABELS.content_kind[source.content_kind];
+    $("#source-verification").textContent = LABELS.verification[source.verification];
+    $("#source-text").textContent = source.text;
+    $("#source-context").textContent = source.context;
+    const provenance = $("#source-provenance");
+    provenance.innerHTML = "";
+    [
+      ["الطبعة", source.edition],
+      ["الجزء", source.volume],
+      ["الصفحة المطبوعة", source.printed_page],
+      ["صفحة المسح/البيانات", source.scan_or_database_page]
+    ].forEach(([label, value]) => {
+      if (!value) return;
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = label;
+      dd.textContent = value;
+      provenance.append(dt, dd);
+    });
+    const link = $("#source-link");
+    if (source.file) {
+      link.href = source.file + (source.pdf_page ? `#page=${source.pdf_page}` : "");
+      link.hidden = false;
+    } else {
+      link.hidden = true;
+    }
+    $("#source-overlay").classList.add("open");
+    $("#source-drawer").classList.add("open");
+    $("#source-drawer").setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    $("#source-close").focus();
+  }
+
+  function closeSource() {
+    $("#source-overlay").classList.remove("open");
+    $("#source-drawer").classList.remove("open");
+    $("#source-drawer").setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function renderSources() {
+    const container = $("#source-list");
+    if (!container || !Object.keys(SOURCES).length) return;
+    SOURCE_ORDER.forEach((id) => {
+      const source = SOURCES[id];
+      const item = document.createElement("article");
+      item.className = "source-item";
+      item.dataset.layer = source.layer;
+      const h = document.createElement("h3");
+      h.textContent = source.book;
+      const meta = document.createElement("div");
+      meta.className = "source-meta";
+      meta.textContent = `${source.author} • ${source.printed_page || source.scan_or_database_page}`;
+      const row = document.createElement("div");
+      row.className = "meta-row";
+      const layer = document.createElement("span");
+      layer.className = `pill ${source.layer}`;
+      layer.textContent = source.layer === "core" ? "الطبقة الأساسية" : source.layer === "advanced" ? "الطبقة المتقدمة" : "تطبيق";
+      const kind = document.createElement("span");
+      kind.className = "pill";
+      kind.textContent = LABELS.content_kind[source.content_kind];
+      const verification = document.createElement("span");
+      verification.className = "pill verified";
+      verification.textContent = LABELS.verification[source.verification];
+      const button = document.createElement("button");
+      button.className = "btn small";
+      button.type = "button";
+      button.textContent = "قراءة المقتطف";
+      button.addEventListener("click", () => openSource(id));
+      row.append(layer, kind, verification, button);
+      item.append(h, meta, row);
+      container.appendChild(item);
+    });
+  }
+
+  function filterSources(filter) {
+    $$("[data-source-filter]").forEach((button) => {
+      button.classList.toggle("primary", button.dataset.sourceFilter === filter);
+    });
+    $$("#source-list .source-item").forEach((item) => {
+      item.hidden = filter !== "all" && item.dataset.layer !== filter;
+    });
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard) return navigator.clipboard.writeText(text);
+    const area = document.createElement("textarea");
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+    return Promise.resolve();
+  }
+
+  function init() {
+    initTheme();
+    renderSources();
+    loadTasks();
+    bindSavedText("#notes-unified", KEYS.notes);
+    bindSavedText("#error-log", KEYS.errors);
+    loadReviewDates();
+
+    $$("[data-tab]").forEach((button) => button.addEventListener("click", () => activateTab(button.dataset.tab, true)));
+    const hash = location.hash.replace("#", "");
+    const savedTab = localStorage.getItem(KEYS.tab);
+    activateTab($( `[data-tab="${hash}"]`) ? hash : ($( `[data-tab="${savedTab}"]`) ? savedTab : "orientation"));
+
+    $("#theme-toggle")?.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
+    $$(".task-check").forEach((box) => box.addEventListener("change", () => updateProgress(true)));
+    $$('[data-reveal]').forEach((button) => button.addEventListener("click", () => {
+      const answer = document.getElementById(button.dataset.reveal);
+      const willShow = answer.hidden;
+      answer.hidden = !willShow;
+      button.textContent = willShow ? "إخفاء الجواب" : "أظهر الجواب";
+      button.setAttribute("aria-expanded", String(willShow));
+    }));
+    $$(".flashcard").forEach((card) => card.addEventListener("click", () => {
+      const answer = $(".back", card);
+      answer.hidden = !answer.hidden;
+      card.setAttribute("aria-expanded", String(!answer.hidden));
+    }));
+    $$('[data-source]').forEach((button) => button.addEventListener("click", () => openSource(button.dataset.source)));
+    $$('[data-source-filter]').forEach((button) => button.addEventListener("click", () => filterSources(button.dataset.sourceFilter)));
+    $("#source-close")?.addEventListener("click", closeSource);
+    $("#source-overlay")?.addEventListener("click", closeSource);
+    $("#source-copy")?.addEventListener("click", () => copyText($("#source-text").textContent));
+    $("#copy-notes")?.addEventListener("click", () => copyText($("#notes-unified").value));
+    $("#print-lesson")?.addEventListener("click", () => window.print());
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeSource();
+      if (/^[1-7]$/.test(event.key) && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+        const button = $$("[data-tab]")[Number(event.key) - 1];
+        if (button) activateTab(button.dataset.tab, true);
+      }
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", init);
+})();
+
+</script>
+</body></html>

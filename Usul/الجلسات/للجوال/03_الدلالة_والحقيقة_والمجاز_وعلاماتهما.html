@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="تحضير الجلسة 03 من درس الشيخ شبير: الموجز ص 13–18 (وحتى ص 20 إن اتسع الوقت)، الدلالة التصديقية وشروطها، الحقيقة والمجاز، وعلامات الحقيقة، على طريقة الشيخ في الإشكال والمثال والسؤال.">
+  <title>الجلسة 03 — الدلالة، الحقيقة والمجاز، وعلاماتهما (تحضير)</title>
+  <script>try{const t=localStorage.getItem('shabbir_usul_theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <style>
+:root {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --surface: #fffdf8;
+  --surface-2: #f0ece3;
+  --ink: #17201d;
+  --muted: #64706a;
+  --line: #dcd5c8;
+  --primary: #176b54;
+  --primary-strong: #0e4e3c;
+  --primary-soft: #e3f2ec;
+  --gold: #9a6718;
+  --gold-soft: #fbf0d7;
+  --blue: #285b87;
+  --blue-soft: #e7f0f8;
+  --rose: #9a3d4d;
+  --rose-soft: #f9e7ea;
+  --shadow: 0 18px 55px rgb(38 44 40 / 10%);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101614;
+  --surface: #17201d;
+  --surface-2: #1d2925;
+  --ink: #eef4f0;
+  --muted: #a6b2ac;
+  --line: #34423c;
+  --primary: #66c5a4;
+  --primary-strong: #8edbbb;
+  --primary-soft: #183a30;
+  --gold: #e4b75f;
+  --gold-soft: #3d311b;
+  --blue: #8bb8df;
+  --blue-soft: #1c3449;
+  --rose: #e79baa;
+  --rose-soft: #43252c;
+  --shadow: 0 18px 55px rgb(0 0 0 / 28%);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 88% 5%, color-mix(in srgb, var(--primary) 13%, transparent), transparent 27rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  line-height: 1.85;
+}
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: var(--primary); }
+.shell { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+.site-header { padding: 30px 0 16px; }
+.eyebrow { margin: 0 0 6px; color: var(--gold); font-weight: 800; font-size: .88rem; letter-spacing: .03em; }
+h1, h2, h3, h4 { line-height: 1.4; margin: 0; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; }
+h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+h3 { font-size: 1.1rem; }
+p { margin: .55rem 0 1rem; }
+.header-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
+.header-copy { max-width: 850px; }
+.subtitle { color: var(--muted); max-width: 800px; font-size: 1.04rem; }
+.header-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.btn {
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 12px;
+  padding: 9px 14px; cursor: pointer; font-weight: 750; transition: .18s ease; text-decoration: none;
+}
+.btn:hover, .btn:focus-visible { border-color: var(--primary); transform: translateY(-1px); outline: none; }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+html[data-theme="dark"] .btn.primary { color: #0d1a15; }
+.btn.small { padding: 5px 10px; font-size: .82rem; border-radius: 9px; }
+.progress-panel { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px 17px; box-shadow: var(--shadow); }
+.progress-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; font-size: .9rem; font-weight: 700; }
+.progress-track { height: 9px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-top: 8px; }
+.progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--gold)); transition: width .25s ease; }
+.tabs-wrap { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); }
+.tabs { display: flex; gap: 8px; overflow-x: auto; padding: 11px 0; scrollbar-width: thin; }
+.tab {
+  white-space: nowrap; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--muted);
+  padding: 8px 13px; cursor: pointer; font-weight: 800; font-size: .9rem;
+}
+.tab[aria-selected="true"] { background: var(--primary); color: #fff; box-shadow: 0 8px 18px color-mix(in srgb, var(--primary) 28%, transparent); }
+html[data-theme="dark"] .tab[aria-selected="true"] { color: #0d1a15; }
+main { padding: 28px 0 64px; }
+.panel[hidden] { display: none; }
+.panel { animation: enter .22s ease; }
+@keyframes enter { from { opacity: 0; transform: translateY(5px); } }
+.section-head { margin-bottom: 18px; }
+.section-head p { color: var(--muted); max-width: 850px; }
+.grid { display: grid; gap: 16px; }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; box-shadow: 0 8px 30px rgb(32 39 35 / 5%); }
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+.card.accent { border-top: 4px solid var(--primary); }
+.card.gold { border-top: 4px solid var(--gold); }
+.card.blue { border-top: 4px solid var(--blue); }
+.card.rose { border-top: 4px solid var(--rose); }
+.muted { color: var(--muted); }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; }
+.pill { display: inline-flex; align-items: center; gap: 5px; border-radius: 999px; padding: 4px 9px; font-weight: 800; font-size: .75rem; background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+.pill.core { background: var(--primary-soft); color: var(--primary-strong); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
+.pill.advanced { background: var(--gold-soft); color: var(--gold); border-color: color-mix(in srgb, var(--gold) 35%, var(--line)); }
+.pill.verified { background: var(--blue-soft); color: var(--blue); }
+.callout { border-right: 4px solid var(--primary); background: var(--primary-soft); padding: 15px 17px; border-radius: 13px; margin: 15px 0; }
+.callout.gold { border-color: var(--gold); background: var(--gold-soft); }
+.callout.rose { border-color: var(--rose); background: var(--rose-soft); }
+.definition { font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; font-weight: 700; }
+.source-button { border: 0; background: transparent; color: var(--primary); cursor: pointer; font-weight: 850; padding: 0; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.source-button:hover { color: var(--gold); }
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 10px; }
+.steps li { counter-increment: step; position: relative; padding: 13px 52px 13px 14px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 13px; }
+.steps li::before { content: counter(step); position: absolute; right: 12px; top: 12px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; }
+.argument-map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
+.argument-map div { min-height: 120px; padding: 12px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.argument-map strong { display: block; color: var(--gold); margin-bottom: 5px; }
+.comparison { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.comparison th, .comparison td { padding: 11px; border: 1px solid var(--line); text-align: right; vertical-align: top; }
+.comparison th { background: var(--surface-2); color: var(--primary-strong); }
+.scroll-x { overflow-x: auto; border-radius: 14px; }
+.exercise { border: 1px dashed color-mix(in srgb, var(--primary) 55%, var(--line)); border-radius: 15px; padding: 16px; margin: 12px 0; background: color-mix(in srgb, var(--primary-soft) 40%, var(--surface)); }
+.answer { margin-top: 12px; padding: 13px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.answer[hidden] { display: none; }
+.task-list { list-style: none; padding: 0; display: grid; gap: 10px; }
+.task-list label { display: flex; align-items: flex-start; gap: 10px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); cursor: pointer; }
+.task-list input { margin-top: 7px; accent-color: var(--primary); width: 17px; height: 17px; }
+.flash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.flashcard { text-align: right; min-height: 145px; width: 100%; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--ink); padding: 17px; cursor: pointer; }
+.flashcard .front { font-weight: 850; color: var(--primary-strong); }
+.flashcard .back { margin-top: 10px; color: var(--muted); }
+.flashcard .back[hidden] { display: none; }
+.notes, .error-log { width: 100%; min-height: 260px; resize: vertical; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 14px; padding: 14px; line-height: 1.8; }
+.error-log { min-height: 150px; }
+.notes:focus, .error-log:focus { outline: 2px solid color-mix(in srgb, var(--primary) 45%, transparent); border-color: var(--primary); }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 9px; }
+.source-grid { display: grid; gap: 12px; }
+.source-item { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 15px; }
+.source-item h3 { margin-bottom: 5px; }
+.source-meta { color: var(--muted); font-size: .84rem; }
+.footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: .84rem; text-align: center; }
+.drawer-overlay { position: fixed; inset: 0; background: rgb(0 0 0 / 58%); z-index: 49; opacity: 0; pointer-events: none; transition: .2s; }
+.drawer-overlay.open { opacity: 1; pointer-events: auto; }
+.drawer { position: fixed; z-index: 50; top: 0; right: 0; height: 100%; width: min(620px, 94vw); background: var(--surface); border-left: 1px solid var(--line); transform: translateX(105%); transition: transform .25s ease; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+.drawer.open { transform: translateX(0); }
+.drawer-head { display: flex; justify-content: space-between; gap: 16px; align-items: start; padding: 18px; border-bottom: 1px solid var(--line); }
+.drawer-body { padding: 18px; overflow: auto; }
+.source-text { white-space: pre-line; font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; line-height: 2.05; background: var(--surface-2); border-right: 4px solid var(--gold); padding: 16px; border-radius: 12px; }
+.lesson-prose { overflow-wrap: anywhere; }
+.lesson-prose h2 { margin-bottom: 14px; color: var(--primary-strong); }
+.lesson-prose h3 { margin: 28px 0 10px; color: var(--gold); }
+.lesson-prose h4 { margin: 20px 0 8px; }
+.lesson-prose li { margin: 6px 0; }
+.lesson-prose table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; margin: 16px 0 22px; }
+.lesson-prose th, .lesson-prose td { border: 1px solid var(--line); padding: 10px 12px; text-align: right; vertical-align: top; min-width: 120px; }
+.lesson-prose th { background: var(--surface-2); color: var(--primary-strong); }
+.lesson-prose details { border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); padding: 10px 14px; margin: 12px 0; }
+.lesson-prose details summary { cursor: pointer; color: var(--primary-strong); font-weight: 800; }
+.lesson-prose details[open] { border-color: var(--primary); }
+.lesson-prose hr { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+.lesson-controls, .source-shortcuts { margin-top: 16px; }
+.source-shortcuts .source-button { margin: 0 6px; }
+.lesson-controls input[type="date"] { width: 100%; margin-top: 5px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); border-radius: 8px; padding: 5px; }
+.provenance { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: .84rem; margin: 15px 0; }
+.provenance dt { color: var(--muted); }
+.provenance dd { margin: 0; font-weight: 700; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Session files: Shaykh Shabbir's lecture as the spine */
+.pill.teacher { background: var(--primary-soft); color: var(--primary-strong); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
+.pill.editor { background: var(--gold-soft); color: var(--gold); border-color: color-mix(in srgb, var(--gold) 35%, var(--line)); }
+.pill.check { background: var(--rose-soft); color: var(--rose); border-color: color-mix(in srgb, var(--rose) 35%, var(--line)); }
+.point { margin: 0 0 16px; }
+.point h3 { color: var(--primary-strong); }
+.point dl { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 10px 14px; margin: 14px 0 0; }
+.point dt { font-weight: 850; color: var(--muted); font-size: .88rem; padding-top: 3px; }
+.point dd { margin: 0; overflow-wrap: anywhere; }
+.point dd > :first-child { margin-top: 0; }
+.point dd > :last-child { margin-bottom: 0; }
+.matn { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.04rem; line-height: 2; background: var(--surface-2); border-right: 4px solid var(--gold); padding: 9px 13px; border-radius: 10px; }
+.matn cite { display: block; font-style: normal; font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: .8rem; color: var(--muted); margin-top: 4px; }
+.editor-note, .check-note { border-right: 3px dashed var(--gold); background: color-mix(in srgb, var(--gold-soft) 55%, transparent); padding: 8px 12px; border-radius: 9px; margin: 8px 0; }
+.check-note { border-right-color: var(--rose); background: color-mix(in srgb, var(--rose-soft) 55%, transparent); }
+.editor-note::before { content: "إضافة تحريرية: "; font-weight: 850; color: var(--gold); }
+.check-note::before { content: "للتحقق: "; font-weight: 850; color: var(--rose); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .85rem; color: var(--muted); }
+.session-banner { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; border: 1px solid color-mix(in srgb, var(--gold) 45%, var(--line)); background: var(--gold-soft); border-radius: 14px; padding: 10px 14px; margin-top: 14px; font-size: .92rem; }
+
+@media (max-width: 850px) {
+  .header-grid, .grid.two, .grid.three, .flash-grid { grid-template-columns: 1fr; }
+  .header-actions { justify-content: flex-start; }
+  .argument-map { grid-template-columns: 1fr; }
+  .argument-map div { min-height: auto; }
+  .point dl { grid-template-columns: 1fr; gap: 4px; }
+  .point dt { padding-top: 8px; }
+}
+
+@media print {
+  .tabs-wrap, .header-actions, .btn, .drawer, .drawer-overlay { display: none !important; }
+  body { background: #fff; color: #000; }
+  .panel[hidden] { display: block; }
+  .card, .source-item { box-shadow: none; break-inside: avoid; }
+}
+
+</style>
+</head>
+<body data-lesson="s03">
+  <header class="site-header"><div class="shell header-grid">
+    <div class="header-copy"><p class="eyebrow">درس الشيخ شبير • الجلسة 03 • <strong>ملف تحضير قبل الدرس</strong> • الموجز ص 13–18 (+ ص 18–20 إن اتسع الوقت)</p>
+      <h1>الدلالة، الحقيقة والمجاز، وعلاماتهما</h1>
+      <p class="subtitle">ادخل الدرس وقد جرّبت بنفسك الإشكالات التي يُتوقع أن يطرحها الشيخ: زوجٌ نائم يقول «زوجتي طالق»، و«الغنيمة» في آية الخمس، و«الحمّام» بين زمن النص وزمننا. بعد الدرس نحوّل هذا الملف إلى تقرير الجلسة بملاحظاتك.</p>
+      <div class="legend"><span class="pill editor">متوقَّع (تحضير)</span><span class="pill teacher">تقرير الشيخ (يُملأ بعد الدرس)</span><span class="pill check">للتحقق أو سؤال للشيخ</span><span class="pill verified">نص الموجز محقق</span></div></div>
+    <div class="header-actions"><button class="btn" id="theme-toggle" type="button"><span id="theme-label">النمط الداكن</span></button>
+      <button class="btn" id="print-lesson" type="button">طباعة</button></div>
+  </div><div class="shell progress-panel" aria-label="تقدم التحضير"><div class="progress-row"><span>التحضير قبل الدرس (15–25 دقيقة)</span>
+  <span id="progress-text">0 من 5 • 0٪</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div></div></header>
+
+  <nav class="tabs-wrap" aria-label="أقسام التحضير"><div class="shell tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="false" data-tab="orientation">1. خطة التحضير</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="flow">2. الدرس كما قد يشرحه الشيخ</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="questions">3. أسئلة قبل الدرس</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="inclass">4. داخل الدرس</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="after">5. بعد الدرس</button>
+  </div></nav>
+
+  <main class="shell">
+  <!-- ============ 1. خطة التحضير ============ -->
+  <section class="panel" id="panel-orientation" tabindex="-1" hidden>
+    <div class="grid two">
+      <article class="card accent"><h3>ما الذي سيُغطّى على الأرجح</h3>
+        <p>بإيقاع الجلسة 02 (نحو 5 صفحات):</p>
+        <ol>
+          <li>شروط الدلالة التصديقية (ص 13): الأمر الرابع الذي بدأ بمراجعة المنطق.</li>
+          <li>الحقيقة والمجاز (ص 14–15): التعريف المشهور، ونظرية الادعاء.</li>
+          <li>علامات الحقيقة (ص 15–18): التبادر، صحة الحمل والسلب، الاطراد (ومثال الغنيمة)، تنصيص أهل اللغة.</li>
+          <li><span class="muted">إن اتسع الوقت:</span> الأصول اللفظية (ص 18–20).</li></ol></article>
+      <article class="card gold"><h3>خطة 15–25 دقيقة</h3><ul class="task-list">
+        <li><label><input class="task-check" id="task-1" type="checkbox"><span>قرأت الموجز ص 13–18، ودوّنت سطراً واحداً لكل فقرة.</span></label></li>
+        <li><label><input class="task-check" id="task-2" type="checkbox"><span>راجعت في المنطق: الحمل الأولي الذاتي والحمل الشائع الصناعي.</span></label></li>
+        <li><label><input class="task-check" id="task-3" type="checkbox"><span>أجبت عن أسئلة التبويب 3 بنفسي قبل كشف مسار الجواب.</span></label></li>
+        <li><label><input class="task-check" id="task-4" type="checkbox"><span>اخترت سؤالين أطرحهما في الدرس (التبويب 4).</span></label></li>
+        <li><label><input class="task-check" id="task-5" type="checkbox"><span>بعد الدرس: أرسلت ملاحظاتي الخام لتحويل هذا الملف إلى تقرير.</span></label></li></ul></article>
+    </div>
+    <article class="card blue"><h3>الإشكال الافتتاحي المتوقع</h3>
+      <p>على طريقة الجلسة الأولى (إشكال من نص حقيقي قبل القاعدة)، أقوى مرشح هو مثال الموجز نفسه في الاطراد:</p>
+      <blockquote class="matn" data-book="mujaz_subhani" data-page="17"><span class="q">فهل الكلمة ( الغنيمة ) موضوعة للغنائم المأخوذة في الحرب ، أو تعمّ كلّ فائدة يحوزها الإنسان من طرق شتى ؟</span><cite>الموجز ص 17</cite></blockquote>
+      <p>ثمرته فقهية كبيرة: الخمس في أرباح المكاسب. وهو من «الشبهات» التي قال الشيخ إن الأصول يدفعها (السبب الثاني لدراسة الأصول في الجلسة 01). فكّر فيه قبل الدرس: كيف تثبت معنى كلمة في زمن النص؟</p></article>
+    <p class="callout">روابط بالجلسات السابقة: «الحمّام» (الجلسة 01) مثال حيّ لسؤال التبادر: تبادر أيّ زمن؟ و«مفيداً للاطمئنان» في تنصيص اللغويين (ص 18) يعيدنا إلى تصحيح الشيخ لمعنى الاطمئنان.</p>
+  </section>
+
+  <!-- ============ 2. الدرس كما قد يشرحه الشيخ ============ -->
+  <section class="panel" id="panel-flow" tabindex="-1" hidden>
+    <div class="section-head"><h2>الدرس كما قد يشرحه الشيخ</h2>
+      <p>لكل فقرة: المتن ← ما يُتوقع أن يفعله الشيخ (مثال، اختبار، سؤال إما/أو) ← ما تنتبه له. كل ما هنا توقّع؛ بعد الدرس نستبدله بما قاله فعلاً.</p></div>
+
+    <article class="card point accent"><h3>1. شروط الدلالة التصديقية (ص 13)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="mujaz_subhani" data-page="13"><span class="q">فالدلالة التصوّرية : هي عبارة عن انتقال الذهن إلى معنى اللّفظ بمجرّد سماعه وإن لم يقصده اللّافظ ، كما إذا سمعه من الساهي أو النائم</span><cite>الموجز ص 13</cite></blockquote>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="13"><span class="q">أ . أن يكون المتكلم عالما باللغة . ب . أن يكون في مقام البيان والإفادة . ج . أن يكون جادّا لا هازلا . د . أن لا ينصب قرينة على خلاف المعنى الحقيقي</span><cite>الموجز ص 13: شروط التصديقية</cite></blockquote></dd>
+        <dt>مثال متوقع</dt><dd>زوجٌ نائم يقول: «زوجتي طالق». هل انتقل ذهنك إلى معنى الطلاق؟ نعم (تصورية). هل تكشف العبارة أنه أراد الطلاق؟ لا (لا تصديقية). ولهذا لا يترتب عليها أثر، لفقد القصد.</dd>
+        <dt>اختبار متوقع</dt><dd>مرّ على الشروط الأربعة واحداً واحداً، واسأل أيها المفقود في كل حالة: الببغاء، الأعجمي الذي يردد عبارة عربية، المازح، ومعلم النحو يقول «ضرب زيدٌ عمراً».</dd>
+        <dt>انتبه لـ</dt><dd>الشرط الرابع: إذا نصب قرينة على المجاز، فهل تنتفي الدلالة التصديقية؟ أم تنتقل إلى المعنى المجازي؟ <span class="pill check">سؤال جيد للشيخ</span></dd>
+      </dl></article>
+
+    <article class="card point gold"><h3>2. الحقيقة والمجاز: المشهور ونظرية الادعاء (ص 14–15)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="mujaz_subhani" data-page="14"><span class="q">وأمّا المجاز : فهو استعمال اللّفظ في غير ما وضع له ، مع وجود علقة بين الموضوع له والمستعمل فيه بأحد العلائق المسوّغة ، كإطلاق الأسد وإرادة الرجل الشجاع</span><cite>الموجز ص 14: التعريف المشهور</cite></blockquote>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="14"><span class="q">وفي الثاني مستعمل في الموضوع له لغاية ادّعاء انّ المورد من مصاديق الموضوع له</span><cite>الموجز ص 14: «النظر الموافق للتحقيق»، وهو اختيار السيد الخميني</cite></blockquote></dd>
+        <dt>اختبار متوقع</dt><dd>بيت زهير: «لدى أسد شاكي السلاح… له لبد أظفاره لم تقلّم». لو كان «أسد» مستعملاً في «الرجل الشجاع»، فلماذا أثبت له اللبد والأظفار؟ هذا الاختبار هو حجة نظرية الادعاء.</dd>
+        <dt>نص حقيقي متوقع</dt><dd>﴿فَتَحْرِيرُ رَقَبَةٍ﴾: «الرقبة» والمراد الإنسان كله. هذا مثال المجاز المرسل (إطلاق الجزء وإرادة الكل) في آية حكم. ومن باب التفسير (السبب الأول لدراسة الأصول): ﴿يَدُ اللَّهِ فَوْقَ أَيْدِيهِمْ﴾.</dd>
+        <dt>سؤال إما/أو</dt><dd>هل للخلاف بين المشهور والادعاء ثمرة فقهية؟ أم هو خلاف في تفسير الظاهرة اللغوية فقط؟ <span class="pill check">اسمع جواب الشيخ</span></dd>
+      </dl></article>
+
+    <article class="card point blue"><h3>3. التبادر: تبادرُ مَن؟ وفي أي زمن؟ (ص 15)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="mujaz_subhani" data-page="15"><span class="q">هو انسباق المعنى إلى الفهم من نفس اللّفظ مجرّدا عن كلّ قرينة</span><cite>الموجز ص 15</cite></blockquote></dd>
+        <dt>إشكال متوقع</dt><dd>«الحمّام» اليوم يتبادر منه دورة المياه، وفي زمن الروايات الحمّام العام (الجلسة 01). فتبادرنا اليوم لا يكشف معنى النص. المطلوب التبادر عند أهل زمن الصدور.</dd>
+        <dt>توسعة محتملة</dt><dd>إشكال الدور المشهور: نعرف الوضع بالتبادر، والتبادر متوقف على العلم بالوضع؛ وجوابه الفرق بين العلم الإجمالي الارتكازي والعلم التفصيلي. <span class="pill editor">ليس في الموجز</span></dd>
+      </dl></article>
+
+    <article class="card point blue"><h3>4. صحة الحمل والسلب (ص 15–16): مراجعة منطقية لحظة الحاجة</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="mujaz_subhani" data-page="16"><span class="q">فاعلم أنّ المقصود من أنّ صحّة الحمل أو صحّة السلب علامة للحقيقة والمجاز هو القسم الأوّل</span><cite>الموجز ص 16: أي الحمل الأولي الذاتي</cite></blockquote></dd>
+        <dt>المتوقع</dt><dd>كما فعل الشيخ مع التصور والتصديق، يُرجَّح أن يراجع الحملين: «الإنسان حيوان ناطق» (أولي: اتحاد في المفهوم)، و«زيد إنسان» (شائع: اتحاد في الوجود فقط).</dd>
+        <dt>اختبار</dt><dd>«الرجل الشجاع ليس بأسد» صحيح بالحمل الأولي، إذن «أسد» ليس موضوعاً للرجل الشجاع. لكن «زيد أسد» يصح بالادعاء. فأيّ الحملين نختبر به؟</dd>
+      </dl></article>
+
+    <article class="card point gold"><h3>5. الاطراد: مثال الغنيمة وآية الخمس (ص 16–17)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="mujaz_subhani" data-page="17"><span class="q">يستكشف الثاني عن طريق الاطّراد في الاستعمال ، فإذا تتبعنا الكتاب والسنّة نجد اطّراد استعمالها في كلّ ما يحوزه الإنسان من أيّ طريق كان</span><cite>الموجز ص 17</cite></blockquote>
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="17"><span class="q">تَبْتَغُونَ عَرَضَ الْحَياةِ الدُّنْيا فَعِنْدَ اللَّهِ مَغانِمُ كَثِيرَةٌ</span><cite>الموجز ص 17: من شواهد الاطراد</cite></blockquote></dd>
+        <dt>إشكال متوقع</dt><dd>الآية في سياق آيات القتال في سورة الأنفال. أليس السياق قرينة على غنائم الحرب؟ وجوابه المتداول: «المورد لا يخصص الوارد»، وعموم «من شيء».</dd>
+        <dt>مثال الموجز الآخر</dt><dd>«الماء طاهر» عند الفقيه، و«رطب سيال» عند الكيميائي، و«لا لون له» عند الفيزيائي: لفظ واحد مع محمولات مختلفة يكشف الجامع.</dd>
+        <dt>انتبه لـ</dt><dd>كيف يربط الشيخ هذا بـ«التفسير البياني» ودفع الشبهات.</dd>
+      </dl></article>
+
+    <article class="card point rose"><h3>✦ من كتب الأعلام: إشكالان يستحقان (اختياري، لكنه ممتع)</h3>
+      <dl>
+        <dt>المرتضى</dt><dd>يجعل الاستعمال نفسه دليل الحقيقة:
+          <blockquote class="matn" data-book="murtada_dhariyah_1" data-page="80"><span class="q">قد بيّنّا أنّ ظاهر الاستعمال يدلّ على الحقيقة</span><cite>الذريعة ج 1 ص 80</cite></blockquote>
+          <blockquote class="matn" data-book="murtada_dhariyah_1" data-page="91"><span class="q">وظاهر الاستعمال يدلّ على الحقيقة ، إلاّ أن تمنع دلالة</span><cite>الذريعة ج 1 ص 91: بعد استشهاده بـ﴿وإذا حللتم فاصطادوا﴾ و﴿فانتشروا في الأرض﴾، وهما للإباحة</cite></blockquote>
+          فيخلص إلى أن صيغة «افعل» حقيقة في الأمر والإباحة معاً، أي مشتركة.</dd>
+        <dt>الإشكال</dt><dd>لو كان كل استعمال علامة حقيقة، لصار أكثر الألفاظ مشتركاً. ولذلك اشتهر عند المتأخرين أن «الاستعمال أعم من الحقيقة». فما الذي تغيّر بين المرتضى والموجز؟ ولماذا صار المتأخرون يشترطون التبادر والاطراد <em>المجرد عن القرينة</em>؟</dd>
+        <dt>الآخوند</dt><dd>يعترض على الاطراد نفسه، وهو علامة الموجز الثالثة:
+          <blockquote class="matn" data-book="kifayah_akhund" data-page="20"><span class="q">فالمجاز مطرد كالحقيقة</span><cite>الكفاية ص 20</cite></blockquote>
+          <blockquote class="matn" data-book="kifayah_akhund" data-page="20"><span class="q">إلا أنه - حينئذ - لا يكون علامة لها إلا على وجه دائر</span><cite>الكفاية ص 20: إذا قُيّد الاطراد بـ«على وجه الحقيقة»</cite></blockquote></dd>
+        <dt>لماذا يستحق</dt><dd>المرتضى يعيدك إلى سؤال الجلسة 01 عن ﴿وأنكحوا الأيامى﴾: هل الأمر للوجوب أم الاستحباب أم الإباحة؟ وإلى «الأمر عقيب الحظر» (الموجز ص 38). والآخوند يمتحن مثال الغنيمة: هل اطراد «الغنيمة» في كل فائدة يثبت الحقيقة، أم يطّرد المجاز أيضاً؟ <span class="pill check">سؤال ممتاز للشيخ إن سمح الوقت</span></dd>
+      </dl></article>
+
+    <article class="card point"><h3>6. تنصيص أهل اللغة (ص 18) — ربط بالاطمئنان</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="mujaz_subhani" data-page="18"><span class="q">فتنصيص مثل هؤلاء يكون مفيدا للاطمئنان بالموضوع له</span><cite>الموجز ص 18 (الخليل والجوهري)</cite></blockquote></dd>
+        <dt>ربط</dt><dd>تذكّر تصحيح الشيخ: الاطمئنان ليس يقيناً، بل احتمال الخلاف فيه لا يُعتنى به. والموجز يحيل تفصيل حجية قول اللغوي إلى ص 175.</dd>
+        <dt>توسعة محتملة</dt><dd>الاعتراض المشهور: اللغوي خبير بموارد الاستعمال، لا بتمييز الحقيقة من المجاز. <span class="pill editor">ليس في الموجز هنا</span></dd>
+      </dl></article>
+
+    <article class="card point"><h3>7. إن اتسع الوقت: الأصول اللفظية (ص 18–20)</h3>
+      <dl>
+        <dt>المفتاح</dt><dd>نوعان من الشك: في <strong>الموضوع له</strong> (وعلاجه العلامات السابقة) وفي <strong>المراد</strong> (وعلاجه الأصول اللفظية).
+          <blockquote class="matn" data-book="mujaz_subhani" data-page="20"><span class="q">ثمّ إنّ الأصول السابقة مصاديق لأصالة الظهور</span><cite>الموجز ص 20</cite></blockquote></dd>
+        <dt>ربط</dt><dd>﴿أحلّ الله البيع﴾ (أصالة الإطلاق) تعيدنا إلى سؤال الجلسة 01 عن ﴿وأنكحوا الأيامى﴾. و﴿واسأل القرية﴾ مثال أصالة عدم التقدير.</dd>
+      </dl></article>
+  </section>
+
+  <!-- ============ 3. أسئلة قبل الدرس ============ -->
+  <section class="panel" id="panel-questions" tabindex="-1" hidden>
+    <div class="section-head"><h2>أسئلة قبل الدرس — بأسلوب الشيخ</h2><p>أجب أولاً ثم اكشف «مسار الجواب». إن خالف الشيخ هذا المسار في الدرس، فذلك أثمن ما تدوّنه.</p></div>
+    <div class="exercise"><p><span class="pill">حالة</span> سمعت نائماً يقول «زوجتي طالق». ماذا حصل عندك من الدلالة؟ وأيّ شروط التصديقية فُقد؟</p>
+      <button class="btn small" type="button" data-reveal="p1" aria-expanded="false">أظهر مسار الجواب</button>
+      <div class="answer" id="p1" hidden>حصلت الدلالة التصورية، لأنها تحصل بالعلم باللغة. ولم تحصل التصديقية، لأنه ليس في مقام البيان والإفادة ولا قصد له. فلا يُحكم بإرادته الطلاق.</div></div>
+    <div class="exercise"><p><span class="pill">تصنيف</span> ما الشرط المفقود في كل حالة: الببغاء، أعجمي يردد جملة عربية، المازح، معلم النحو يقول «ضرب زيدٌ عمراً»؟</p>
+      <button class="btn small" type="button" data-reveal="p2" aria-expanded="false">أظهر مسار الجواب</button>
+      <div class="answer" id="p2" hidden>الببغاء: كل الشروط، فلا متكلم قاصد أصلاً. الأعجمي: العلم باللغة. المازح: الجِدّ. معلم النحو: مقام البيان والإفادة (يمثّل ولا يخبر).</div></div>
+    <div class="exercise"><p><span class="pill">اختبار</span> لماذا أثبت الشاعر للرجل الشجاع «لبداً» و«أظفاراً»؟ وأيّ نظرية في المجاز يدعم ذلك؟</p>
+      <button class="btn small" type="button" data-reveal="p3" aria-expanded="false">أظهر مسار الجواب</button>
+      <div class="answer" id="p3" hidden>لأنه ادّعى أن الرجل فرد من أفراد الأسد حقيقة، فأثبت له آثاره. وهذا يدعم نظرية الادعاء: اللفظ مستعمل في معناه الموضوع له، والتصرف في تطبيقه على المورد.</div></div>
+    <div class="exercise"><p><span class="pill">إما/أو</span> «الحمّام» في الروايات: نأخذ بما يتبادر اليوم أم بما كان يتبادر زمن النص؟ وكيف نعرف الثاني؟</p>
+      <button class="btn small" type="button" data-reveal="p4" aria-expanded="false">أظهر مسار الجواب</button>
+      <div class="answer" id="p4" hidden>بما كان يتبادر زمن الصدور. نعرفه بتتبع استعمالات ذلك العصر (الاطراد) وتنصيص اللغويين القدامى وقرائن النصوص. وتبادرنا اليوم ينفع فقط إذا ضممنا إليه أن اللفظ لم ينتقل عن معناه (أصالة عدم النقل)، وهذا في «الحمّام» غير متحقق.</div></div>
+    <div class="exercise"><p><span class="pill">شبهة</span> قيل: الخمس في غنائم الحرب فقط، لأن آية الخمس نزلت في سياق القتال. كيف يجيب الأصولي؟</p>
+      <button class="btn small" type="button" data-reveal="p5" aria-expanded="false">أظهر مسار الجواب</button>
+      <div class="answer" id="p5" hidden>(1) الاطراد في الكتاب والسنة يكشف أن «الغنيمة» لكل فائدة (الموجز ص 17). (2) عموم «من شيء». (3) المورد لا يخصص الوارد؛ فالسياق لا يضيّق معنى اللفظ الموضوع للأعم ما لم يكن قرينة صارفة.</div></div>
+    <div class="exercise"><p><span class="pill">منطق</span> «الإنسان حيوان ناطق» و«زيد إنسان»: أيهما أولي وأيهما شائع؟ وأيهما علامة الحقيقة عند الموجز؟</p>
+      <button class="btn small" type="button" data-reveal="p6" aria-expanded="false">أظهر مسار الجواب</button>
+      <div class="answer" id="p6" hidden>الأول أولي ذاتي (اتحاد مفهومي)، والثاني شائع صناعي (اتحاد وجودي). العلامة عند الموجز هي صحة الحمل الأولي (ص 16).</div></div>
+  </section>
+
+  <!-- ============ 4. داخل الدرس ============ -->
+  <section class="panel" id="panel-inclass" tabindex="-1" hidden>
+    <div class="grid two">
+      <article class="card accent"><h3>وسوم التدوين السريع</h3>
+        <ul>
+          <li><strong>[مثال]</strong> ومعه دائماً: <em>ماذا أثبت؟</em></li>
+          <li><strong>[سؤال]</strong> سؤال طرحه الشيخ، وهل أجابه أم تركه معلّقاً.</li>
+          <li><strong>[تصحيح]</strong> تصوّر خاطئ صحّحه.</li>
+          <li><strong>[ثمرة]</strong> الأثر الفقهي أو العملي.</li>
+          <li><strong>[إحالة]</strong> «سيأتي في…» أو «بعد الكفاية…».</li>
+          <li><strong>[علم]</strong> عالم ورأيه في سطر.</li>
+          <li><strong>[متن]</strong> عبارة من الموجز علّق عليها، أو فقرة تجاوزها.</li></ul></article>
+      <article class="card gold"><h3>أسئلة مرشحة لطرحها</h3><ol>
+        <li>إذا نصب المتكلم قرينة على المجاز، فهل انتفت الدلالة التصديقية أم انتقلت إلى المعنى المجازي؟</li>
+        <li>هل للخلاف بين المشهور ونظرية الادعاء ثمرة فقهية؟</li>
+        <li>التبادر المطلوب: تبادر زمن الصدور؟ وكيف نحرزه؟</li>
+        <li>الموجز يقول إن تنصيص اللغوي «مفيد للاطمئنان»؛ هل هذا الاطمئنان هو الذي صحّحتم معناه في الجلسة الأولى؟</li></ol></article>
+    </div>
+  </section>
+
+  <!-- ============ 5. بعد الدرس ============ -->
+  <section class="panel" id="panel-after" tabindex="-1" hidden>
+    <article class="card lesson-prose"><h2>بعد الدرس: تحويل التحضير إلى تقرير</h2>
+      <ol>
+        <li>احفظ ملاحظاتك كما هي في <code>ملاحظات_خام/جلسة_03.md</code>، وأرسلها للتحرير.</li>
+        <li>كل نقطة «متوقعة» تحققت تتحول إلى «تقرير الشيخ» بمثاله الفعلي. ما لم يُذكر يُحذف أو يُنقل إلى «للتوسع».</li>
+        <li>أمثلة الشيخ الجديدة تُضاف إلى جدول «أمثلة الشيخ ونكاتها» مع وظيفتها.</li>
+        <li>أسئلته المعلّقة تُضاف إلى <a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/Usul/%D8%B3%D8%AC%D9%84_%D8%A7%D9%84%D8%A5%D8%B4%D9%83%D8%A7%D9%84%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%81%D8%AA%D9%88%D8%AD%D8%A9.md" target="_blank" rel="noopener">سجل الإشكالات المفتوحة</a>.</li>
+        <li>نقارن التوقع بالواقع لنحسّن تحضير الجلسة 04: هل كان إيقاعه 5 صفحات؟ هل افتتح بإشكال؟</li>
+      </ol>
+      <p class="muted">الجلسة السابقة: <a href="02_التعريف_والتقسيم_والوضع.html">الجلسة 02</a>. مرجع موضوعي أوسع: <a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/Usul/00_%D8%A7%D9%84%D9%85%D9%82%D8%AF%D9%85%D8%A9_%D9%88%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%A6/03_%D8%A7%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B5%D9%88%D8%B1%D9%8A%D8%A9_%D9%88%D8%A7%D9%84%D8%AF%D9%84%D8%A7%D9%84%D8%A9_%D8%A7%D9%84%D8%AA%D8%B5%D8%AF%D9%8A%D9%82%D9%8A%D8%A9.html" target="_blank" rel="noopener">ملف الدلالة</a> و<a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/Usul/00_%D8%A7%D9%84%D9%85%D9%82%D8%AF%D9%85%D8%A9_%D9%88%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%A6/04_%D8%A7%D9%84%D8%AD%D9%82%D9%8A%D9%82%D8%A9_%D9%88%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D8%B2_%D9%88%D8%B9%D9%84%D8%A7%D9%85%D8%A7%D8%AA_%D8%A7%D9%84%D8%AD%D9%82%D9%8A%D9%82%D8%A9.html" target="_blank" rel="noopener">ملف الحقيقة والمجاز</a> (اختياري).</p>
+    </article>
+  </section>
+  </main>
+  <footer class="footer">جلسات الشيخ شبير • الجلسة 03 • ملف تحضير: التوقعات معلّمة، ونصوص الموجز حرفية من قاعدة الكتب المحلية ومفحوصة آلياً</footer>
+  <script>
+(() => {
+  "use strict";
+
+  const lessonId = document.body.dataset.lesson || "01";
+  const prefix = `shabbir_usul_lesson_${lessonId}`;
+  const SOURCES = window.LESSON_SOURCES || window.LESSON01_SOURCES || {};
+  const SOURCE_ORDER = window.LESSON_SOURCE_ORDER || window.LESSON01_SOURCE_ORDER || Object.keys(SOURCES);
+  const LABELS = window.LESSON_LABELS || window.LESSON01_LABELS;
+  const KEYS = {
+    theme: "shabbir_usul_theme",
+    notes: `${prefix}_unified_notes`,
+    tasks: `${prefix}_tasks`,
+    errors: `${prefix}_error_log`,
+    reviews: `${prefix}_review_dates`,
+    tab: `${prefix}_active_tab`
+  };
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem(KEYS.theme, theme);
+    const label = $("#theme-label");
+    if (label) label.textContent = theme === "dark" ? "النمط الفاتح" : "النمط الداكن";
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem(KEYS.theme);
+    const preferred = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    setTheme(saved === "dark" || saved === "light" ? saved : preferred);
+  }
+
+  function activateTab(id, focus = false) {
+    const button = $(`[data-tab="${id}"]`);
+    const panel = $(`#panel-${id}`);
+    if (!button || !panel) return;
+    $$("[data-tab]").forEach((item) => item.setAttribute("aria-selected", String(item === button)));
+    $$(".panel").forEach((item) => { item.hidden = item !== panel; });
+    localStorage.setItem(KEYS.tab, id);
+    history.replaceState(null, "", `#${id}`);
+    if (focus) panel.focus({ preventScroll: true });
+  }
+
+  function loadTasks() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEYS.tasks) || "{}"); } catch (_) { saved = {}; }
+    $$(".task-check").forEach((box) => {
+      if (Object.prototype.hasOwnProperty.call(saved, box.id)) box.checked = Boolean(saved[box.id]);
+    });
+    updateProgress(false);
+  }
+
+  function updateProgress(save = true) {
+    const boxes = $$(".task-check");
+    const state = {};
+    let complete = 0;
+    boxes.forEach((box) => {
+      state[box.id] = box.checked;
+      if (box.checked) complete += 1;
+    });
+    if (save) localStorage.setItem(KEYS.tasks, JSON.stringify(state));
+    const percent = boxes.length ? Math.round((complete / boxes.length) * 100) : 0;
+    const text = $("#progress-text");
+    const bar = $("#progress-fill");
+    if (text) text.textContent = `${complete} من ${boxes.length} • ${percent}٪`;
+    if (bar) bar.style.width = `${percent}%`;
+  }
+
+  function bindSavedText(selector, key) {
+    const field = $(selector);
+    if (!field) return;
+    const saved = localStorage.getItem(key);
+    if (saved !== null) field.value = saved;
+    const count = $(`${selector}-count`);
+    const persist = () => {
+      localStorage.setItem(key, field.value);
+      if (count) count.textContent = `${field.value.length} حرف`;
+      const status = $("#save-status");
+      if (status) {
+        status.textContent = "حُفظ تلقائياً";
+        clearTimeout(persist.timer);
+        persist.timer = setTimeout(() => { status.textContent = ""; }, 1200);
+      }
+    };
+    field.addEventListener("input", persist);
+    if (count) count.textContent = `${field.value.length} حرف`;
+  }
+
+  function loadReviewDates() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEYS.reviews) || "{}"); } catch (_) { saved = {}; }
+    $$("[data-review-date]").forEach((input) => {
+      if (saved[input.id]) input.value = saved[input.id];
+      input.addEventListener("change", () => {
+        const current = {};
+        $$("[data-review-date]").forEach((item) => { current[item.id] = item.value; });
+        localStorage.setItem(KEYS.reviews, JSON.stringify(current));
+      });
+    });
+  }
+
+  function openSource(id) {
+    const source = SOURCES[id];
+    if (!source) return;
+    $("#source-title").textContent = source.book;
+    $("#source-author").textContent = source.author;
+    $("#source-kind").textContent = LABELS.content_kind[source.content_kind];
+    $("#source-verification").textContent = LABELS.verification[source.verification];
+    $("#source-text").textContent = source.text;
+    $("#source-context").textContent = source.context;
+    const provenance = $("#source-provenance");
+    provenance.innerHTML = "";
+    [
+      ["الطبعة", source.edition],
+      ["الجزء", source.volume],
+      ["الصفحة المطبوعة", source.printed_page],
+      ["صفحة المسح/البيانات", source.scan_or_database_page]
+    ].forEach(([label, value]) => {
+      if (!value) return;
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = label;
+      dd.textContent = value;
+      provenance.append(dt, dd);
+    });
+    const link = $("#source-link");
+    if (source.file) {
+      link.href = source.file + (source.pdf_page ? `#page=${source.pdf_page}` : "");
+      link.hidden = false;
+    } else {
+      link.hidden = true;
+    }
+    $("#source-overlay").classList.add("open");
+    $("#source-drawer").classList.add("open");
+    $("#source-drawer").setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    $("#source-close").focus();
+  }
+
+  function closeSource() {
+    $("#source-overlay").classList.remove("open");
+    $("#source-drawer").classList.remove("open");
+    $("#source-drawer").setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function renderSources() {
+    const container = $("#source-list");
+    if (!container || !Object.keys(SOURCES).length) return;
+    SOURCE_ORDER.forEach((id) => {
+      const source = SOURCES[id];
+      const item = document.createElement("article");
+      item.className = "source-item";
+      item.dataset.layer = source.layer;
+      const h = document.createElement("h3");
+      h.textContent = source.book;
+      const meta = document.createElement("div");
+      meta.className = "source-meta";
+      meta.textContent = `${source.author} • ${source.printed_page || source.scan_or_database_page}`;
+      const row = document.createElement("div");
+      row.className = "meta-row";
+      const layer = document.createElement("span");
+      layer.className = `pill ${source.layer}`;
+      layer.textContent = source.layer === "core" ? "الطبقة الأساسية" : source.layer === "advanced" ? "الطبقة المتقدمة" : "تطبيق";
+      const kind = document.createElement("span");
+      kind.className = "pill";
+      kind.textContent = LABELS.content_kind[source.content_kind];
+      const verification = document.createElement("span");
+      verification.className = "pill verified";
+      verification.textContent = LABELS.verification[source.verification];
+      const button = document.createElement("button");
+      button.className = "btn small";
+      button.type = "button";
+      button.textContent = "قراءة المقتطف";
+      button.addEventListener("click", () => openSource(id));
+      row.append(layer, kind, verification, button);
+      item.append(h, meta, row);
+      container.appendChild(item);
+    });
+  }
+
+  function filterSources(filter) {
+    $$("[data-source-filter]").forEach((button) => {
+      button.classList.toggle("primary", button.dataset.sourceFilter === filter);
+    });
+    $$("#source-list .source-item").forEach((item) => {
+      item.hidden = filter !== "all" && item.dataset.layer !== filter;
+    });
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard) return navigator.clipboard.writeText(text);
+    const area = document.createElement("textarea");
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+    return Promise.resolve();
+  }
+
+  function init() {
+    initTheme();
+    renderSources();
+    loadTasks();
+    bindSavedText("#notes-unified", KEYS.notes);
+    bindSavedText("#error-log", KEYS.errors);
+    loadReviewDates();
+
+    $$("[data-tab]").forEach((button) => button.addEventListener("click", () => activateTab(button.dataset.tab, true)));
+    const hash = location.hash.replace("#", "");
+    const savedTab = localStorage.getItem(KEYS.tab);
+    activateTab($( `[data-tab="${hash}"]`) ? hash : ($( `[data-tab="${savedTab}"]`) ? savedTab : "orientation"));
+
+    $("#theme-toggle")?.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
+    $$(".task-check").forEach((box) => box.addEventListener("change", () => updateProgress(true)));
+    $$('[data-reveal]').forEach((button) => button.addEventListener("click", () => {
+      const answer = document.getElementById(button.dataset.reveal);
+      const willShow = answer.hidden;
+      answer.hidden = !willShow;
+      button.textContent = willShow ? "إخفاء الجواب" : "أظهر الجواب";
+      button.setAttribute("aria-expanded", String(willShow));
+    }));
+    $$(".flashcard").forEach((card) => card.addEventListener("click", () => {
+      const answer = $(".back", card);
+      answer.hidden = !answer.hidden;
+      card.setAttribute("aria-expanded", String(!answer.hidden));
+    }));
+    $$('[data-source]').forEach((button) => button.addEventListener("click", () => openSource(button.dataset.source)));
+    $$('[data-source-filter]').forEach((button) => button.addEventListener("click", () => filterSources(button.dataset.sourceFilter)));
+    $("#source-close")?.addEventListener("click", closeSource);
+    $("#source-overlay")?.addEventListener("click", closeSource);
+    $("#source-copy")?.addEventListener("click", () => copyText($("#source-text").textContent));
+    $("#copy-notes")?.addEventListener("click", () => copyText($("#notes-unified").value));
+    $("#print-lesson")?.addEventListener("click", () => window.print());
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeSource();
+      if (/^[1-7]$/.test(event.key) && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+        const button = $$("[data-tab]")[Number(event.key) - 1];
+        if (button) activateTab(button.dataset.tab, true);
+      }
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", init);
+})();
+
+</script>
+</body></html>
