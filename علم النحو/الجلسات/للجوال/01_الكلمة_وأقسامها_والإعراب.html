@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="علم النحو، الجلسة 01: مدخل إلى علم النحو ص 1–7. الكلمة والكلام، أقسام الكلمة وعلاماتها، والإعراب الظاهر والتقديري، على طريقة الشيخ شبير، مع تطبيقات قرآنية متدرجة وتقييم ذاتي.">
+  <title>النحو 01 — الكلمة وأقسامها، والإعراب</title>
+  <script>try{const t=localStorage.getItem('shabbir_usul_theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <style>
+:root {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --surface: #fffdf8;
+  --surface-2: #f0ece3;
+  --ink: #17201d;
+  --muted: #64706a;
+  --line: #dcd5c8;
+  --primary: #176b54;
+  --primary-strong: #0e4e3c;
+  --primary-soft: #e3f2ec;
+  --gold: #9a6718;
+  --gold-soft: #fbf0d7;
+  --blue: #285b87;
+  --blue-soft: #e7f0f8;
+  --rose: #9a3d4d;
+  --rose-soft: #f9e7ea;
+  --shadow: 0 18px 55px rgb(38 44 40 / 10%);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101614;
+  --surface: #17201d;
+  --surface-2: #1d2925;
+  --ink: #eef4f0;
+  --muted: #a6b2ac;
+  --line: #34423c;
+  --primary: #66c5a4;
+  --primary-strong: #8edbbb;
+  --primary-soft: #183a30;
+  --gold: #e4b75f;
+  --gold-soft: #3d311b;
+  --blue: #8bb8df;
+  --blue-soft: #1c3449;
+  --rose: #e79baa;
+  --rose-soft: #43252c;
+  --shadow: 0 18px 55px rgb(0 0 0 / 28%);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 88% 5%, color-mix(in srgb, var(--primary) 13%, transparent), transparent 27rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  line-height: 1.85;
+}
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: var(--primary); }
+.shell { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+.site-header { padding: 30px 0 16px; }
+.eyebrow { margin: 0 0 6px; color: var(--gold); font-weight: 800; font-size: .88rem; letter-spacing: .03em; }
+h1, h2, h3, h4 { line-height: 1.4; margin: 0; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; }
+h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+h3 { font-size: 1.1rem; }
+p { margin: .55rem 0 1rem; }
+.header-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
+.header-copy { max-width: 850px; }
+.subtitle { color: var(--muted); max-width: 800px; font-size: 1.04rem; }
+.header-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.btn {
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 12px;
+  padding: 9px 14px; cursor: pointer; font-weight: 750; transition: .18s ease; text-decoration: none;
+}
+.btn:hover, .btn:focus-visible { border-color: var(--primary); transform: translateY(-1px); outline: none; }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+html[data-theme="dark"] .btn.primary { color: #0d1a15; }
+.btn.small { padding: 5px 10px; font-size: .82rem; border-radius: 9px; }
+.progress-panel { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px 17px; box-shadow: var(--shadow); }
+.progress-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; font-size: .9rem; font-weight: 700; }
+.progress-track { height: 9px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-top: 8px; }
+.progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--gold)); transition: width .25s ease; }
+.tabs-wrap { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); }
+.tabs { display: flex; gap: 8px; overflow-x: auto; padding: 11px 0; scrollbar-width: thin; }
+.tab {
+  white-space: nowrap; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--muted);
+  padding: 8px 13px; cursor: pointer; font-weight: 800; font-size: .9rem;
+}
+.tab[aria-selected="true"] { background: var(--primary); color: #fff; box-shadow: 0 8px 18px color-mix(in srgb, var(--primary) 28%, transparent); }
+html[data-theme="dark"] .tab[aria-selected="true"] { color: #0d1a15; }
+main { padding: 28px 0 64px; }
+.panel[hidden] { display: none; }
+.panel { animation: enter .22s ease; }
+@keyframes enter { from { opacity: 0; transform: translateY(5px); } }
+.section-head { margin-bottom: 18px; }
+.section-head p { color: var(--muted); max-width: 850px; }
+.grid { display: grid; gap: 16px; }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; box-shadow: 0 8px 30px rgb(32 39 35 / 5%); }
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+.card.accent { border-top: 4px solid var(--primary); }
+.card.gold { border-top: 4px solid var(--gold); }
+.card.blue { border-top: 4px solid var(--blue); }
+.card.rose { border-top: 4px solid var(--rose); }
+.muted { color: var(--muted); }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; }
+.pill { display: inline-flex; align-items: center; gap: 5px; border-radius: 999px; padding: 4px 9px; font-weight: 800; font-size: .75rem; background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+.pill.core { background: var(--primary-soft); color: var(--primary-strong); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
+.pill.advanced { background: var(--gold-soft); color: var(--gold); border-color: color-mix(in srgb, var(--gold) 35%, var(--line)); }
+.pill.verified { background: var(--blue-soft); color: var(--blue); }
+.callout { border-right: 4px solid var(--primary); background: var(--primary-soft); padding: 15px 17px; border-radius: 13px; margin: 15px 0; }
+.callout.gold { border-color: var(--gold); background: var(--gold-soft); }
+.callout.rose { border-color: var(--rose); background: var(--rose-soft); }
+.definition { font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; font-weight: 700; }
+.source-button { border: 0; background: transparent; color: var(--primary); cursor: pointer; font-weight: 850; padding: 0; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.source-button:hover { color: var(--gold); }
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 10px; }
+.steps li { counter-increment: step; position: relative; padding: 13px 52px 13px 14px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 13px; }
+.steps li::before { content: counter(step); position: absolute; right: 12px; top: 12px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; }
+.argument-map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
+.argument-map div { min-height: 120px; padding: 12px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.argument-map strong { display: block; color: var(--gold); margin-bottom: 5px; }
+.comparison { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.comparison th, .comparison td { padding: 11px; border: 1px solid var(--line); text-align: right; vertical-align: top; }
+.comparison th { background: var(--surface-2); color: var(--primary-strong); }
+.scroll-x { overflow-x: auto; border-radius: 14px; }
+.exercise { border: 1px dashed color-mix(in srgb, var(--primary) 55%, var(--line)); border-radius: 15px; padding: 16px; margin: 12px 0; background: color-mix(in srgb, var(--primary-soft) 40%, var(--surface)); }
+.answer { margin-top: 12px; padding: 13px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.answer[hidden] { display: none; }
+.task-list { list-style: none; padding: 0; display: grid; gap: 10px; }
+.task-list label { display: flex; align-items: flex-start; gap: 10px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); cursor: pointer; }
+.task-list input { margin-top: 7px; accent-color: var(--primary); width: 17px; height: 17px; }
+.flash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.flashcard { text-align: right; min-height: 145px; width: 100%; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--ink); padding: 17px; cursor: pointer; }
+.flashcard .front { font-weight: 850; color: var(--primary-strong); }
+.flashcard .back { margin-top: 10px; color: var(--muted); }
+.flashcard .back[hidden] { display: none; }
+.notes, .error-log { width: 100%; min-height: 260px; resize: vertical; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 14px; padding: 14px; line-height: 1.8; }
+.error-log { min-height: 150px; }
+.notes:focus, .error-log:focus { outline: 2px solid color-mix(in srgb, var(--primary) 45%, transparent); border-color: var(--primary); }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 9px; }
+.source-grid { display: grid; gap: 12px; }
+.source-item { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 15px; }
+.source-item h3 { margin-bottom: 5px; }
+.source-meta { color: var(--muted); font-size: .84rem; }
+.footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: .84rem; text-align: center; }
+.drawer-overlay { position: fixed; inset: 0; background: rgb(0 0 0 / 58%); z-index: 49; opacity: 0; pointer-events: none; transition: .2s; }
+.drawer-overlay.open { opacity: 1; pointer-events: auto; }
+.drawer { position: fixed; z-index: 50; top: 0; right: 0; height: 100%; width: min(620px, 94vw); background: var(--surface); border-left: 1px solid var(--line); transform: translateX(105%); transition: transform .25s ease; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+.drawer.open { transform: translateX(0); }
+.drawer-head { display: flex; justify-content: space-between; gap: 16px; align-items: start; padding: 18px; border-bottom: 1px solid var(--line); }
+.drawer-body { padding: 18px; overflow: auto; }
+.source-text { white-space: pre-line; font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; line-height: 2.05; background: var(--surface-2); border-right: 4px solid var(--gold); padding: 16px; border-radius: 12px; }
+.lesson-prose { overflow-wrap: anywhere; }
+.lesson-prose h2 { margin-bottom: 14px; color: var(--primary-strong); }
+.lesson-prose h3 { margin: 28px 0 10px; color: var(--gold); }
+.lesson-prose h4 { margin: 20px 0 8px; }
+.lesson-prose li { margin: 6px 0; }
+.lesson-prose table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; margin: 16px 0 22px; }
+.lesson-prose th, .lesson-prose td { border: 1px solid var(--line); padding: 10px 12px; text-align: right; vertical-align: top; min-width: 120px; }
+.lesson-prose th { background: var(--surface-2); color: var(--primary-strong); }
+.lesson-prose details { border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); padding: 10px 14px; margin: 12px 0; }
+.lesson-prose details summary { cursor: pointer; color: var(--primary-strong); font-weight: 800; }
+.lesson-prose details[open] { border-color: var(--primary); }
+.lesson-prose hr { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+.lesson-controls, .source-shortcuts { margin-top: 16px; }
+.source-shortcuts .source-button { margin: 0 6px; }
+.lesson-controls input[type="date"] { width: 100%; margin-top: 5px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); border-radius: 8px; padding: 5px; }
+.provenance { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: .84rem; margin: 15px 0; }
+.provenance dt { color: var(--muted); }
+.provenance dd { margin: 0; font-weight: 700; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Session files: Shaykh Shabbir's lecture as the spine */
+.pill.teacher { background: var(--primary-soft); color: var(--primary-strong); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
+.pill.editor { background: var(--gold-soft); color: var(--gold); border-color: color-mix(in srgb, var(--gold) 35%, var(--line)); }
+.pill.check { background: var(--rose-soft); color: var(--rose); border-color: color-mix(in srgb, var(--rose) 35%, var(--line)); }
+.point { margin: 0 0 16px; }
+.point h3 { color: var(--primary-strong); }
+.point dl { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 10px 14px; margin: 14px 0 0; }
+.point dt { font-weight: 850; color: var(--muted); font-size: .88rem; padding-top: 3px; }
+.point dd { margin: 0; overflow-wrap: anywhere; }
+.point dd > :first-child { margin-top: 0; }
+.point dd > :last-child { margin-bottom: 0; }
+.matn { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.04rem; line-height: 2; background: var(--surface-2); border-right: 4px solid var(--gold); padding: 9px 13px; border-radius: 10px; }
+.matn cite { display: block; font-style: normal; font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: .8rem; color: var(--muted); margin-top: 4px; }
+.editor-note, .check-note { border-right: 3px dashed var(--gold); background: color-mix(in srgb, var(--gold-soft) 55%, transparent); padding: 8px 12px; border-radius: 9px; margin: 8px 0; }
+.check-note { border-right-color: var(--rose); background: color-mix(in srgb, var(--rose-soft) 55%, transparent); }
+.editor-note::before { content: "إضافة تحريرية: "; font-weight: 850; color: var(--gold); }
+.check-note::before { content: "للتحقق: "; font-weight: 850; color: var(--rose); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .85rem; color: var(--muted); }
+.session-banner { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; border: 1px solid color-mix(in srgb, var(--gold) 45%, var(--line)); background: var(--gold-soft); border-radius: 14px; padding: 10px 14px; margin-top: 14px; font-size: .92rem; }
+
+/* Full Mujaz text tab and suggested answers */
+.mujaz-page { margin-bottom: 14px; }
+.mujaz-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 10px; color: var(--muted); font-size: .85rem; }
+.mujaz-head strong { color: var(--gold); font-size: 1rem; }
+.mujaz-body { font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; line-height: 2.1; }
+.mujaz-body p { margin: .35rem 0; }
+.mujaz-body h4 { color: var(--primary-strong); margin: 16px 0 6px; font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: 1rem; }
+.mujaz-body .ayah { color: var(--primary-strong); text-align: center; font-size: 1.15rem; }
+.mujaz-body .verse { text-align: center; font-style: italic; color: var(--gold); }
+.mujaz-notes { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .82rem; color: var(--muted); }
+.ans-wrap { margin-top: 8px; }
+.ans-wrap .answer { border-right: 3px solid var(--gold); }
+.prereq h3 { color: var(--primary-strong); }
+
+@media (max-width: 850px) {
+  .header-grid, .grid.two, .grid.three, .flash-grid { grid-template-columns: 1fr; }
+  .header-actions { justify-content: flex-start; }
+  .argument-map { grid-template-columns: 1fr; }
+  .argument-map div { min-height: auto; }
+  .point dl { grid-template-columns: 1fr; gap: 4px; }
+  .point dt { padding-top: 8px; }
+}
+
+@media print {
+  .tabs-wrap, .header-actions, .btn, .drawer, .drawer-overlay { display: none !important; }
+  body { background: #fff; color: #000; }
+  .panel[hidden] { display: block; }
+  .card, .source-item { box-shadow: none; break-inside: avoid; }
+}
+
+</style>
+  <style>
+/* إضافات جلسات النحو والبلاغة فوق lesson.css: الآيات، الشواهد، جداول الإعراب، والتقييم الذاتي */
+
+@font-face {
+  font-family: "Amiri Quran";
+  src: url("data:font/woff2;base64,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") format("woff2");
+  font-display: swap;
+  /* Amiri Quran © The Amiri Project Authors, SIL Open Font License 1.1 */
+}
+
+.ayah { font-family: "Amiri Quran", "Amiri", "Traditional Arabic", serif; font-size: 1.32em; line-height: 2.35; color: var(--primary-strong); }
+.ayah mark { background: var(--gold-soft); color: inherit; border-bottom: 2px solid var(--gold); border-radius: 4px; padding: 0 2px; }
+.ayah + cite, .verse cite { font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: .78rem; color: var(--muted); font-style: normal; white-space: nowrap; }
+.verse { margin: 6px 0; padding: 6px 14px; background: var(--surface-2); border-right: 4px solid var(--primary); border-radius: 10px; }
+.verse .ayah { display: inline; }
+
+.shahid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; margin: 8px 0; padding: 10px 16px; background: var(--surface-2); border-radius: 10px; font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; text-align: center; }
+.shahid span:first-child { text-align: right; }
+.shahid span:last-child { text-align: left; }
+
+.irab { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: .95rem; }
+.irab th, .irab td { border: 1px solid var(--line); padding: 7px 10px; text-align: right; vertical-align: top; }
+.irab th { background: var(--surface-2); color: var(--primary-strong); white-space: nowrap; }
+.irab td:first-child { font-family: "Amiri Quran", "Amiri", serif; font-size: 1.15rem; white-space: nowrap; color: var(--primary-strong); }
+
+.level-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin: 28px 0 6px; padding-bottom: 6px; border-bottom: 2px solid var(--line); }
+.level-head h3 { color: var(--gold); }
+.level-head .muted { font-size: .88rem; }
+.exercise .num { font-weight: 900; color: var(--gold); margin-left: 4px; }
+.exercise .task { font-weight: 700; }
+
+.self-mark { display: inline-flex; gap: 6px; margin-inline-start: 8px; vertical-align: middle; }
+.self-mark[hidden] { display: none; }
+.btn.good { border-color: color-mix(in srgb, var(--primary) 50%, var(--line)); color: var(--primary-strong); }
+.btn.bad { border-color: color-mix(in srgb, var(--rose) 50%, var(--line)); color: var(--rose); }
+.btn.good[aria-pressed="true"] { background: var(--primary); color: #fff; }
+.btn.bad[aria-pressed="true"] { background: var(--rose); color: #fff; }
+.exercise.is-right { border-style: solid; border-color: var(--primary); }
+.exercise.is-wrong { border-style: solid; border-color: var(--rose); background: color-mix(in srgb, var(--rose-soft) 45%, var(--surface)); }
+body.only-wrong .exercise:not(.is-wrong) { display: none; }
+body.only-wrong .level-head { opacity: .55; }
+
+.score-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; font-size: .9rem; font-weight: 700; }
+.score-row .actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.gem { border-top: 4px solid var(--rose); }
+
+@media (max-width: 850px) {
+  .shahid { grid-template-columns: 1fr; text-align: center; }
+  .shahid span:first-child, .shahid span:last-child { text-align: center; }
+  .irab td:first-child { white-space: normal; }
+}
+
+@media print {
+  .self-mark, .score-row .actions { display: none !important; }
+  .answer[hidden] { display: block; }
+}
+
+</style>
+</head>
+<body data-lesson="nahw01">
+  <header class="site-header"><div class="shell header-grid">
+    <div class="header-copy"><p class="eyebrow">علم النحو • الجلسة 01 • <strong>درس ذاتي على طريقة الشيخ شبير</strong> • مدخل إلى علم النحو ص 1–7</p>
+      <h1>الكلمة وأقسامها، والإعراب</h1>
+      <p class="subtitle">قبل أي قاعدة: رجلٌ قرأ «ورسولِه» بكسرة واحدة، فصار المعنى أن الله بريء من رسوله! وفي ﴿إنما يخشى الله من عباده العلماء﴾ لا يدلّك الترتيب على الخاشي والمخشيّ، بل الحركة. هذه الجلسة تعطيك أدوات ذلك: أقسام الكلمة وعلاماتها، ثم الإعراب الظاهر والمقدَّر، مع نحو أربعين تطبيقاً من القرآن تقيّم فيها نفسك.</p>
+      <div class="legend"><span class="pill editor">شرح على طريقة الشيخ</span><span class="pill verified">نص الكتاب محقق</span><span class="pill verified">آية محققة على نص التنزيل</span><span class="pill check">للتحقق أو سؤال لأستاذ</span></div></div>
+    <div class="header-actions"><button class="btn" id="theme-toggle" type="button"><span id="theme-label">النمط الداكن</span></button>
+      <button class="btn" id="print-lesson" type="button">طباعة</button></div>
+  </div><div class="shell progress-panel" aria-label="تقدم الجلسة"><div class="progress-row"><span>خطة الجلسة (60–75 دقيقة)</span>
+  <span id="progress-text">0 من 6 • 0٪</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="score-row"><span id="score-text">التطبيقات</span><span class="actions"><button class="btn small" id="only-wrong" type="button">أعد ما أخطأت فيه فقط</button><button class="btn small" id="reset-scores" type="button">ابدأ التقييم من جديد</button></span></div></div></header>
+
+  <nav class="tabs-wrap" aria-label="أقسام الجلسة"><div class="shell tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="false" data-tab="orientation">1. خطة الجلسة</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="flow">2. الدرس على طريقة الشيخ</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="tatbiq">3. تطبيقات قرآنية</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="final">4. الاختبار الختامي</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="after">5. المراجعة</button>
+  </div></nav>
+
+  <main class="shell">
+  <!-- ============ 1. خطة الجلسة ============ -->
+  <section class="panel" id="panel-orientation" tabindex="-1" hidden>
+    <div class="grid two">
+      <article class="card accent"><h3>ما تغطيه الجلسة</h3>
+        <p>الكتاب قصير الصفحات (نحو 150 كلمة في الصفحة)، فالجلسة 7 صفحات:</p>
+        <ol>
+          <li>تعريف النحو، موضوعه، ثمرته، واضعه (ص 1).</li>
+          <li>الكلمة، القول، المفرد، الكلام، وأقسام الكلمة (ص 2).</li>
+          <li>الاسم وعلاماته الأربع، والعامل اللفظي والمعنوي (ص 3–4).</li>
+          <li>الفعل بأقسامه الثلاثة وعلاماتها، والحرف وعلامته العدمية (ص 4–5).</li>
+          <li>الإعراب: الظاهر والتقديري، وأنواعه الأربعة، وعلاماته الأصلية (ص 6–7).</li></ol>
+        <p class="muted">النص: <a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/%D8%B9%D9%84%D9%85%20%D8%A7%D9%84%D9%86%D8%AD%D9%88/%D9%85%D8%AF%D8%AE%D9%84%20%D8%A5%D9%84%D9%89%20%D8%B9%D9%84%D9%85%20%D8%A7%D9%84%D9%86%D8%AD%D9%88.pdf#page=2" target="_blank" rel="noopener">الـPDF</a> (الصفحة المطبوعة = صفحة الـPDF ناقص 1). كل اقتباس هنا منقول حرفياً ومفحوص آلياً.</p></article>
+      <article class="card gold"><h3>خطة 60–75 دقيقة</h3><ul class="task-list">
+        <li><label><input class="task-check" id="task-1" type="checkbox"><span>قرأت ص 1–7 من الكتاب، وفكّرت في الإشكال الافتتاحي قبل أن أقرأ جوابه.</span></label></li>
+        <li><label><input class="task-check" id="task-2" type="checkbox"><span>قرأت التبويب 2 (الدرس) بطاقةً بطاقة، وأجبت عن «إما/أو» في كل بطاقة قبل المتابعة.</span></label></li>
+        <li><label><input class="task-check" id="task-3" type="checkbox"><span>حللت المستويين 1 و2 من التطبيقات وقيّمت نفسي بصدق.</span></label></li>
+        <li><label><input class="task-check" id="task-4" type="checkbox"><span>حللت المستويين 3 و4 من التطبيقات.</span></label></li>
+        <li><label><input class="task-check" id="task-5" type="checkbox"><span>أنهيت الاختبار الختامي دون الرجوع إلى الدرس.</span></label></li>
+        <li><label><input class="task-check" id="task-6" type="checkbox"><span>كتبت أخطائي في سجل المراجعة (التبويب 5)، وأعدت «ما أخطأت فيه فقط».</span></label></li></ul></article>
+    </div>
+    <article class="card blue"><h3>الإشكال الافتتاحي: كسرة واحدة</h3>
+      <p>على طريقة الشيخ (الإشكال من نص حقيقي قبل القاعدة)، اقرأ هذه الآية مرتين: مرة بضم اللام من «رسوله»، ومرة بكسرها:</p>
+      <p class="verse"><span class="ayah" data-ref="9:3" data-part="أن الله بريء من المشركين ورسوله" data-mark="ورسوله">﴿أَنَّ ٱللَّهَ بَرِیۤءࣱ مِّنَ ٱلۡمُشۡرِكِینَ <mark>وَرَسُولُهُۥۚ</mark>﴾</span> <cite>[التوبة 3]</cite></p>
+      <p>ما الذي تغيّر في المعنى؟ ومن أين جاء التغيير، والحروف هي هي؟ احتفظ بجوابك؛ الجواب في البطاقة الأولى من التبويب 2، ثم في التطبيق 34.</p></article>
+    <p class="callout">روابط: تعريف الحرف في هذه الجلسة («كلمة تدل على معنى في غيرها») هو نفسه «المعنى الحرفي» الذي اختبره الشيخ بالاستبدال في <a href="../../../Usul/الجلسات/للجوال/02_التعريف_والتقسيم_والوضع.html">جلسة الأصول 02</a>. وسؤال «من يعود عليه الضمير في ﴿ابتلى إبراهيمَ ربُّه﴾؟» يتكرر في <a href="../../../بلاغة/الجلسات/للجوال/01_البلاغة_والفصاحة.html">جلسة البلاغة 01</a> (ضعف التأليف).</p>
+  </section>
+
+  <!-- ============ 2. الدرس على طريقة الشيخ ============ -->
+  <section class="panel" id="panel-flow" tabindex="-1" hidden>
+    <div class="section-head"><h2>الدرس على طريقة الشيخ</h2>
+      <p>لكل فقرة: المتن ← إشكال أو مثال من القرآن ← اختبار أو سؤال «إما/أو» ← ما تنتبه له. لا تقرأ الجواب قبل أن تجيب بنفسك.</p></div>
+
+    <article class="card point accent"><h3>1. ما النحو؟ ولماذا وُضع؟ (ص 1)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="1"><span class="q">النحو اصطلاحًا: العلم بالقواعد التي يُعرف بها أحكام أواخر الكلمات العربية حال تركيبها، من إعراب وبناء.</span><cite>مدخل إلى علم النحو ص 1</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="1"><span class="q">ثمرته: فهم الكلام العربي وإدراك معانيه ومقاصده، وصيانة اللسان والكتابة عن الخطأ في الكلام العربي.</span><cite>مدخل إلى علم النحو ص 1</cite></blockquote></dd>
+        <dt>جواب الإشكال</dt><dd>بالضم «ورسولُه» يصير الرسول شريكاً في البراءة: الله بريء من المشركين، ورسوله بريء منهم أيضاً. وبالكسر يُعطف «رسوله» على «المشركين»، فيصير مما يتبرّأ الله منه. الحروف واحدة، والفرق كله في <strong>حركة الآخر</strong>. وهذا بالضبط ما يدرسه النحو: «أحكام أواخر الكلمات».</dd>
+        <dt>اختبار «حال تركيبها»</dt><dd>كلمة «الله» وحدها لا رفع لها ولا نصب. ركّبها تتغير:
+          <p class="verse"><span class="ayah" data-ref="112:2">﴿ٱللَّهُ ٱلصَّمَدُ﴾</span> <cite>[الإخلاص 2]: مرفوع</cite></p>
+          <p class="verse"><span class="ayah" data-ref="35:28" data-part="إنما يخشى الله من عباده العلماء" data-mark="الله">﴿إِنَّمَا یَخۡشَى <mark>ٱللَّهَ</mark> مِنۡ عِبَادِهِ ٱلۡعُلَمَـٰۤؤُا۟ۗ﴾</span> <cite>[فاطر 28]: منصوب</cite></p>
+          <p class="verse"><span class="ayah" data-ref="1:1" data-mark="الله">﴿بِسۡمِ <mark>ٱللَّهِ</mark> ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ﴾</span> <cite>[الفاتحة 1]: مخفوض</cite></p>
+          فالنحو لا يدرس الكلمة مفردة، بل في التركيب.</dd>
+        <dt>انتبه لـ</dt><dd>الثمرة شيئان: <em>فهم</em> (تعرف من الخاشي في آية فاطر) و<em>صيانة</em> (لا تقرأ «ورسولِه»). والأول هو الذي يهمّك في التفسير والفقه.</dd>
+      </dl></article>
+
+    <article class="card point rose gem"><h3>✦ من كتب الأعلام: كيف وُضع النحو؟</h3>
+      <dl>
+        <dt>الكتاب</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="1"><span class="q">اشتهر أن واضع علم النحو هو أبو الأسود الدؤلي بإرشاد من أمير المؤمنين علي بن أبي طالب (ع).</span><cite>مدخل إلى علم النحو ص 1</cite></blockquote></dd>
+        <dt>العسكري</dt><dd>يروي أن الإشكال الافتتاحي نفسه كان سبب الوضع:
+          <blockquote class="matn" data-book="askari_tashif" data-page="30"><span class="q">سمع أبو الأسود الدّؤلىّ رجلا يقرأ . إن اللّه بريء من المشركين ورسوله ، بالجر . فقال : لا يسعني إلا أن أضع شيئا أصلح به نحو هذا . فوضع النحو</span><cite>العسكري (ت 382 هـ)، شرح ما يقع فيه التصحيف والتحريف ص 30</cite></blockquote>
+          <blockquote class="matn" data-book="yaqut_udaba_1" data-page="11"><span class="q">فإن كسر اللام من رسوله كان كفرا بحتا وجهلا قحا</span><cite>ياقوت، معجم الأدباء ج 1 ص 11</cite></blockquote></dd>
+        <dt>صحيفة الإمام</dt><dd>ويروي ياقوت عن أبي الأسود أن أمير المؤمنين (ع) ألقى إليه صحيفة فيها:
+          <blockquote class="matn" data-book="yaqut_udaba_14" data-page="49"><span class="q">الكلام كله اسم وفعل وحرف والاسم ما أنبأ عن المسمى والفعل ما أنبأ عن حركة المسمى والحرف ما أنبأ عن معنى ليس باسم ولا فعل</span><cite>ياقوت، معجم الأدباء ج 14 ص 49</cite></blockquote></dd>
+        <dt>لماذا يستحق</dt><dd>قارن تعريفات الصحيفة بتعريفات الكتاب في البطاقة 3. «حركة المسمى» هي ما يسميه الكتاب «حدثاً». والحرف عند الإمام «معنى ليس باسم ولا فعل»، وعند الكتاب «معنى في غيرها». هل هما تعريف واحد بعبارتين؟ <span class="pill check">سؤال جيد لأستاذ</span></dd>
+      </dl></article>
+
+    <article class="card point gold"><h3>2. الكلمة، القول، والكلام (ص 2)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="2"><span class="q">والقول: هو اللفظ الدال على معنى كرجل وفرس، أما ديز مقلوب زيد فليس بقول لأنه لا يدل على معنى.</span><cite>مدخل إلى علم النحو ص 2</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="2"><span class="q">الكلام: هو القول الذي يحسن السكوت عليه أي يكون مفيدًا.</span><cite>مدخل إلى علم النحو ص 2</cite></blockquote></dd>
+        <dt>مثال من الحاضرين</dt><dd>«عماد» قول. واقلبه: «دامع»، وهو قول أيضاً، لأن له معنى! أما «ديز» فلا. فالمدار على <strong>الدلالة</strong> لا على الحروف. (وستلقى الفكرة نفسها في البلاغة: «علم» و«ملع» حروفهما واحدة، وإحداهما ثقيلة.)</dd>
+        <dt>إما/أو</dt><dd>«استقم» كلمة أم كلام؟ الكتاب: كلام، لأن فاعله مستتر: «استقم أنت». وفي القرآن:
+          <p class="verse"><span class="ayah" data-ref="74:2">﴿قُمۡ فَأَنذِرۡ﴾</span> <cite>[المدثر 2]</cite></p>
+          كلمتان في الظاهر، وكلامان في الحقيقة. <strong>الثمرة:</strong> حين تعرب فعل الأمر لا بد أن تذكر فاعله المستتر، وإلا لم يكن كلاماً.</dd>
+        <dt>امتداد خارج المتن</dt><dd><span class="ayah" data-ref="2:1">﴿الۤمۤ﴾</span> هل هي «قول»؟ إن كانت حروفاً لا تدل بنفسها على معنى، فليست قولاً بتعريف الكتاب. وإن كانت أسماء للسور، فهي أسماء. اترك السؤال معلّقاً كما يفعل الشيخ؛ يعود في التطبيق 23.</dd>
+        <dt>انتبه لـ</dt><dd>الكتاب يقصر «المركب» على حاصل الإضافة («قلم محمد»). وهناك تراكيب أخرى (الإسنادي كـ«العلم نافع»، والمزجي كـ«بعلبك») ستمرّ بك. <span class="pill check">للتحقق في كتاب أوسع</span></dd>
+      </dl></article>
+
+    <article class="card point blue"><h3>3. أقسام الكلمة: الاسم والفعل والحرف (ص 2–5)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="3"><span class="q">الاسم: هو الكلمة التي تدل على معنى غيرِ مقترن بزمن</span><cite>ص 3</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="4"><span class="q">الفعل: كلمة تدل على حدث اقترن بزمن.</span><cite>ص 4</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="5"><span class="q">تعريفه: كلمة تدل على معنى في غيرها، نحو (من) فإنها تدل على الابتداء، وهذا المعنى لا يتم حتى تضم إليها كلمة غيرَها</span><cite>ص 5: الحرف</cite></blockquote></dd>
+        <dt>إشكال (إما/أو)</dt><dd>«اليوم» يدل على زمن، فهل هو فعل؟
+          <p class="verse"><span class="ayah" data-ref="5:3" data-part="اليوم أكملت لكم دينكم" data-mark="اليوم">﴿<mark>ٱلۡیَوۡمَ</mark> أَكۡمَلۡتُ لَكُمۡ دِینَكُمۡ﴾</span> <cite>[المائدة 3]</cite></p>
+          لا. الفعل حدث <em>مقترن</em> بزمن (أكمل = إكمال + مضيّ). أما «اليوم» فالزمن هو معناه نفسه، لا قيد على حدث. ولذلك يقبل علامة الاسم «أل».</dd>
+        <dt>اختبار الاستبدال</dt><dd>هو اختبار الشيخ في <a href="../../../Usul/الجلسات/للجوال/02_التعريف_والتقسيم_والوضع.html">جلسة الأصول 02</a>:
+          <p class="verse"><span class="ayah" data-ref="17:1" data-part="سبحان الذي أسرى بعبده ليلا من المسجد الحرام" data-mark="من">﴿سُبۡحَـٰنَ ٱلَّذِیۤ أَسۡرَىٰ بِعَبۡدِهِۦ لَیۡلࣰا <mark>مِّنَ</mark> ٱلۡمَسۡجِدِ ٱلۡحَرَامِ﴾</span> <cite>[الإسراء 1]</cite></p>
+          ضع «ابتداء» مكان «من»: «أسرى بعبده ليلاً ابتداءِ المسجد الحرام». فسد الكلام. فمعنى «من» لا يقوم بنفسه، بل يتحقق في غيره (بين الإسراء والمسجد). هذا معنى «في غيرها».</dd>
+        <dt>انتبه لـ</dt><dd>التقسيم ثلاثي <em>حاصر</em>. كل كلمة في القرآن واحدة من الثلاثة، ولا رابع. ستمتحن هذا في كل تطبيق.</dd>
+      </dl></article>
+
+    <article class="card point accent"><h3>4. علامات الاسم، والعامل (ص 3–4)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="3"><span class="q">الخفض: عبارة عن الكسرة التي يُحدثها العامل أو ما ناب عنها</span><cite>ص 3: العلامة الأولى</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="3"><span class="q">التنوين: هو نون ساكنة تظهر لفظًا لا خطًا في آخر الأسماء</span><cite>ص 3: العلامة الثانية، ثم «أل»، ثم حروف الخفض (ص 4)</cite></blockquote></dd>
+        <dt>العامل</dt><dd>لفظي: <span class="ayah" data-ref="89:22" data-part="وجاء ربك" data-mark="ربك">﴿وَجَاۤءَ <mark>رَبُّكَ</mark>﴾</span> «جاء» رفع «ربُّ». ومعنوي: <span class="ayah" data-ref="112:2">﴿ٱللَّهُ ٱلصَّمَدُ﴾</span> ما الذي رفع لفظ الجلالة؟ لا لفظ قبله: إنه «الابتداء».</dd>
+        <dt>تصحيح تصوّر</dt><dd><strong>صح أم خطأ:</strong> «كل كسرة في آخر الكلمة علامة اسم». <em>خطأ.</em> الخفض كسرة <em>يحدثها عامل</em>. انظر:
+          <p class="verse"><span class="ayah" data-ref="73:2" data-part="قم الليل" data-mark="قم">﴿<mark>قُمِ</mark> ٱلَّیۡلَ﴾</span> <cite>[المزمل 2]</cite></p>
+          الكسرة على ميم «قمِ» جاءت للتخلص من التقاء الساكنين، لا من عامل. والكتاب نفسه نبّه على نظيره في تاء التأنيث: <span class="ayah" data-ref="28:9" data-part="وقالت امرأة فرعون">﴿وَقَالَتِ ٱمۡرَأَتُ فِرۡعَوۡنَ﴾</span> (ص 4).</dd>
+        <dt>إشكال</dt><dd><span class="ayah" data-ref="17:23" data-part="فلا تقل لهما أف" data-mark="أف">﴿فَلَا تَقُل لَّهُمَاۤ <mark>أُفࣲّ</mark>﴾</span> معناها «أتضجّر»، أي معنى فعل. لكنها منوّنة، والتنوين علامة الاسم. فهي اسم؟ نعم، «اسم فعل» كـ«صه» في الكتاب (ص 5). العلامة تحكم، لا المعنى التقريبي.</dd>
+        <dt>انتبه لـ</dt><dd>عبارة «أو ما ناب عنها»: قد ينوب عن الكسرة غيرُها، كالياء في ﴿ربِّ العالمين﴾. هذا موضوع الجلسة القادمة (الإعراب الفرعي، ص 8).</dd>
+      </dl></article>
+
+    <article class="card point gold"><h3>5. علامات الفعل، وعلامة الحرف (ص 4–5)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="4"><span class="q">علامته أن يقبل تاء التأنيث الساكنة، نحو قامتْ وقعدتْ، وهذه التاء ليست ضميرًا</span><cite>ص 4: الماضي</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="4"><span class="q">علامته أن يقبل (سوف) مثل: سوف أقوم، ويجب أن يبدأ الفعل المضارع بأحد حروف المضارعة، وهي المجموعة في كلمة (أنيتُ).</span><cite>ص 4: المضارع</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="5"><span class="q">علامته مركبة من شيئين: الدلالة على الطلب وقبول ياء المخاطبة.</span><cite>ص 5: الأمر</cite></blockquote></dd>
+        <dt>آية تجمع الاختبار</dt><dd><p class="verse"><span class="ayah" data-ref="19:26" data-part="فكلي واشربي وقري عينا فإما ترين" data-mark="فكلي|واشربي|وقري|ترين">﴿<mark>فَكُلِی</mark> <mark>وَٱشۡرَبِی</mark> <mark>وَقَرِّی</mark> عَیۡنࣰاۖ فَإِمَّا <mark>تَرَیِنَّ</mark>﴾</span> <cite>[مريم 26]</cite></p>
+          «كلي، اشربي، قرّي»: طلب + ياء المخاطبة = أمر. «ترَيِنّ»: فيها ياء المخاطبة ولا طلب = مضارع (كـ«تقومين» في الكتاب). علامة الأمر <em>مركبة</em>، ونصفها لا يكفي.</dd>
+        <dt>إما/أو</dt><dd>«أكلَ» تبدأ بالهمزة، وهي من حروف «أنيت». فهل هي مضارع؟ <span class="ayah" data-ref="20:121" data-part="فأكلا منها" data-mark="فأكلا">﴿<mark>فَأَكَلَا</mark> مِنۡهَا﴾</span> لا: لا تقبل «سوف»، وتقبل «أكلتْ». حرف «أنيت» شرط للمضارع، لا علامة كافية.</dd>
+        <dt>تصحيح تصوّر</dt><dd>في ﴿أنعمتَ عليهم﴾ التاء ضمير الفاعل، وليست تاء التأنيث. العلامة أن الفعل <em>يقبل</em> «أنعمتْ» الساكنة، لا أن فيه أي تاء.</dd>
+        <dt>الحرف</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="5"><span class="q">علامته أنه لا يقبل علامات الاسم وعلامات الفعل</span><cite>ص 5</cite></blockquote>
+          علامة عدمية: تعرف الحرف بأنه رسب في الامتحانين. <span class="ayah" data-ref="76:1" data-part="هل أتى على الإنسان" data-mark="هل">﴿<mark>هَلۡ</mark> أَتَىٰ عَلَى ٱلۡإِنسَـٰنِ﴾</span></dd>
+      </dl></article>
+
+    <article class="card point blue"><h3>6. الإعراب: الظاهر والمقدَّر (ص 6–7)</h3>
+      <dl>
+        <dt>المتن</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="6"><span class="q">تعريفه: تغيير أواخر الكلم لاختلاف العوامل الداخلة عليها لفظا أو تقديرًا</span><cite>ص 6</cite></blockquote>
+          <blockquote class="matn" data-book="madkhal_nahw" data-page="6"><span class="q">والتقديري: هو ما يمنع من النطق به مانع من تعذّر أو استثقال أو مناسبة.</span><cite>ص 6، ثم يعدّ خمسة مواضع: المقصور، المنقوص، المضاف إلى ياء المتكلم، والمضارع المعتل الآخر</cite></blockquote></dd>
+        <dt>آية واحدة، ثلاثة أحكام</dt><dd><p class="verse"><span class="ayah" data-ref="36:20" data-part="وجاء من أقصا المدينة رجل يسعى" data-mark="أقصا|رجل|يسعى">﴿وَجَاۤءَ مِنۡ <mark>أَقۡصَا</mark> ٱلۡمَدِینَةِ <mark>رَجُلࣱ</mark> <mark>یَسۡعَىٰ</mark>﴾</span> <cite>[يس 20]</cite></p>
+          «أقصا»: مخفوض بكسرة مقدّرة (تعذّر). «رجلٌ»: مرفوع بضمة ظاهرة. «يسعى»: مرفوع بضمة مقدّرة (تعذّر).</dd>
+        <dt>إما/أو</dt><dd>لماذا قالوا «تعذّر» في الألف و«ثقل» في الواو والياء؟ <strong>الثمرة:</strong> الألف لا تقبل الحركة أصلاً، فلا تظهر عليها حركة أبداً. أما الواو والياء فتقبلانها مع ثقل، فتظهر عليهما الفتحة الخفيفة:
+          <p class="verse"><span class="ayah" data-ref="18:14" data-part="لن ندعو من دونه إلها" data-mark="ندعو">﴿لَن <mark>نَّدۡعُوَا۟</mark> مِن دُونِهِۦۤ إِلَـٰهࣰاۖ﴾</span> <cite>[الكهف 14]: «ندعوَ» منصوب بفتحة ظاهرة</cite></p>
+          ولهذا قيّد الكتاب المضارع المعتل بالواو والياء بـ«حالة الرفع» (ص 7).</dd>
+        <dt>تصحيح تصوّر</dt><dd>الكتاب أطلق المنقوص في قائمة التقدير، والفتحة تظهر عليه كذلك:
+          <p class="verse"><span class="ayah" data-ref="46:31" data-part="أجيبوا داعي الله" data-mark="داعي">﴿أَجِیبُوا۟ <mark>دَاعِیَ</mark> ٱللَّهِ﴾</span> <cite>[الأحقاف 31]</cite></p>
+          فالتقدير في المنقوص للرفع والخفض فقط. <span class="pill check">قيد لم يذكره الكتاب</span></dd>
+        <dt>أنواع الإعراب</dt><dd><blockquote class="matn" data-book="madkhal_nahw" data-page="7"><span class="q">ولا جزم في الأسماء كما أنه لا خفض في الأفعال</span><cite>ص 7</cite></blockquote>
+          <span class="ayah" data-ref="112:3">﴿لَمۡ یَلِدۡ وَلَمۡ یُولَدۡ﴾</span>: «يلدْ» و«يولدْ» مجزومان بالسكون. ولن تجد اسماً مجزوماً ولا فعلاً مخفوضاً في القرآن كله.</dd>
+      </dl></article>
+  </section>
+
+  <!-- ============ 3. تطبيقات قرآنية ============ -->
+  <section class="panel" id="panel-tatbiq" tabindex="-1" hidden>
+    <div class="section-head"><h2>تطبيقات قرآنية: أربعة مستويات</h2>
+      <p>أجب في ذهنك أو على ورقة، ثم اكشف الجواب وقيّم نفسك بـ«أصبت/أخطأت». يُحفظ التقييم في متصفحك، ويمكنك لاحقاً أن تعيد ما أخطأت فيه فقط (الزر أعلى الصفحة). الكلمات المظللة هي محل السؤال.</p></div>
+
+    <div class="level-head"><h3>المستوى 1: ميّز الكلمة واذكر علامتها</h3><span class="muted">اسم أم فعل أم حرف؟ وبأي علامة؟</span></div>
+
+    <div class="exercise"><p><span class="num">1</span><span class="pill">تمييز</span> <span class="task">صنّف كل كلمة، واذكر علامة لكل اسم.</span></p>
+      <p class="verse"><span class="ayah" data-ref="1:1">﴿بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ﴾</span> <span class="ayah" data-ref="1:2">﴿ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِینَ﴾</span> <cite>[الفاتحة 1–2]</cite></p>
+      <button class="btn small" type="button" data-reveal="n1" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n1" hidden><table class="irab"><tr><th>الكلمة</th><th>نوعها وعلامتها</th></tr>
+        <tr><td>بِـ</td><td>حرف (خفض): لا يقبل علامات الاسم ولا الفعل.</td></tr>
+        <tr><td>اسمِ</td><td>اسم: دخل عليه حرف الخفض، وهو مخفوض.</td></tr>
+        <tr><td>اللهِ، الرحمنِ، الرحيمِ</td><td>أسماء: «أل»، والخفض.</td></tr>
+        <tr><td>الحمدُ</td><td>اسم: «أل».</td></tr>
+        <tr><td>لِـ / لله</td><td>اللام حرف خفض، ولفظ الجلالة اسم دخل عليه.</td></tr>
+        <tr><td>ربِّ</td><td>اسم: الخفض (بالإضافة).</td></tr>
+        <tr><td>العالمين</td><td>اسم: «أل». وخفضه بالياء نيابةً عن الكسرة («أو ما ناب عنها»، ص 3).</td></tr></table></div></div>
+
+    <div class="exercise"><p><span class="num">2</span><span class="pill">تمييز</span> <span class="task">صنّف كل كلمة. في الآية الأولى كلمة اسمٌ مع أنه لا تظهر فيها أي علامة من الأربع؛ أيها؟ ولماذا هي اسم؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="1:5">﴿إِیَّاكَ نَعۡبُدُ وَإِیَّاكَ نَسۡتَعِینُ﴾</span> <span class="ayah" data-ref="1:6">﴿ٱهۡدِنَا ٱلصِّرَ ٰ⁠طَ ٱلۡمُسۡتَقِیمَ﴾</span> <cite>[الفاتحة 5–6]</cite></p>
+      <button class="btn small" type="button" data-reveal="n2" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n2" hidden><table class="irab"><tr><th>الكلمة</th><th>نوعها وعلامتها</th></tr>
+        <tr><td>إيّاك</td><td>اسم (ضمير). لا يقبل «أل» ولا التنوين ولا حرف الخفض. لكنه اسم بالتعريف: معنى غير مقترن بزمن.</td></tr>
+        <tr><td>نعبدُ، نستعينُ</td><td>فعلان مضارعان: يبدآن بالنون (من «أنيت») ويقبلان «سوف».</td></tr>
+        <tr><td>وَ</td><td>حرف.</td></tr>
+        <tr><td>اهدِ</td><td>فعل أمر: طلب، ويقبل ياء المخاطبة («اهدِي»).</td></tr>
+        <tr><td>نا</td><td>اسم (ضمير).</td></tr>
+        <tr><td>الصراطَ المستقيمَ</td><td>اسمان: «أل».</td></tr></table>
+        <p><strong>النكتة:</strong> العلامة إذا وُجدت دلّت، وإذا فُقدت لم تنفِ. فالعلامات كافية لا لازمة، والمرجع عند فقدها هو التعريف.</p></div></div>
+
+    <div class="exercise"><p><span class="num">3</span><span class="pill">تمييز</span> <span class="task">صنّف. وانتبه للتاء في «أنعمتَ»: هل هي علامة الماضي التي في الكتاب؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="1:7">﴿صِرَ ٰ⁠طَ ٱلَّذِینَ أَنۡعَمۡتَ عَلَیۡهِمۡ غَیۡرِ ٱلۡمَغۡضُوبِ عَلَیۡهِمۡ وَلَا ٱلضَّاۤلِّینَ﴾</span> <cite>[الفاتحة 7]</cite></p>
+      <button class="btn small" type="button" data-reveal="n3" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n3" hidden><table class="irab"><tr><th>الكلمة</th><th>نوعها وعلامتها</th></tr>
+        <tr><td>صراطَ</td><td>اسم: يقبل «أل» والتنوين.</td></tr>
+        <tr><td>الذين</td><td>اسم (موصول): بالتعريف.</td></tr>
+        <tr><td>أنعمتَ</td><td>فعل ماض. التاء المفتوحة هنا ضمير المخاطب (الفاعل)، وليست تاء التأنيث. العلامة أنه <em>يقبل</em> «أنعمتْ» الساكنة.</td></tr>
+        <tr><td>على / هم</td><td>حرف خفض / اسم (ضمير).</td></tr>
+        <tr><td>غيرِ</td><td>اسم: الخفض.</td></tr>
+        <tr><td>المغضوبِ، الضالّين</td><td>اسمان: «أل».</td></tr>
+        <tr><td>وَ، لا</td><td>حرفان.</td></tr></table></div></div>
+
+    <div class="exercise"><p><span class="num">4</span><span class="pill">تمييز</span> <span class="task">صنّف كل كلمات السورة.</span></p>
+      <p class="verse"><span class="ayah" data-ref="112:1">﴿قُلۡ هُوَ ٱللَّهُ أَحَدٌ﴾</span> <span class="ayah" data-ref="112:2">﴿ٱللَّهُ ٱلصَّمَدُ﴾</span> <span class="ayah" data-ref="112:3">﴿لَمۡ یَلِدۡ وَلَمۡ یُولَدۡ﴾</span> <span class="ayah" data-ref="112:4">﴿وَلَمۡ یَكُن لَّهُۥ كُفُوًا أَحَدُۢ﴾</span> <cite>[الإخلاص]</cite></p>
+      <button class="btn small" type="button" data-reveal="n4" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n4" hidden><table class="irab"><tr><th>الكلمة</th><th>نوعها وعلامتها</th></tr>
+        <tr><td>قلْ</td><td>فعل أمر: طلب، ويقبل ياء المخاطبة («قولي»).</td></tr>
+        <tr><td>هو</td><td>اسم (ضمير).</td></tr>
+        <tr><td>اللهُ، الصمدُ</td><td>اسمان: «أل».</td></tr>
+        <tr><td>أحدٌ، كفوًا</td><td>اسمان: التنوين.</td></tr>
+        <tr><td>لم</td><td>حرف.</td></tr>
+        <tr><td>يلدْ، يولدْ، يكنْ</td><td>أفعال مضارعة: الياء من «أنيت»، وتقبل «سوف» (سوف يلد).</td></tr>
+        <tr><td>لـ / ـهُ</td><td>اللام حرف خفض، والهاء اسم (ضمير).</td></tr></table></div></div>
+
+    <div class="exercise"><p><span class="num">5</span><span class="pill">تمييز</span> <span class="task">صنّف. وفي «الصالحاتِ» كسرة: هل هي خفض؟ (خمّن، فالجواب الكامل في الجلسة القادمة.)</span></p>
+      <p class="verse"><span class="ayah" data-ref="103:1">﴿وَٱلۡعَصۡرِ﴾</span> <span class="ayah" data-ref="103:2">﴿إِنَّ ٱلۡإِنسَـٰنَ لَفِی خُسۡرٍ﴾</span> <span class="ayah" data-ref="103:3">﴿إِلَّا ٱلَّذِینَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوۡا۟ بِٱلۡحَقِّ وَتَوَاصَوۡا۟ بِٱلصَّبۡرِ﴾</span> <cite>[العصر]</cite></p>
+      <button class="btn small" type="button" data-reveal="n5" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n5" hidden><table class="irab"><tr><th>الكلمة</th><th>نوعها وعلامتها</th></tr>
+        <tr><td>وَ (والعصر)</td><td>حرف قسم، من حروف الخفض (ص 4).</td></tr>
+        <tr><td>العصرِ</td><td>اسم: «أل»، والخفض بواو القسم.</td></tr>
+        <tr><td>إنّ، لـ، في، إلا</td><td>حروف.</td></tr>
+        <tr><td>الإنسانَ، الحقِّ، الصبرِ</td><td>أسماء: «أل».</td></tr>
+        <tr><td>خسرٍ</td><td>اسم: التنوين والخفض.</td></tr>
+        <tr><td>الذين</td><td>اسم (موصول).</td></tr>
+        <tr><td>آمنوا، عملوا، تواصوا</td><td>أفعال ماضية: تقبل تاء التأنيث (آمنتْ). والواو فيها اسم (ضمير الجماعة).</td></tr>
+        <tr><td>الصالحاتِ</td><td>اسم («أل»). وكسرته ليست خفضاً؛ هو منصوب، وجمع المؤنث السالم ينصب بالكسرة نيابةً عن الفتحة (الكتاب ص 11). فليست كل كسرة خفضاً.</td></tr></table></div></div>
+
+    <div class="level-head"><h3>المستوى 2: مزالق العلامات</h3><span class="muted">حيث يخدعك الظاهر</span></div>
+
+    <div class="exercise"><p><span class="num">6</span><span class="pill">تصحيح تصور</span> <span class="task">على الميم كسرة. فهل «قمِ» اسم مخفوض؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="73:2" data-mark="قم">﴿<mark>قُمِ</mark> ٱلَّیۡلَ إِلَّا قَلِیلࣰا﴾</span> <cite>[المزمل 2]</cite></p>
+      <button class="btn small" type="button" data-reveal="n6" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n6" hidden>لا. «قمْ» فعل أمر (طلب، و«قومي»)، وأصله ساكن الآخر. التقى ساكنان (ميم «قمْ» ولام «اللَّيل»)، فحُرّكت الميم بالكسر للتخلص. الخفض كسرة يحدثها <em>عامل</em>، وهذه لم يحدثها عامل. ثم «لا خفض في الأفعال» (ص 7).</div></div>
+
+    <div class="exercise"><p><span class="num">7</span><span class="pill">تصحيح تصور</span> <span class="task">«يكنِ» بعد «لم» مكسورة الآخر. ما حكمها الحقيقي؟ ولماذا الكسرة؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="98:1" data-part="لم يكن الذين كفروا" data-mark="يكن">﴿لَمۡ <mark>یَكُنِ</mark> ٱلَّذِینَ كَفَرُوا۟﴾</span> <cite>[البينة 1]</cite></p>
+      <button class="btn small" type="button" data-reveal="n7" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n7" hidden>مضارع مجزوم بـ«لم» (علامته السكون). ثم التقى ساكنان (نون «يكنْ» ولام «الَّذين»)، فحُرّك بالكسر. كذا في الجدول في إعراب القرآن: «مضارع ناقص مجزوم، وحرّك بالكسر لالتقاء الساكنين».</div></div>
+
+    <div class="exercise"><p><span class="num">8</span><span class="pill">إشكال</span> <span class="task">«أفّ» بمعنى «أتضجّر». فهل هي فعل مضارع؟ احكم بالعلامة.</span></p>
+      <p class="verse"><span class="ayah" data-ref="17:23" data-part="فلا تقل لهما أف ولا تنهرهما" data-mark="أف">﴿فَلَا تَقُل لَّهُمَاۤ <mark>أُفࣲّ</mark> وَلَا تَنۡهَرۡهُمَا﴾</span> <cite>[الإسراء 23]</cite></p>
+      <button class="btn small" type="button" data-reveal="n8" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n8" hidden>ليست فعلاً: لا تقبل «سوف» ولا تبدأ بحرف مضارعة. وهي منوّنة، والتنوين علامة الاسم. فهي «اسم فعل مضارع بمعنى أتضجّر» (الجدول في إعراب القرآن)، كما أن «صه» اسم فعل أمر في الكتاب (ص 5). «لا تقلْ» و«لا تنهرْ» مضارعان مجزومان بلا الناهية.</div></div>
+
+    <div class="exercise"><p><span class="num">9</span><span class="pill">إشكال</span> <span class="task">«هيهات» بمعنى «بَعُدَ»، أي ماضٍ. طبّق علامة الماضي: ماذا تجد؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="23:36">﴿هَیۡهَاتَ هَیۡهَاتَ لِمَا تُوعَدُونَ﴾</span> <cite>[المؤمنون 36]</cite></p>
+      <button class="btn small" type="button" data-reveal="n9" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n9" hidden>لا تقبل تاء التأنيث (لا يقال «هيهاتتْ»). فليست فعلاً ماضياً، بل «اسم فعل ماض بمعنى بعُد»، والثانية توكيد للأولى (الجدول). و«تُوعدون» مضارع (التاء من «أنيت»).</div></div>
+
+    <div class="exercise"><p><span class="num">10</span><span class="pill">تصنيف</span> <span class="task">ميّز الأمر من المضارع في الكلمات المظللة، بعلامة الكتاب المركبة.</span></p>
+      <p class="verse"><span class="ayah" data-ref="19:26" data-part="فكلي واشربي وقري عينا فإما ترين من البشر أحدا فقولي" data-mark="فكلي|واشربي|وقري|ترين|فقولي">﴿<mark>فَكُلِی</mark> <mark>وَٱشۡرَبِی</mark> <mark>وَقَرِّی</mark> عَیۡنࣰاۖ فَإِمَّا <mark>تَرَیِنَّ</mark> مِنَ ٱلۡبَشَرِ أَحَدࣰا <mark>فَقُولِیۤ</mark>﴾</span> <cite>[مريم 26]</cite></p>
+      <button class="btn small" type="button" data-reveal="n10" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n10" hidden>«كلي، اشربي، قرّي، قولي»: أوامر، لأنها دالة على الطلب وفيها ياء المخاطبة. «ترَيِنّ»: فيها ياء المخاطبة ولا تدل على طلب، وتبدأ بالتاء من «أنيت»، فهي مضارع. نصف العلامة لا يكفي.</div></div>
+
+    <div class="exercise"><p><span class="num">11</span><span class="pill">إما/أو</span> <span class="task">«اليوم» اسم أم فعل وهو يدل على الزمن؟ و«أكملتُ»: هل تاؤه علامة الماضي؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="5:3" data-part="اليوم أكملت لكم دينكم" data-mark="اليوم|أكملت">﴿<mark>ٱلۡیَوۡمَ</mark> <mark>أَكۡمَلۡتُ</mark> لَكُمۡ دِینَكُمۡ﴾</span> <cite>[المائدة 3]</cite></p>
+      <button class="btn small" type="button" data-reveal="n11" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n11" hidden>«اليوم» اسم: يقبل «أل» (وهي فيه)، والزمن معناه نفسه لا قيد على حدث. «أكملتُ» فعل ماض، لكن تاءه المضمومة ضمير المتكلم (الفاعل)، لا تاء التأنيث. علامته أنه يقبل «أكملتْ».</div></div>
+
+    <div class="exercise"><p><span class="num">12</span><span class="pill">من الكتاب</span> <span class="task">مثال الكتاب نفسه (ص 4): لماذا كُسرت التاء في «قالتِ»؟ وما نوع هذه التاء؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="28:9" data-part="وقالت امرأة فرعون" data-mark="وقالت">﴿<mark>وَقَالَتِ</mark> ٱمۡرَأَتُ فِرۡعَوۡنَ﴾</span> <cite>[القصص 9]</cite></p>
+      <button class="btn small" type="button" data-reveal="n12" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n12" hidden>تاء التأنيث الساكنة، حرف لا ضمير. كُسرت لالتقاء الساكنين (التاء وميم «امرأة» بعد همزة الوصل). فهي العلامة نفسها وإن تحركت. وقارن: كسرتها ليست خفضاً كما في التطبيق 6.</div></div>
+
+    <div class="exercise"><p><span class="num">13</span><span class="pill">تمييز</span> <span class="task">ما التاء في أول «تالله»؟ وبماذا تعرف أن ما بعدها اسم؟ و«تفتؤا»: ما هي؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="12:85" data-part="قالوا تالله تفتأ تذكر يوسف" data-mark="تالله|تفتأ">﴿قَالُوا۟ <mark>تَٱللَّهِ</mark> <mark>تَفۡتَؤُا۟</mark> تَذۡكُرُ یُوسُفَ﴾</span> <cite>[يوسف 85]</cite></p>
+      <button class="btn small" type="button" data-reveal="n13" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n13" hidden>التاء حرف قسم، وهو من حروف الخفض في الكتاب («وحروف القسم: الواو والباء والتاء»). فلفظ الجلالة اسم، بعلامة دخول حرف الخفض عليه، وبالخفض نفسه. «تفتأ» فعل مضارع: يبدأ بالتاء، ويقبل «سوف».</div></div>
+
+    <div class="exercise"><p><span class="num">14</span><span class="pill">تمييز</span> <span class="task">صنّف الكلمات المظللة.</span></p>
+      <p class="verse"><span class="ayah" data-ref="76:1" data-part="هل أتى على الإنسان حين من الدهر" data-mark="هل|أتى|حين">﴿<mark>هَلۡ</mark> <mark>أَتَىٰ</mark> عَلَى ٱلۡإِنسَـٰنِ <mark>حِینࣱ</mark> مِّنَ ٱلدَّهۡرِ﴾</span> <cite>[الإنسان 1]</cite></p>
+      <button class="btn small" type="button" data-reveal="n14" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n14" hidden>«هل»: حرف، وهو مثال الكتاب (ص 5): لا تنوين، ولا «أل»، ولا «سوف». «أتى»: فعل ماض (يقبل «أتتْ»). «حينٌ»: اسم (التنوين).</div></div>
+
+    <div class="exercise"><p><span class="num">15</span><span class="pill">إما/أو</span> <span class="task">«سوف» علامة المضارع. فما «سوف» نفسها: اسم أم فعل أم حرف؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="93:5" data-mark="ولسوف">﴿<mark>وَلَسَوۡفَ</mark> یُعۡطِیكَ رَبُّكَ فَتَرۡضَىٰۤ﴾</span> <cite>[الضحى 5]</cite></p>
+      <button class="btn small" type="button" data-reveal="n15" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n15" hidden>حرف: لا تقبل شيئاً من علامات الاسم ولا الفعل. وهي علامة غيرها، ومعناها (الاستقبال) يتحقق في الفعل الذي بعدها، فهي «معنى في غيرها». واللام قبلها حرف أيضاً.</div></div>
+
+    <div class="level-head"><h3>المستوى 3: الإعراب الظاهر والمقدّر</h3><span class="muted">ما حكم الكلمة؟ ظاهر أم مقدّر؟ وما المانع؟</span></div>
+
+    <div class="exercise"><p><span class="num">16</span><span class="pill">إعراب</span> <span class="task">ما حكم كل كلمة مظللة؟ وهل علامتها ظاهرة أم مقدّرة؟ ولماذا؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="36:20" data-part="وجاء من أقصا المدينة رجل يسعى" data-mark="أقصا|المدينة|رجل|يسعى">﴿وَجَاۤءَ مِنۡ <mark>أَقۡصَا</mark> <mark>ٱلۡمَدِینَةِ</mark> <mark>رَجُلࣱ</mark> <mark>یَسۡعَىٰ</mark>﴾</span> <cite>[يس 20]</cite></p>
+      <button class="btn small" type="button" data-reveal="n16" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n16" hidden><table class="irab"><tr><th>الكلمة</th><th>الحكم</th></tr>
+        <tr><td>أقصا</td><td>مخفوض بـ«من»، بكسرة مقدّرة على الألف للتعذّر (اسم مقصور).</td></tr>
+        <tr><td>المدينةِ</td><td>مخفوض بالإضافة، بكسرة ظاهرة.</td></tr>
+        <tr><td>رجلٌ</td><td>مرفوع (فاعل «جاء»)، بضمة ظاهرة.</td></tr>
+        <tr><td>يسعى</td><td>مضارع مرفوع، بضمة مقدّرة على الألف للتعذّر.</td></tr></table></div></div>
+
+    <div class="exercise"><p><span class="num">17</span><span class="pill">إعراب</span> <span class="task">«يهدي» و«يبشّرُ» كلاهما مرفوع. فلماذا تظهر الضمة على أحدهما دون الآخر؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="17:9" data-part="إن هذا القرآن يهدي للتي هي أقوم ويبشر المؤمنين" data-mark="يهدي|ويبشر">﴿إِنَّ هَـٰذَا ٱلۡقُرۡءَانَ <mark>یَهۡدِی</mark> لِلَّتِی هِیَ أَقۡوَمُ <mark>وَیُبَشِّرُ</mark> ٱلۡمُؤۡمِنِینَ﴾</span> <cite>[الإسراء 9]</cite></p>
+      <button class="btn small" type="button" data-reveal="n17" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n17" hidden>«يهدي» مضارع معتل الآخر بالياء، فالضمة مقدّرة عليه للثقل (الجدول: «وعلامة الرفع الضمّة المقدّرة على الياء»). «يبشّرُ» صحيح الآخر، فالضمة ظاهرة. والعامل في الاثنين واحد.</div></div>
+
+    <div class="exercise"><p><span class="num">18</span><span class="pill">إعراب</span> <span class="task">في «عصاي» سببان للتقدير اجتمعا. ما هما؟ وعلى أيّ حرف قُدّرت الضمة؟ ثم «غنمي» و«أخرى».</span></p>
+      <p class="verse"><span class="ayah" data-ref="20:18" data-mark="عصاي|غنمي|أخرى">﴿قَالَ هِیَ <mark>عَصَایَ</mark> أَتَوَكَّؤُا۟ عَلَیۡهَا وَأَهُشُّ بِهَا عَلَىٰ <mark>غَنَمِی</mark> وَلِیَ فِیهَا مَـَٔارِبُ <mark>أُخۡرَىٰ</mark>﴾</span> <cite>[طه 18]</cite></p>
+      <button class="btn small" type="button" data-reveal="n18" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n18" hidden>«عصا» اسم مقصور، وهو مضاف إلى ياء المتكلم. الضمة مقدّرة على الألف للتعذّر (الجدول: «خبر المبتدأ (هي) مرفوع وعلامة الرفع الضمّة المقدّرة على الألف»). «غنمي»: مخفوض بـ«على» بكسرة مقدّرة، منع من ظهورها اشتغال المحل بحركة المناسبة لياء المتكلم. «أخرى»: مرفوعة بضمة مقدّرة على الألف للتعذّر.</div></div>
+
+    <div class="exercise"><p><span class="num">19</span><span class="pill">إعراب</span> <span class="task">ما حكم «موسى» و«فتاه»؟ ولماذا لا تظهر الحركة عليهما؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="18:60" data-part="وإذ قال موسى لفتاه" data-mark="موسى|لفتاه">﴿وَإِذۡ قَالَ <mark>مُوسَىٰ</mark> <mark>لِفَتَىٰهُ</mark>﴾</span> <cite>[الكهف 60]</cite></p>
+      <button class="btn small" type="button" data-reveal="n19" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n19" hidden>«موسى»: مرفوع (فاعل «قال») بضمة مقدّرة للتعذّر. «فتى»: مخفوض باللام بكسرة مقدّرة للتعذّر، والهاء اسم (ضمير). كلاهما مقصور، وهو مثالا الكتاب: «الفتى وموسى» (ص 6).</div></div>
+
+    <div class="exercise"><p><span class="num">20</span><span class="pill">إعراب</span> <span class="task">«صدري» منصوب. أين الفتحة؟ وما المانع من ظهورها؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="20:25" data-mark="صدري">﴿قَالَ رَبِّ ٱشۡرَحۡ لِی <mark>صَدۡرِی</mark>﴾</span> <cite>[طه 25]</cite></p>
+      <button class="btn small" type="button" data-reveal="n20" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n20" hidden>مفعول به منصوب بفتحة مقدّرة على الراء، منع من ظهورها اشتغال المحل بالكسرة المناسبة لياء المتكلم. وهذا الموضع الثالث في الكتاب: «الاسم المضاف إلى ياء المتكلم نحو: قلمي وكتابي». المانع هنا «المناسبة»، لا التعذّر ولا الثقل.</div></div>
+
+    <div class="exercise"><p><span class="num">21</span><span class="pill">مقارنة</span> <span class="task">ثلاثة مضارعات مرفوعة. أيها ظاهر الضمة؟ وأيها مقدّر؟ وما المانع في كلٍّ؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="10:25" data-mark="يدعوا|ويهدي|يشاء">﴿وَٱللَّهُ <mark>یَدۡعُوۤا۟</mark> إِلَىٰ دَارِ ٱلسَّلَـٰمِ <mark>وَیَهۡدِی</mark> مَن <mark>یَشَاۤءُ</mark> إِلَىٰ صِرَ ٰ⁠طࣲ مُّسۡتَقِیمࣲ﴾</span> <cite>[يونس 25]</cite></p>
+      <button class="btn small" type="button" data-reveal="n21" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n21" hidden>«يدعو»: ضمة مقدّرة على الواو للثقل. «يهدي»: ضمة مقدّرة على الياء للثقل. «يشاءُ»: ضمة ظاهرة (صحيح الآخر). وهذا مثال الكتاب حرفياً: «يدعو ويرمي» في حالة الرفع (ص 7). والألف بعد واو «يدعوا» في الرسم لا تُنطق.</div></div>
+
+    <div class="exercise"><p><span class="num">22</span><span class="pill">تصحيح تصور</span> <span class="task">«داعي» اسم منقوص، والكتاب عدّ المنقوص فيما يُعرب تقديراً. فلماذا ظهرت الفتحة؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="46:31" data-part="يا قومنا أجيبوا داعي الله" data-mark="داعي">﴿یَـٰقَوۡمَنَاۤ أَجِیبُوا۟ <mark>دَاعِیَ</mark> ٱللَّهِ﴾</span> <cite>[الأحقاف 31]</cite></p>
+      <button class="btn small" type="button" data-reveal="n22" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n22" hidden>«داعيَ» مفعول به منصوب بفتحة <em>ظاهرة</em>، لأن الفتحة خفيفة على الياء. التقدير في المنقوص للرفع والخفض فقط، وهو القيد نفسه الذي ذكره الكتاب في المضارع المعتل بالواو والياء («في حالة الرفع»). فأطلق الكتاب في المنقوص، والقيد لازم.</div></div>
+
+    <div class="exercise"><p><span class="num">23</span><span class="pill">إشكال مفتوح</span> <span class="task">هل ﴿الۤمۤ﴾ «قول» بتعريف الكتاب؟ اذكر الاحتمالين ونتيجة كل منهما.</span></p>
+      <p class="verse"><span class="ayah" data-ref="2:1">﴿الۤمۤ﴾</span> <cite>[البقرة 1]</cite></p>
+      <button class="btn small" type="button" data-reveal="n23" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n23" hidden>القول عند الكتاب «اللفظ الدال على معنى». إن كانت أسماء حروف تُتهجّى ولا يُقصد بها معنى تركيبي، فليست كلاماً، ولا محل لها من الإعراب عند من يقول ذلك. وإن كانت أسماء للسور أو لمعانٍ مرادة، فهي أسماء لها محل. والمسألة خلافية في التفسير. <span class="pill check">راجع كتب إعراب القرآن في أول البقرة</span></div></div>
+
+    <div class="exercise"><p><span class="num">24</span><span class="pill">مقارنة</span> <span class="task">«ندعوَ» مضارع معتل بالواو. لماذا ظهرت حركته هنا، وقُدّرت في «يدعو» (التطبيق 21)؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="18:14" data-part="لن ندعو من دونه إلها" data-mark="ندعو">﴿لَن <mark>نَّدۡعُوَا۟</mark> مِن دُونِهِۦۤ إِلَـٰهࣰاۖ﴾</span> <cite>[الكهف 14]</cite></p>
+      <button class="btn small" type="button" data-reveal="n24" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n24" hidden>هنا منصوب بـ«لن»، والفتحة خفيفة فتظهر على الواو. وهناك مرفوع، والضمة ثقيلة على الواو فتُقدّر. ولهذا قال الكتاب «في حالة الرفع». أما المعتل بالألف («يسعى») فيُقدّر في الرفع والنصب معاً، لأن الألف لا تقبل حركة أصلاً.</div></div>
+
+    <div class="exercise"><p><span class="num">25</span><span class="pill">تحدٍّ</span> <span class="task">أين ذهبت واو «يدعو» وياء «الداعي»؟ وكيف تعربهما؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="54:6" data-part="يوم يدع الداع إلى شيء نكر" data-mark="يدع|الداع">﴿یَوۡمَ <mark>یَدۡعُ</mark> <mark>ٱلدَّاعِ</mark> إِلَىٰ شَیۡءࣲ نُّكُرٍ﴾</span> <cite>[القمر 6]</cite></p>
+      <button class="btn small" type="button" data-reveal="n25" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n25" hidden>كلاهما مرفوع، والحذف في الرسم والنطق وصلاً لا للإعراب. الجدول: «(يدع) مضارع مرفوع وعلامة الرفع الضمّة المقدّرة على الواو المحذوفة لمناسبة قراءة الوصل»، و«(الداع) فاعل مرفوع وعلامة الرفع الضمّة المقدّرة على الياء المحذوفة للتخفيف». فلا تحكم بالجزم لمجرد حذف الحرف: «يدعُ» ليس مسبوقاً بجازم.</div></div>
+
+    <div class="exercise"><p><span class="num">26</span><span class="pill">إعراب</span> <span class="task">أعرب المظلّل إعراباً مختصراً، مع بيان نوع العلامة.</span></p>
+      <p class="verse"><span class="ayah" data-ref="93:5" data-mark="يعطيك|ربك|فترضى">﴿وَلَسَوۡفَ <mark>یُعۡطِیكَ</mark> <mark>رَبُّكَ</mark> <mark>فَتَرۡضَىٰۤ</mark>﴾</span> <cite>[الضحى 5]</cite></p>
+      <button class="btn small" type="button" data-reveal="n26" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n26" hidden>«يعطي»: مضارع مرفوع بضمة مقدّرة على الياء للثقل، والكاف اسم (ضمير). «ربُّ»: مرفوع (فاعل) بضمة ظاهرة. «ترضى»: مضارع مرفوع (معطوف على «يعطي») بضمة مقدّرة على الألف للتعذّر.</div></div>
+
+    <div class="level-head"><h3>المستوى 4: اختبار الاستبدال</h3><span class="muted">غيّر الحركة، وانظر ما الذي يتغير</span></div>
+
+    <div class="exercise"><p><span class="num">27</span><span class="pill">استبدال</span> <span class="task">من الخاشي ومن المخشيّ؟ احكم بالحركة لا بالترتيب. ثم اعكس الحركتين: ماذا يصير المعنى؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="35:28" data-part="إنما يخشى الله من عباده العلماء" data-mark="الله|العلماء">﴿إِنَّمَا یَخۡشَى <mark>ٱللَّهَ</mark> مِنۡ عِبَادِهِ <mark>ٱلۡعُلَمَـٰۤؤُا۟ۗ</mark>﴾</span> <cite>[فاطر 28]</cite></p>
+      <button class="btn small" type="button" data-reveal="n27" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n27" hidden>«اللهَ» منصوب (مفعول به مقدّم)، و«العلماءُ» مرفوع (فاعل مؤخّر). فالخاشون هم العلماء، والمخشيّ هو الله، مع أن لفظ الجلالة جاء أولاً. لو عُكست الحركتان لصار الله هو الذي يخشى العلماء، وهو باطل. ولماذا قُدّم المفعول؟ ليكون الحصر في الفاعل: لا يخشاه حق الخشية إلا العلماء. <span class="pill editor">إحالة: باب القصر في البلاغة</span></div></div>
+
+    <div class="exercise"><p><span class="num">28</span><span class="pill">استبدال</span> <span class="task">من ابتلى مَن؟ وإلى من يعود الضمير في «ربُّه»؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="2:124" data-part="وإذ ابتلى إبراهيم ربه بكلمات" data-mark="إبراهيم|ربه">﴿وَإِذِ ٱبۡتَلَىٰۤ <mark>إِبۡرَ ٰ⁠هِـۧمَ</mark> <mark>رَبُّهُۥ</mark> بِكَلِمَـٰتࣲ﴾</span> <cite>[البقرة 124]</cite></p>
+      <button class="btn small" type="button" data-reveal="n28" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n28" hidden>«إبراهيمَ» منصوب (مفعول به مقدّم)، و«ربُّه» مرفوع (فاعل). فالرب هو المبتلي. والهاء في «ربُّه» تعود إلى إبراهيم، وهو متقدّم في اللفظ وإن كان متأخراً في الرتبة. وهذا يجعل التركيب سليماً؛ وتفصيله في <a href="../../../بلاغة/الجلسات/للجوال/01_البلاغة_والفصاحة.html">جلسة البلاغة 01</a> (ضعف التأليف).</div></div>
+
+    <div class="exercise"><p><span class="num">29</span><span class="pill">استبدال</span> <span class="task">من العاصي؟ وما الذي يدلك؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="20:121" data-part="وعصى آدم ربه فغوى" data-mark="آدم|ربه">﴿وَعَصَىٰۤ <mark>ءَادَمُ</mark> <mark>رَبَّهُۥ</mark> فَغَوَىٰ﴾</span> <cite>[طه 121]</cite></p>
+      <button class="btn small" type="button" data-reveal="n29" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n29" hidden>«آدمُ» مرفوع بضمة ظاهرة (فاعل)، و«ربَّه» منصوب بفتحة ظاهرة (مفعول به). الترتيب هنا موافق للأصل، والحركة تؤكده. و«عصى» و«غوى» فعلان ماضيان (عصتْ، غوتْ).</div></div>
+
+    <div class="exercise"><p><span class="num">30</span><span class="pill">امتداد</span> <span class="task">«أكرم موسى عيسى»: من المكرِم؟ ولماذا لا تنفعك الحركة هنا؟ وما الذي يقوم مقامها؟</span></p>
+      <button class="btn small" type="button" data-reveal="n30" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n30" hidden>كلاهما مقصور، فالإعراب مقدّر فيهما ولا يُرى. حين يخفى الإعراب ولا قرينة، يصير الترتيب هو الدليل: الأول فاعل (موسى) والثاني مفعول. فإذا ظهرت الحركة («إنما يخشى اللهَ… العلماءُ») جاز التقديم والتأخير. <strong>النكتة:</strong> الإعراب هو الذي يمنح العربية حرية الترتيب، فإذا غاب غابت الحرية.</div></div>
+
+    <div class="exercise"><p><span class="num">31</span><span class="pill">استبدال</span> <span class="task">لو قرئت «ربُّك» بالنصب و«الملكَ» بالرفع في هذه الآية، ماذا يحدث للمعنى والتركيب؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="89:22">﴿وَجَاۤءَ رَبُّكَ وَٱلۡمَلَكُ صَفࣰّا صَفࣰّا﴾</span> <cite>[الفجر 22]</cite></p>
+      <button class="btn small" type="button" data-reveal="n31" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n31" hidden>«ربُّك» فاعل «جاء»، و«الملكُ» معطوف عليه مرفوع. بالعكس يصير «ربَّك» مفعولاً به (جاء الملكُ ربَّك، أي أتاه)، وهو معنى آخر تماماً. و«صفّاً صفّاً» منصوبان بفتحة ظاهرة (حال، ستأتي).</div></div>
+  </section>
+
+  <!-- ============ 4. الاختبار الختامي ============ -->
+  <section class="panel" id="panel-final" tabindex="-1" hidden>
+    <div class="section-head"><h2>الاختبار الختامي</h2><p>دون الرجوع إلى الدرس. سورة كاملة، ثم أسئلة سريعة. قيّم نفسك في كل سؤال.</p></div>
+
+    <div class="exercise"><p><span class="num">32</span><span class="pill">سورة كاملة</span> <span class="task">لكل كلمة: نوعها، وعلامتها، وحكمها الإعرابي إن ظهر (رفع/نصب/خفض/جزم)، وهل علامته ظاهرة أم مقدّرة.</span></p>
+      <p class="verse"><span class="ayah" data-ref="108:1">﴿إِنَّاۤ أَعۡطَیۡنَـٰكَ ٱلۡكَوۡثَرَ﴾</span> <span class="ayah" data-ref="108:2">﴿فَصَلِّ لِرَبِّكَ وَٱنۡحَرۡ﴾</span> <span class="ayah" data-ref="108:3">﴿إِنَّ شَانِئَكَ هُوَ ٱلۡأَبۡتَرُ﴾</span> <cite>[الكوثر]</cite></p>
+      <button class="btn small" type="button" data-reveal="n32" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n32" hidden><table class="irab"><tr><th>الكلمة</th><th>الجواب</th></tr>
+        <tr><td>إنّـ / ـا</td><td>«إنّ» حرف، و«نا» اسم (ضمير).</td></tr>
+        <tr><td>أعطيناك</td><td>«أعطى» فعل ماض (أعطتْ)، و«نا» و«الكاف» اسمان (ضميران).</td></tr>
+        <tr><td>الكوثرَ</td><td>اسم («أل»)، منصوب بفتحة ظاهرة.</td></tr>
+        <tr><td>فـ</td><td>حرف.</td></tr>
+        <tr><td>صلِّ</td><td>فعل أمر (طلب + «صلّي»). وحُذفت ياؤه، فآخره كسرة.</td></tr>
+        <tr><td>لـ / ربِّ / ـك</td><td>اللام حرف خفض، «ربِّ» اسم مخفوض بكسرة ظاهرة، والكاف اسم.</td></tr>
+        <tr><td>وَ / انحرْ</td><td>الواو حرف، و«انحر» فعل أمر (طلب + «انحري»).</td></tr>
+        <tr><td>شانئَـ / ـك</td><td>اسم (يقبل «أل» والتنوين)، منصوب بفتحة ظاهرة (اسم «إنّ»)، والكاف اسم.</td></tr>
+        <tr><td>هو</td><td>اسم (ضمير).</td></tr>
+        <tr><td>الأبترُ</td><td>اسم («أل»)، مرفوع بضمة ظاهرة.</td></tr></table></div></div>
+
+    <div class="exercise"><p><span class="num">33</span><span class="pill">سريع</span> <span class="task">«نِعْمَ»: اسم أم فعل؟ طبّق العلامة.</span></p>
+      <p class="verse"><span class="ayah" data-ref="38:30" data-part="نعم العبد إنه أواب" data-mark="نعم">﴿<mark>نِعۡمَ</mark> ٱلۡعَبۡدُ إِنَّهُۥۤ أَوَّابٌ﴾</span> <cite>[ص 30]</cite></p>
+      <button class="btn small" type="button" data-reveal="n33" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n33" hidden>فعل ماض، لأنه يقبل تاء التأنيث الساكنة: «نعمتْ». ولو حكمت بالمعنى (المدح) لترددت، لكن العلامة تحسم.</div></div>
+
+    <div class="exercise"><p><span class="num">34</span><span class="pill">سريع</span> <span class="task">عُد إلى الإشكال الافتتاحي: لماذا الرفع في «ورسولُه» هو الصواب، وما الذي يصنعه الجر؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="9:3" data-part="أن الله بريء من المشركين ورسوله" data-mark="ورسوله">﴿أَنَّ ٱللَّهَ بَرِیۤءࣱ مِّنَ ٱلۡمُشۡرِكِینَ <mark>وَرَسُولُهُۥۚ</mark>﴾</span> <cite>[التوبة 3]</cite></p>
+      <button class="btn small" type="button" data-reveal="n34" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n34" hidden>بالرفع يكون الرسول شريكاً في البراءة («ورسولُه بريء» أيضاً). وبالجر يُعطف على «المشركين» المخفوض بـ«من»، فيصير مما يُتبرّأ منه. وهو ما سمّاه ياقوت «كفراً بحتاً». <strong>الثمرة:</strong> عامل الخفض (من) لا يتعدى إلى «رسوله» إلا إذا عطفته على «المشركين»، والحركة هي التي تخبرك بذلك.</div></div>
+
+    <div class="exercise"><p><span class="num">35</span><span class="pill">سريع</span> <span class="task">«عسى»: فعل أم حرف؟ و«ينفعَنا»: ما حكمه؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="28:9" data-part="عسى أن ينفعنا" data-mark="عسى|ينفعنا">﴿<mark>عَسَىٰۤ</mark> <mark>أَن یَنفَعَنَاۤ</mark>﴾</span> <cite>[القصص 9]</cite></p>
+      <button class="btn small" type="button" data-reveal="n35" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n35" hidden>«عسى» فعل ماض: يقبل «عستْ». «ينفعَ» مضارع منصوب بـ«أنْ» بفتحة ظاهرة، و«نا» اسم (ضمير).</div></div>
+
+    <div class="exercise"><p><span class="num">36</span><span class="pill">سريع</span> <span class="task">«أهشّ»: ما نوعها؟ وبأي علامة؟</span></p>
+      <p class="verse"><span class="ayah" data-ref="20:18" data-part="وأهش بها على غنمي" data-mark="وأهش">﴿<mark>وَأَهُشُّ</mark> بِهَا عَلَىٰ غَنَمِی﴾</span> <cite>[طه 18]</cite></p>
+      <button class="btn small" type="button" data-reveal="n36" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n36" hidden>فعل مضارع مرفوع بضمة ظاهرة: يبدأ بهمزة المضارعة، ويقبل «سوف أهشّ».</div></div>
+
+    <div class="exercise"><p><span class="num">37</span><span class="pill">سريع</span> <span class="task">«حرثٌ» في كلام عربي عادي: اسم بأي علامة؟ ثم اكتب «لم» + فعل من القرآن تحفظه، وبيّن علامة جزمه.</span></p>
+      <button class="btn small" type="button" data-reveal="n37" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n37" hidden>«حرثٌ»: اسم بالتنوين. والثاني مفتوح، ومثاله ﴿لم يلدْ ولم يولدْ﴾: مجزومان بالسكون، وهي العلامة الأصلية للجزم (ص 7). أي مثال صحيح يُقبل.</div></div>
+
+    <div class="exercise"><p><span class="num">38</span><span class="pill">تصنيف</span> <span class="task">ضع كل كلمة في قسمها: «الذي، أسرى، بعبده، ليلاً، من، المسجد».</span></p>
+      <p class="verse"><span class="ayah" data-ref="17:1" data-part="سبحان الذي أسرى بعبده ليلا من المسجد الحرام" data-mark="الذي|أسرى|بعبده|ليلا|من|المسجد">﴿سُبۡحَـٰنَ <mark>ٱلَّذِیۤ</mark> <mark>أَسۡرَىٰ</mark> <mark>بِعَبۡدِهِۦ</mark> <mark>لَیۡلࣰا</mark> <mark>مِّنَ</mark> <mark>ٱلۡمَسۡجِدِ</mark> ٱلۡحَرَامِ﴾</span> <cite>[الإسراء 1]</cite></p>
+      <button class="btn small" type="button" data-reveal="n38" aria-expanded="false">أظهر الجواب</button>
+      <div class="answer" id="n38" hidden>أسماء: «الذي» (موصول)، «عبد» (دخل عليه حرف الخفض، ومخفوض)، والهاء (ضمير)، «ليلاً» (تنوين)، «المسجد» («أل»). فعل: «أسرى» (ماض: «أسرتْ»). حروف: الباء، و«من».</div></div>
+  </section>
+
+  <!-- ============ 5. المراجعة ============ -->
+  <section class="panel" id="panel-after" tabindex="-1" hidden>
+    <div class="grid two">
+      <article class="card accent"><h3>سجل الأخطاء</h3>
+        <p class="muted">اكتب كل خطأ وسببه في سطر: «ظننت كسرة قمِ خفضاً: نسيت شرط العامل». يُحفظ تلقائياً في متصفحك.</p>
+        <textarea class="error-log" id="error-log" placeholder="رقم التطبيق: الخطأ ← سببه ← القاعدة"></textarea>
+        <p class="muted" id="save-status" aria-live="polite"></p></article>
+      <article class="card gold"><h3>بطاقات الاستذكار</h3><div class="flash-grid">
+        <button class="flashcard" type="button" aria-expanded="false"><div class="front">الفرق بين القول والكلام؟</div><div class="back" hidden>القول لفظ دال على معنى. والكلام قول يحسن السكوت عليه (مفيد).</div></button>
+        <button class="flashcard" type="button" aria-expanded="false"><div class="front">علامات الاسم الأربع؟</div><div class="back" hidden>الخفض، التنوين، «أل»، دخول حرف الخفض.</div></button>
+        <button class="flashcard" type="button" aria-expanded="false"><div class="front">علامة الأمر؟ ولماذا هي «مركبة»؟</div><div class="back" hidden>الطلب + قبول ياء المخاطبة. الطلب وحده: اسم فعل (صه). الياء وحدها: مضارع (تقومين).</div></button>
+        <button class="flashcard" type="button" aria-expanded="false"><div class="front">موانع ظهور الحركة الثلاثة؟</div><div class="back" hidden>التعذّر (الألف)، الثقل (الواو والياء في الرفع، والياء في الخفض)، المناسبة (ياء المتكلم).</div></button>
+        <button class="flashcard" type="button" aria-expanded="false"><div class="front">لماذا تظهر الفتحة في «داعيَ الله» و«لن ندعوَ»؟</div><div class="back" hidden>لخفة الفتحة على الياء والواو. التقدير فيهما للرفع (والخفض في المنقوص) فقط.</div></button>
+        <button class="flashcard" type="button" aria-expanded="false"><div class="front">متى يصير الترتيب واجباً بين الفاعل والمفعول؟</div><div class="back" hidden>إذا خفي الإعراب ولا قرينة: «أكرم موسى عيسى».</div></button></div></article>
+    </div>
+    <article class="card blue"><h3>أسئلة لأستاذ (إن وجدت مجلساً)</h3><ol>
+      <li>تعريف الحرف في صحيفة أمير المؤمنين (ع) «معنى ليس باسم ولا فعل»، وفي الكتاب «معنى في غيرها»: هل هما واحد؟ وما علاقتهما بالمعنى الحرفي في الأصول؟</li>
+      <li>العلامات كافية لا لازمة («إياك» بلا علامة): فما الضابط في الضمائر والموصولات وأسماء الإشارة؟</li>
+      <li>الحروف المقطعة: ما الراجح في إعرابها؟</li></ol></article>
+    <article class="card lesson-prose"><h3>الجلسة القادمة</h3>
+      <p><strong>النحو 02 — الإعراب الفرعي (ص 8–15):</strong> الأسماء الخمسة، المثنى، جمع المذكر السالم، جمع المؤنث السالم، الممنوع من الصرف، الأفعال الخمسة، والمضارع المعتل. فيها جواب «العالمين» (التطبيق 1) و«الصالحاتِ» (التطبيق 5).</p>
+      <p class="muted">المنهج كاملاً: <a href="https://github.com/emadlawati/Shaykh-Shabbir/blob/main/%D8%B9%D9%84%D9%85%20%D8%A7%D9%84%D9%86%D8%AD%D9%88/%D8%AE%D8%B1%D9%8A%D8%B7%D8%A9_%D8%A7%D9%84%D9%85%D9%86%D9%87%D8%AC.md" target="_blank" rel="noopener">خريطة منهج النحو</a>. والجلسة الموازية: <a href="../../../بلاغة/الجلسات/للجوال/01_البلاغة_والفصاحة.html">البلاغة 01</a>.</p></article>
+  </section>
+  </main>
+  <footer class="footer">علم النحو • الجلسة 01 • نصوص الكتاب منسوخة من صور الـPDF ومفحوصة آلياً، والآيات من نص التنزيل (Tanzil) ومفحوصة حرفياً</footer>
+  <script>
+(() => {
+  "use strict";
+
+  const lessonId = document.body.dataset.lesson || "01";
+  const prefix = `shabbir_usul_lesson_${lessonId}`;
+  const SOURCES = window.LESSON_SOURCES || window.LESSON01_SOURCES || {};
+  const SOURCE_ORDER = window.LESSON_SOURCE_ORDER || window.LESSON01_SOURCE_ORDER || Object.keys(SOURCES);
+  const LABELS = window.LESSON_LABELS || window.LESSON01_LABELS;
+  const KEYS = {
+    theme: "shabbir_usul_theme",
+    notes: `${prefix}_unified_notes`,
+    tasks: `${prefix}_tasks`,
+    errors: `${prefix}_error_log`,
+    reviews: `${prefix}_review_dates`,
+    tab: `${prefix}_active_tab`
+  };
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem(KEYS.theme, theme);
+    const label = $("#theme-label");
+    if (label) label.textContent = theme === "dark" ? "النمط الفاتح" : "النمط الداكن";
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem(KEYS.theme);
+    const preferred = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    setTheme(saved === "dark" || saved === "light" ? saved : preferred);
+  }
+
+  function activateTab(id, focus = false) {
+    const button = $(`[data-tab="${id}"]`);
+    const panel = $(`#panel-${id}`);
+    if (!button || !panel) return;
+    $$("[data-tab]").forEach((item) => item.setAttribute("aria-selected", String(item === button)));
+    $$(".panel").forEach((item) => { item.hidden = item !== panel; });
+    localStorage.setItem(KEYS.tab, id);
+    history.replaceState(null, "", `#${id}`);
+    if (focus) panel.focus({ preventScroll: true });
+  }
+
+  function loadTasks() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEYS.tasks) || "{}"); } catch (_) { saved = {}; }
+    $$(".task-check").forEach((box) => {
+      if (Object.prototype.hasOwnProperty.call(saved, box.id)) box.checked = Boolean(saved[box.id]);
+    });
+    updateProgress(false);
+  }
+
+  function updateProgress(save = true) {
+    const boxes = $$(".task-check");
+    const state = {};
+    let complete = 0;
+    boxes.forEach((box) => {
+      state[box.id] = box.checked;
+      if (box.checked) complete += 1;
+    });
+    if (save) localStorage.setItem(KEYS.tasks, JSON.stringify(state));
+    const percent = boxes.length ? Math.round((complete / boxes.length) * 100) : 0;
+    const text = $("#progress-text");
+    const bar = $("#progress-fill");
+    if (text) text.textContent = `${complete} من ${boxes.length} • ${percent}٪`;
+    if (bar) bar.style.width = `${percent}%`;
+  }
+
+  function bindSavedText(selector, key) {
+    const field = $(selector);
+    if (!field) return;
+    const saved = localStorage.getItem(key);
+    if (saved !== null) field.value = saved;
+    const count = $(`${selector}-count`);
+    const persist = () => {
+      localStorage.setItem(key, field.value);
+      if (count) count.textContent = `${field.value.length} حرف`;
+      const status = $("#save-status");
+      if (status) {
+        status.textContent = "حُفظ تلقائياً";
+        clearTimeout(persist.timer);
+        persist.timer = setTimeout(() => { status.textContent = ""; }, 1200);
+      }
+    };
+    field.addEventListener("input", persist);
+    if (count) count.textContent = `${field.value.length} حرف`;
+  }
+
+  function loadReviewDates() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEYS.reviews) || "{}"); } catch (_) { saved = {}; }
+    $$("[data-review-date]").forEach((input) => {
+      if (saved[input.id]) input.value = saved[input.id];
+      input.addEventListener("change", () => {
+        const current = {};
+        $$("[data-review-date]").forEach((item) => { current[item.id] = item.value; });
+        localStorage.setItem(KEYS.reviews, JSON.stringify(current));
+      });
+    });
+  }
+
+  function openSource(id) {
+    const source = SOURCES[id];
+    if (!source) return;
+    $("#source-title").textContent = source.book;
+    $("#source-author").textContent = source.author;
+    $("#source-kind").textContent = LABELS.content_kind[source.content_kind];
+    $("#source-verification").textContent = LABELS.verification[source.verification];
+    $("#source-text").textContent = source.text;
+    $("#source-context").textContent = source.context;
+    const provenance = $("#source-provenance");
+    provenance.innerHTML = "";
+    [
+      ["الطبعة", source.edition],
+      ["الجزء", source.volume],
+      ["الصفحة المطبوعة", source.printed_page],
+      ["صفحة المسح/البيانات", source.scan_or_database_page]
+    ].forEach(([label, value]) => {
+      if (!value) return;
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = label;
+      dd.textContent = value;
+      provenance.append(dt, dd);
+    });
+    const link = $("#source-link");
+    if (source.file) {
+      link.href = source.file + (source.pdf_page ? `#page=${source.pdf_page}` : "");
+      link.hidden = false;
+    } else {
+      link.hidden = true;
+    }
+    $("#source-overlay").classList.add("open");
+    $("#source-drawer").classList.add("open");
+    $("#source-drawer").setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    $("#source-close").focus();
+  }
+
+  function closeSource() {
+    $("#source-overlay").classList.remove("open");
+    $("#source-drawer").classList.remove("open");
+    $("#source-drawer").setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function renderSources() {
+    const container = $("#source-list");
+    if (!container || !Object.keys(SOURCES).length) return;
+    SOURCE_ORDER.forEach((id) => {
+      const source = SOURCES[id];
+      const item = document.createElement("article");
+      item.className = "source-item";
+      item.dataset.layer = source.layer;
+      const h = document.createElement("h3");
+      h.textContent = source.book;
+      const meta = document.createElement("div");
+      meta.className = "source-meta";
+      meta.textContent = `${source.author} • ${source.printed_page || source.scan_or_database_page}`;
+      const row = document.createElement("div");
+      row.className = "meta-row";
+      const layer = document.createElement("span");
+      layer.className = `pill ${source.layer}`;
+      layer.textContent = source.layer === "core" ? "الطبقة الأساسية" : source.layer === "advanced" ? "الطبقة المتقدمة" : "تطبيق";
+      const kind = document.createElement("span");
+      kind.className = "pill";
+      kind.textContent = LABELS.content_kind[source.content_kind];
+      const verification = document.createElement("span");
+      verification.className = "pill verified";
+      verification.textContent = LABELS.verification[source.verification];
+      const button = document.createElement("button");
+      button.className = "btn small";
+      button.type = "button";
+      button.textContent = "قراءة المقتطف";
+      button.addEventListener("click", () => openSource(id));
+      row.append(layer, kind, verification, button);
+      item.append(h, meta, row);
+      container.appendChild(item);
+    });
+  }
+
+  function filterSources(filter) {
+    $$("[data-source-filter]").forEach((button) => {
+      button.classList.toggle("primary", button.dataset.sourceFilter === filter);
+    });
+    $$("#source-list .source-item").forEach((item) => {
+      item.hidden = filter !== "all" && item.dataset.layer !== filter;
+    });
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard) return navigator.clipboard.writeText(text);
+    const area = document.createElement("textarea");
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+    return Promise.resolve();
+  }
+
+  function init() {
+    initTheme();
+    renderSources();
+    loadTasks();
+    bindSavedText("#notes-unified", KEYS.notes);
+    bindSavedText("#error-log", KEYS.errors);
+    loadReviewDates();
+
+    $$("[data-tab]").forEach((button) => button.addEventListener("click", () => activateTab(button.dataset.tab, true)));
+    const hash = location.hash.replace("#", "");
+    const savedTab = localStorage.getItem(KEYS.tab);
+    activateTab($( `[data-tab="${hash}"]`) ? hash : ($( `[data-tab="${savedTab}"]`) ? savedTab : "orientation"));
+
+    $("#theme-toggle")?.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
+    $$(".task-check").forEach((box) => box.addEventListener("change", () => updateProgress(true)));
+    $$('[data-reveal]').forEach((button) => button.addEventListener("click", () => {
+      const answer = document.getElementById(button.dataset.reveal);
+      const willShow = answer.hidden;
+      answer.hidden = !willShow;
+      button.textContent = willShow ? "إخفاء الجواب" : "أظهر الجواب";
+      button.setAttribute("aria-expanded", String(willShow));
+    }));
+    $$(".flashcard").forEach((card) => card.addEventListener("click", () => {
+      const answer = $(".back", card);
+      answer.hidden = !answer.hidden;
+      card.setAttribute("aria-expanded", String(!answer.hidden));
+    }));
+    $$('[data-source]').forEach((button) => button.addEventListener("click", () => openSource(button.dataset.source)));
+    $$('[data-source-filter]').forEach((button) => button.addEventListener("click", () => filterSources(button.dataset.sourceFilter)));
+    $("#source-close")?.addEventListener("click", closeSource);
+    $("#source-overlay")?.addEventListener("click", closeSource);
+    $("#source-copy")?.addEventListener("click", () => copyText($("#source-text").textContent));
+    $("#copy-notes")?.addEventListener("click", () => copyText($("#notes-unified").value));
+    $("#print-lesson")?.addEventListener("click", () => window.print());
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeSource();
+      if (/^[1-7]$/.test(event.key) && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+        const button = $$("[data-tab]")[Number(event.key) - 1];
+        if (button) activateTab(button.dataset.tab, true);
+      }
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", init);
+})();
+
+</script>
+  <script>
+// التقييم الذاتي لتمارين جلسات النحو والبلاغة: بعد كشف الجواب يسجّل الطالب «أصبت» أو «أخطأت»،
+// فيُحفظ ذلك محلياً، ويُعرض المجموع، ويمكن إعادة ما أخطأ فيه فقط.
+(() => {
+  "use strict";
+
+  const lessonId = document.body.dataset.lesson || "lugha";
+  const KEY = `shabbir_lugha_${lessonId}_scores`;
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (_) { return {}; }
+  }
+
+  function save(scores) {
+    try { localStorage.setItem(KEY, JSON.stringify(scores)); } catch (_) { /* التخزين غير متاح */ }
+  }
+
+  function exercises() {
+    return $$(".exercise").filter((item) => $("[data-reveal]", item));
+  }
+
+  function idOf(item) {
+    return $("[data-reveal]", item).dataset.reveal;
+  }
+
+  function paint(item, value) {
+    item.classList.toggle("is-right", value === 1);
+    item.classList.toggle("is-wrong", value === 0);
+    $$(".self-mark .btn", item).forEach((button) => {
+      button.setAttribute("aria-pressed", String(Number(button.dataset.value) === value));
+    });
+  }
+
+  function summary() {
+    const scores = load();
+    const all = exercises();
+    const marked = all.filter((item) => idOf(item) in scores);
+    const right = marked.filter((item) => scores[idOf(item)] === 1).length;
+    const text = $("#score-text");
+    if (text) {
+      text.textContent = marked.length
+        ? `التطبيقات: ${right} صحيحة من ${marked.length} مُقيَّمة • ${all.length} سؤالاً في الجلسة`
+        : `التطبيقات: ${all.length} سؤالاً — اكشف الجواب ثم قيّم نفسك`;
+    }
+  }
+
+  function init() {
+    const scores = load();
+    exercises().forEach((item) => {
+      const reveal = $("[data-reveal]", item);
+      const id = idOf(item);
+      const box = document.createElement("span");
+      box.className = "self-mark";
+      box.hidden = !(id in scores);
+      [[1, "✓ أصبت", "good"], [0, "✗ أخطأت", "bad"]].forEach(([value, label, kind]) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `btn small ${kind}`;
+        button.dataset.value = String(value);
+        button.textContent = label;
+        button.setAttribute("aria-pressed", "false");
+        button.addEventListener("click", () => {
+          const current = load();
+          current[id] = value;
+          save(current);
+          paint(item, value);
+          summary();
+        });
+        box.appendChild(button);
+      });
+      reveal.after(box);
+      reveal.addEventListener("click", () => { box.hidden = false; });
+      if (id in scores) paint(item, scores[id]);
+    });
+
+    $("#only-wrong")?.addEventListener("click", (event) => {
+      const on = document.body.classList.toggle("only-wrong");
+      event.currentTarget.textContent = on ? "أظهر كل الأسئلة" : "أعد ما أخطأت فيه فقط";
+    });
+    $("#reset-scores")?.addEventListener("click", () => {
+      if (!window.confirm("مسح تقييم هذه الجلسة والبدء من جديد؟")) return;
+      save({});
+      exercises().forEach((item) => {
+        paint(item, -1);
+        $(".self-mark", item).hidden = true;
+        const answer = document.getElementById(idOf(item));
+        if (answer) answer.hidden = true;
+        const reveal = $("[data-reveal]", item);
+        reveal.textContent = "أظهر الجواب";
+        reveal.setAttribute("aria-expanded", "false");
+      });
+      document.body.classList.remove("only-wrong");
+      summary();
+    });
+    summary();
+  }
+
+  window.addEventListener("DOMContentLoaded", init);
+})();
+
+</script>
+</body></html>
