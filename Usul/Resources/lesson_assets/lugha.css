@@ -1,0 +1,55 @@
+/* إضافات جلسات النحو والبلاغة فوق lesson.css: الآيات، الشواهد، جداول الإعراب، والتقييم الذاتي */
+
+@font-face {
+  font-family: "Amiri Quran";
+  src: url("fonts/amiri-quran-arabic.woff2") format("woff2");
+  font-display: swap;
+  /* Amiri Quran © The Amiri Project Authors, SIL Open Font License 1.1 */
+}
+
+.ayah { font-family: "Amiri Quran", "Amiri", "Traditional Arabic", serif; font-size: 1.32em; line-height: 2.35; color: var(--primary-strong); }
+.ayah mark { background: var(--gold-soft); color: inherit; border-bottom: 2px solid var(--gold); border-radius: 4px; padding: 0 2px; }
+.ayah + cite, .verse cite { font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: .78rem; color: var(--muted); font-style: normal; white-space: nowrap; }
+.verse { margin: 6px 0; padding: 6px 14px; background: var(--surface-2); border-right: 4px solid var(--primary); border-radius: 10px; }
+.verse .ayah { display: inline; }
+
+.shahid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; margin: 8px 0; padding: 10px 16px; background: var(--surface-2); border-radius: 10px; font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; text-align: center; }
+.shahid span:first-child { text-align: right; }
+.shahid span:last-child { text-align: left; }
+
+.irab { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: .95rem; }
+.irab th, .irab td { border: 1px solid var(--line); padding: 7px 10px; text-align: right; vertical-align: top; }
+.irab th { background: var(--surface-2); color: var(--primary-strong); white-space: nowrap; }
+.irab td:first-child { font-family: "Amiri Quran", "Amiri", serif; font-size: 1.15rem; white-space: nowrap; color: var(--primary-strong); }
+
+.level-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin: 28px 0 6px; padding-bottom: 6px; border-bottom: 2px solid var(--line); }
+.level-head h3 { color: var(--gold); }
+.level-head .muted { font-size: .88rem; }
+.exercise .num { font-weight: 900; color: var(--gold); margin-left: 4px; }
+.exercise .task { font-weight: 700; }
+
+.self-mark { display: inline-flex; gap: 6px; margin-inline-start: 8px; vertical-align: middle; }
+.self-mark[hidden] { display: none; }
+.btn.good { border-color: color-mix(in srgb, var(--primary) 50%, var(--line)); color: var(--primary-strong); }
+.btn.bad { border-color: color-mix(in srgb, var(--rose) 50%, var(--line)); color: var(--rose); }
+.btn.good[aria-pressed="true"] { background: var(--primary); color: #fff; }
+.btn.bad[aria-pressed="true"] { background: var(--rose); color: #fff; }
+.exercise.is-right { border-style: solid; border-color: var(--primary); }
+.exercise.is-wrong { border-style: solid; border-color: var(--rose); background: color-mix(in srgb, var(--rose-soft) 45%, var(--surface)); }
+body.only-wrong .exercise:not(.is-wrong) { display: none; }
+body.only-wrong .level-head { opacity: .55; }
+
+.score-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; font-size: .9rem; font-weight: 700; }
+.score-row .actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.gem { border-top: 4px solid var(--rose); }
+
+@media (max-width: 850px) {
+  .shahid { grid-template-columns: 1fr; text-align: center; }
+  .shahid span:first-child, .shahid span:last-child { text-align: center; }
+  .irab td:first-child { white-space: normal; }
+}
+
+@media print {
+  .self-mark, .score-row .actions { display: none !important; }
+  .answer[hidden] { display: block; }
+}
