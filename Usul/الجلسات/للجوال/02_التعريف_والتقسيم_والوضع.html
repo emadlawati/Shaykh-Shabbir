@@ -197,6 +197,20 @@ main { padding: 28px 0 64px; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .85rem; color: var(--muted); }
 .session-banner { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; border: 1px solid color-mix(in srgb, var(--gold) 45%, var(--line)); background: var(--gold-soft); border-radius: 14px; padding: 10px 14px; margin-top: 14px; font-size: .92rem; }
 
+/* Full Mujaz text tab and suggested answers */
+.mujaz-page { margin-bottom: 14px; }
+.mujaz-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 10px; color: var(--muted); font-size: .85rem; }
+.mujaz-head strong { color: var(--gold); font-size: 1rem; }
+.mujaz-body { font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; line-height: 2.1; }
+.mujaz-body p { margin: .35rem 0; }
+.mujaz-body h4 { color: var(--primary-strong); margin: 16px 0 6px; font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: 1rem; }
+.mujaz-body .ayah { color: var(--primary-strong); text-align: center; font-size: 1.15rem; }
+.mujaz-body .verse { text-align: center; font-style: italic; color: var(--gold); }
+.mujaz-notes { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .82rem; color: var(--muted); }
+.ans-wrap { margin-top: 8px; }
+.ans-wrap .answer { border-right: 3px solid var(--gold); }
+.prereq h3 { color: var(--primary-strong); }
+
 @media (max-width: 850px) {
   .header-grid, .grid.two, .grid.three, .flash-grid { grid-template-columns: 1fr; }
   .header-actions { justify-content: flex-start; }
