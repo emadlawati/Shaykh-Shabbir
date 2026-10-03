@@ -11,7 +11,7 @@ consonant skeleton (so Uthmani spellings like «إِبۡرَ ٰ⁠هِـۧمَ»
 widened to whole words. `data-mark` words (separated by |) are wrapped in <mark>.
 The span is then filled with the exact Tanzil text. Run before validate_sessions.py:
 
-    python scripts/fill_ayat.py            # all Nahw and Balagha session files
+    python scripts/fill_ayat.py            # all Usul, Nahw and Balagha session files
 """
 
 from __future__ import annotations
@@ -29,7 +29,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parents[1]
-TRACKS = [ROOT / "علم النحو" / "الجلسات", ROOT / "بلاغة" / "الجلسات"]
+TRACKS = [ROOT / "Usul" / "الجلسات", ROOT / "علم النحو" / "الجلسات", ROOT / "بلاغة" / "الجلسات"]
 SPAN = re.compile(r'<span class="ayah" data-ref="(\d+:\d+)"((?: data-(?:part|mark)="[^"]*")*)>(.*?)</span>', re.S)
 ATTR = re.compile(r'data-(part|mark)="([^"]*)"')
 DROP = set("اأإآٱءئؤوىيی") | {"ـ"}
