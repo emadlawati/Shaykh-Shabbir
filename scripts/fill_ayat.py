@@ -73,6 +73,8 @@ def locate(text: str, phrase: str, after: int = 0) -> tuple[int, int]:
     spans = [w for w in words(text) if w[0] >= after]
     target = skeleton(phrase)
     for i in range(len(spans)):
+        if not skeleton(text[spans[i][0]:spans[i][1]]):
+            continue  # a run never starts on a consonant-less word like «أو»
         joined = ""
         for j in range(i, len(spans)):
             joined = skeleton(text[spans[i][0]:spans[j][1]])

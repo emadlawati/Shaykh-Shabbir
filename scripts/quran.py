@@ -8,7 +8,6 @@
 from __future__ import annotations
 
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -20,13 +19,6 @@ QURAN = Path(__file__).resolve().parents[1] / "Resources" / "quran" / "quran_uth
 
 def load() -> dict:
     return json.loads(QURAN.read_text(encoding="utf-8"))
-
-
-def skeleton(text: str) -> str:
-    """Letters only, for searching: drop marks and unify letter shapes."""
-    text = re.sub(r"[ً-ٰٟۖ-ۭـ]", "", text)
-    text = re.sub("[أإآٱ]", "ا", text).replace("ى", "ي").replace("ی", "ي").replace("ة", "ه")
-    return re.sub(r"[^ء-ي ]", "", text)
 
 
 def main(argv: list[str]) -> int:
@@ -45,9 +37,10 @@ def main(argv: list[str]) -> int:
             else:
                 print(f'<span class="ayah" data-ref="{ref}">﴿{text}﴾</span> <cite>[{name} {ref.split(":")[1]}]</cite>')
     elif command == "search":
-        needle = skeleton(" ".join(args)).replace(" ", "")
+        from fill_ayat import skeleton as consonants  # same matching as the verse filler
+        needle = consonants(" ".join(args))
         for ref, text in verses.items():
-            if needle in skeleton(text).replace(" ", ""):
+            if needle in consonants(text):
                 print(f"{ref}: {text}")
     else:
         print(__doc__)
